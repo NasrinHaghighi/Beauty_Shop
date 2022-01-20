@@ -1,0 +1,40 @@
+.nav {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.box {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.formContainer {
+    padding: 5px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid red;
+}
+
+.input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: right;
+}
+
+.sidebarIcon {
+    text-align: right;
+    margin-right: 20px;
+}

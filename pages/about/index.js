@@ -1,6 +1,6 @@
 import React from 'react'
 
-function index() {
+function About() {
     return (
         <div>
             about
@@ -8,4 +8,4 @@ function index() {
     )
 }
 
-export default index
+export default About

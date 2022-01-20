@@ -15,7 +15,7 @@ const Navbar=()=> {
     }
     const handelClose =(e)=>{
         if(!e.target.classList.contains('nav')){
-          console.log('nav')
+          //console.log('nav')
         }
     }
     return (

@@ -4,11 +4,11 @@ import Image from 'next/image';
 import closeIcon from '../../../public/New folder/Group 345.png'
 import {useGlobalContex} from './../../context/context';
 import {sidebarData} from './SidebarData'
+import Submenu from './Submenu';
 
 const Sidebar = () =>{
     const {loading , sidebarIsOpen ,handelCloseSidebar}= useGlobalContex();
-    console.log(sidebarIsOpen)
-
+   
     return (
         <>
          
@@ -20,8 +20,8 @@ const Sidebar = () =>{
                 <span>منو</span>
                </div>
                <ul className={styles.menu}>
-{sidebarData.map((data,index)=>{
-    return(<li key={index} className={styles.li} onClick={handelCloseSidebar}>   {data.title}   <span className={styles.icon}> {data.icon} </span>           </li>)
+{sidebarData.map((item,index)=>{
+    return(<Submenu key={index} item={item}/>)
 })}
            </ul>
            <button className={styles.button}>ورود/ ثبت نام</button>

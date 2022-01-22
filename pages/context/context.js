@@ -12,6 +12,7 @@ const AppProvider =({children})=>{
     }
     const handelCloseSidebar =()=>{
         setSidebarOpen(false)
+        setSubmenu(false)
     }
     const showSubmenu =()=>{
         setSubmenu(!submenu)

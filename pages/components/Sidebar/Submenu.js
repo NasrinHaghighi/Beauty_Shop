@@ -11,13 +11,13 @@ const Submenu =({item}) =>{
   <li 
    onClick={item.subNav ? showSubmenu : handelCloseSidebar} 
    className={styles.li}>
-      {item.title}   <span className={styles.icon} > {item.icon} </span>    
-      
-   </li>
+       <Link href={item.path}><a>{item.title}<span className={styles.icon} > {item.icon} </span></a></Link>
+    </li>
  
   {submenu && item.subNav ? item.subNav.map((item, index)=>{
       return(<li key={index} className={styles.innerLi} onClick={ handelCloseSidebar}> 
-      {item.title} <span className={styles.icon} > {item.icon} </span>
+      <Link href={item.path}><a>{item.title} <span className={styles.icon} > {item.icon} </span></a></Link>
+     
          </li>)
   } ) : null}
   </>;

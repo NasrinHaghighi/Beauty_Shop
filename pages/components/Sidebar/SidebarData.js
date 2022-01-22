@@ -11,24 +11,24 @@ import myfavoraite from '../../../public/New folder/Group 335.png'
 
 export const sidebarData = [{
         title: 'پروفایل',
-        path: '',
+        path: '/',
         icon: < Image src = { profile }
         />,
         subNav: [{
                 title: 'سفارش های من',
-                path: '',
+                path: '/profile/myorder',
                 icon: < Image src = { myorder }
                 />,
             },
             {
                 title: 'آدرس های من',
-                path: '',
+                path: '/profile/myadress',
                 icon: < Image src = { myadress }
                 />,
             },
             {
                 title: 'علاقه مندی ها ',
-                path: '',
+                path: '/profile/myfavoraite',
                 icon: < Image src = { myfavoraite }
                 />,
             },
@@ -46,15 +46,15 @@ export const sidebarData = [{
     },
     {
         title: 'ارتباط با ما',
-        path: 'contact',
+        path: '/contact',
 
         icon: < Image src = { contactIcon }
         />
     },
     {
         title: 'خروج',
-        path: 'exite',
-
+        path: '/',
+        //back to home//
         icon: < Image src = { exitIcon }
         />
 

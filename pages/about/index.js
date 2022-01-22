@@ -1,11 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
 
-function About() {
+function AboutPage() {
     return (
         <div>
-            about
+        <div>  <Link href='/'><a>Back home</a></Link>     </div>   
+        <div>  about page   </div>    
         </div>
     )
 }
 
-export default About
+export default AboutPage

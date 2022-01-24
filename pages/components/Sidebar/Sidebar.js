@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Sidebar.module.css'
 import Image from 'next/image';
-import closeIcon from '../../../public/New folder/Group 345.png'
+import closeIcon from '../../../public/images/Group 345.png'
 import {useGlobalContex} from './../../context/context';
 import {sidebarData} from './SidebarData'
 import Submenu from './Submenu';

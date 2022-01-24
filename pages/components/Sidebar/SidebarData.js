@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 
-import profile from '../../../public/New folder/Group 332.png'
-import aboutIcon from '../../../public/New folder/Group 336.png'
-import contactIcon from '../../../public/New folder/Path 162.png'
-import exitIcon from '../../../public/New folder/Group 337.png'
-import myorder from '../../../public/New folder/Group 333.png'
-import myadress from '../../../public/New folder/Group 334.png'
-import myfavoraite from '../../../public/New folder/Group 335.png'
+import profile from '../../../public/images/Group 332.png'
+import aboutIcon from '../../../public/images/Group 336.png'
+import contactIcon from '../../../public/images/Path 162.png'
+import exitIcon from '../../../public/images/Group 337.png'
+import myorder from '../../../public/images/Group 333.png'
+import myadress from '../../../public/images/Group 334.png'
+import myfavoraite from '../../../public/images/Group 335.png'
 
 export const sidebarData = [{
         title: 'پروفایل',

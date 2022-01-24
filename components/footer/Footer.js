@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Footer.module.css'
-import logo from '../../../public/images/Group 10.png'
+import logo from '../../public/images/Group 10.png'
 import Link from 'next/link';
 import Image from 'next/image';
-import whatsApp from '../../../public/images/whatsapp (2).png'
-import insta from '../../../public/images/instagram (2).png'
-import linkedin from '../../../public/images/linkedin (1).png'
-import email from '../../../public/images/email (1).png'
+import whatsApp from '../../public/images/whatsapp (2).png'
+import insta from '../../public/images/instagram (2).png'
+import linkedin from '../../public/images/linkedin (1).png'
+import email from '../../public/images/email (1).png'
 
-import kanoon from '../../../public/images/download (1).png'
-import sabt from '../../../public/images/samandehi-ir-4_graphic222shop-ir.png'
+import kanoon from '../../public/images/download (1).png'
+import sabt from '../../public/images/samandehi-ir-4_graphic222shop-ir.png'
 
 
 

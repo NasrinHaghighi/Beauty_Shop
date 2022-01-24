@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { useGlobalContex } from '../../context/context';
+import { useGlobalContex } from '../../pages/context/context';
 
 import styles from './Submenu.module.css'
 const Submenu =({item}) =>{

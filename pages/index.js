@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Navbar from './components/navbar/Navbar'
-import Sidebar from './components/Sidebar/Sidebar'
+import Navbar from '../components/navbar/Navbar'
+import Sidebar from '../components/Sidebar/Sidebar'
 import styles from '../styles/Home.module.css'
-import OverlayText from './components/OverlayText/OverlayText'
-import Footer from './components/footer/Footer'
+import OverlayText from '../components/OverlayText/OverlayText'
+import Footer from '../components/footer/Footer'
 
 
 export default function Home() {

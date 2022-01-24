@@ -1,11 +1,11 @@
 import React , {useState}from 'react'
 import Image from 'next/image'
-import logo from '../../../public/images/Group 10.png'
-import box from '../../../public/images/Group 9.png'
-import searchIcon from '../../../public/images/Component 1 – 1.png'
-import sidebarIcon from '../../../public/images/Group 27.png'
+import logo from '../../public/images/Group 10.png'
+import box from '../../public/images/Group 9.png'
+import searchIcon from '../../public/images/Component 1 – 1.png'
+import sidebarIcon from '../../public/images/Group 27.png'
 import styles from './Navbar.module.css'
-import { useGlobalContex } from '../../context/context'
+import { useGlobalContex } from '../../pages/context/context'
 
 const Navbar=()=> {
     const {handelOpenSidebar} =useGlobalContex()

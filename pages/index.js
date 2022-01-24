@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
 import styles from '../styles/Home.module.css'
 import OverlayText from './components/OverlayText/OverlayText'
+import Footer from './components/footer/Footer'
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        FOOTER
+      <Footer />
       </footer>
     </div>
   )

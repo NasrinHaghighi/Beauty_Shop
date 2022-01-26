@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar/Navbar'
-import Sidebar from '../components/Sidebar/Sidebar'
+
 import styles from '../styles/Home.module.css'
-import OverlayText from '../components/OverlayText/OverlayText'
+import Banner from '../components/banner/Banner'
 import Footer from '../components/footer/Footer'
+import Beauty from '../components/beauty/Beauty'
 
 
 export default function Home() {
@@ -16,11 +16,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-     
-      <Navbar />
-      <OverlayText />
-      <Sidebar />
-     
+         <Banner />
+         <Beauty />
       </main>
 
       <footer className={styles.footer}>

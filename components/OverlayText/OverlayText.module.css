@@ -5,10 +5,11 @@
     left: 50%;
     top: 60%;
     transform: translate(-50%, -50%);
-    width: 864px;
+    width: 800px;
     height: 345px;
     border: 1px solid #707070;
     text-align: center;
+    padding: 20px 40px;
 }
 
 .header {

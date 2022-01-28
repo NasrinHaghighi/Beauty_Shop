@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .bgImage {
@@ -45,4 +46,12 @@
 
 .chatIcon:hover {
     transform: scale(1.1);
+}
+
+.anim {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
 }

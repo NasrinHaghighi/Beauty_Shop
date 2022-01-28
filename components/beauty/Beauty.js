@@ -13,6 +13,8 @@ const Beauty =()=> {
   <div className={styles.beauty}>
       <h1>تنوع در رنگ های نود</h1>
     <div className={styles.container}>
+
+    {/* APPLY BOXSHADOW??? */}
       <div className={styles.mainImage}><Image src={img2}/></div>
       <div  className={styles.img3}><Image src={img3}/></div> 
       <div  className={styles.img4}><Image src={img4}/></div> 

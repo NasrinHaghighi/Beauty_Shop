@@ -22,3 +22,11 @@ a {
 li {
     list-style: none;
 }
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: IRANSans;
+}

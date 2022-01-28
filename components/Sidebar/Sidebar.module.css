@@ -72,3 +72,11 @@
     position: absolute;
     bottom: 0;
 }
+
+
+/*-----------*/
+
+.sidebarIcon {
+    position: absolute;
+    right: 20px;
+}

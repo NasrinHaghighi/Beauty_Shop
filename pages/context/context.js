@@ -3,21 +3,21 @@ import React ,{useState, useContext} from "react";
 const AppContext= React.createContext();
 
 const AppProvider =({children})=>{
-    const [loading, setLoading] =useState(false)
-    const [sidebarIsOpen , setSidebarOpen] = useState(false)
-    const [submenu, setSubmenu] = useState(false);
+    // const [loading, setLoading] =useState(false)
+    // const [sidebarIsOpen , setSidebarOpen] = useState(false)
+    // const [submenu, setSubmenu] = useState(false);
 
-    const handelOpenSidebar=()=>{
-       setSidebarOpen(!sidebarIsOpen)
-    }
-    const handelCloseSidebar =()=>{
-        setSidebarOpen(false)
-        setSubmenu(false)
-    }
-    const showSubmenu =()=>{
-        setSubmenu(!submenu)
+    // const handelOpenSidebar=()=>{
+    //    setSidebarOpen(!sidebarIsOpen)
+    // }
+    // const handelCloseSidebar =()=>{
+    //     setSidebarOpen(false)
+    //     setSubmenu(false)
+    // }
+    // const showSubmenu =()=>{
+    //     setSubmenu(!submenu)
       
-    }
+    // }
   
 
     return(

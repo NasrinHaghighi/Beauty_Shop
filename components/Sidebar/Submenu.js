@@ -1,21 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
-import { useGlobalContex } from '../../pages/context/context';
 
+import { handelCloseSidebar } from '../../redux/action/banner';
+import { handelcloseSubmenu } from '../../redux/action/banner';
 import styles from './Submenu.module.css'
-const Submenu =({item}) =>{
-    const {handelCloseSidebar, showSubmenu, submenu}= useGlobalContex();
 
-  return <>
+import {handelOpenSubmenu} from '../../redux/action/banner'
+import { useSelector, useDispatch } from 'react-redux';
+
+
+
+const Submenu =({item}) =>{
+
+  const submenu = useSelector(state=>state.submenu)
+  const dispatch = useDispatch()
+
+       return <>
   
   <li 
-   onClick={item.subNav ? showSubmenu : handelCloseSidebar} 
+   onClick={item.subNav ? ()=>dispatch(handelOpenSubmenu()) : ()=>dispatch(handelCloseSidebar())  } 
    className={styles.li}>
        <Link href={item.path}><a>{item.title}<span className={styles.icon} > {item.icon} </span></a></Link>
     </li>
  
   {submenu && item.subNav ? item.subNav.map((item, index)=>{
-      return(<li key={index} className={styles.innerLi} onClick={ handelCloseSidebar}> 
+    {/*can i have two dispatch in a tag????*/}
+      return(<li key={index} className={styles.innerLi} onClick={()=>dispatch(handelCloseSidebar())} onClick={()=>dispatch(handelcloseSubmenu())}> 
       <Link href={item.path}><a>{item.title} <span className={styles.icon} > {item.icon} </span></a></Link>
      
          </li>)
@@ -24,3 +34,6 @@ const Submenu =({item}) =>{
 }
 
 export default Submenu;
+
+
+///onClick={()=>dispatch(handelCloseSidebar())} onClick={()=>dispatch(handelcloseSubmenu())}

@@ -1,11 +1,13 @@
 import '../styles/globals.css'
 import { AppProvider } from './context/context';
+import { Provider } from "react-redux";
+import { store } from '../redux/store/index';
 
 function MyApp({ Component, pageProps }) {
   return(
-    <AppProvider>
+    <Provider store={store}>
        <Component {...pageProps} />
-    </AppProvider>
+    </Provider>
 
   )
   

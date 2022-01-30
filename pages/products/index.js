@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import Navbar2 from '../../components/navbar/Navbar2'
 import Footer from '../../components/footer/Footer'
+import Filters from '../../components/filters/Filters';
+import ProductList from '../../components/productList/ProductList';
+
 import { getAllProducts } from '../../redux/action/products'
 import { useDispatch , useSelector } from 'react-redux';
 import {productsList} from '../../servises/productsList'
@@ -8,7 +11,7 @@ import {productsList} from '../../servises/productsList'
 
 
 const ProductsPage=()=> {
-  const products = useSelector(state=>state.products)
+ 
   const dispatch = useDispatch();
 
 //???  empty array    ??//
@@ -23,9 +26,8 @@ const ProductsPage=()=> {
   return <>
   <div>
   <Navbar2 />
-  <h1>
-    {products.map((p)=>{return(<p>{p.name}</p>)})}
-  </h1>
+  <Filters />
+  <ProductList />
   <Footer /> 
   </div>
   </>;

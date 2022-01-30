@@ -15,6 +15,6 @@ export const handelOpenSubmenu = () => {
 };
 export const handelcloseSubmenu = () => {
     return async dispatch => {
-        await dispatch({ type: "CLOSE_SUBMENU" });
+        await dispatch({ type: "CLOSE_SUBMENU" } , dispatch({ type: "CLOSE_SIDEBAR" }));
     };
 };

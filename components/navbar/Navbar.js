@@ -1,4 +1,4 @@
-import React , {useState}from 'react'
+import React from 'react'
 import Image from 'next/image'
 import logo from '../../public/images/Group 10.png'
 import box from '../../public/images/Group 9.png'

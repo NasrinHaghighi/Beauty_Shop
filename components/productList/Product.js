@@ -23,13 +23,15 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
           <p>قیمت : {price} تومان</p>
 
           {/* ///how to make path for single product page ????// */}
-          <div className={styles.link}><Link href='/products'><a> مشاهده محصول</a></Link></div>
+          <div className={styles.link}><Link href={'/products/'+ id}><a> مشاهده محصول</a></Link></div>
           <div className={styles.rank}>
               <Stars stars={stars}/>
               <div className={styles.likeComments}>
                <span><Image src={likeIcon}/> <span>{likes}</span></span>
-               {/* //link for rout to one comment???? */}
-               <span><Image src={commentsIcon}/><span>{comments.length}</span></span>
+                <span>                
+                <Image src={commentsIcon}/><span>
+                       
+                {comments.length}</span></span>
                </div>
         </div>
       </div>

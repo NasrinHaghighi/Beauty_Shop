@@ -1,6 +1,7 @@
 import { productsList } from '../../servises/productsList'
 
 
+
 export const getAllProducts = () => {
     return async dispatch => {
         // const { data } = await getAllMovies();
@@ -8,6 +9,37 @@ export const getAllProducts = () => {
     }
 }
 
+
+//sortvalue is parameter to this func //
+export const sortProductsBy = (sortValue = '') => {
+    return async(dispatch, getState) => {
+        //all products
+        const products = [...getState.products];
+
+        return await dispatch({
+            type: 'SORT_PRODUCTS_BY',
+            payload: {
+                sortValue: sortValue,
+                sortedProducts: sortValue === '' ? products : products.filter((p) => p.sortValue === true)
+                    //now render sortProductBy instead of all products//
+            }
+        })
+    }
+}
+
+
+//  export const sortProductsBy = (e) => {
+//      return async dispatch => {
+//          return await dispatch({
+//             type: 'SORT_PRODUCTS_BY',
+//            payload: {
+//                sortValue: e.target.value,
+// sortedItems: products.filter((a) => a.sortValue === true)
+//         }
+
+//        })
+//     }
+// }
 
 
 

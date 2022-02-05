@@ -1,6 +1,49 @@
 .filterSection {
     width: 100%;
     height: 130px;
-    background-color: #ffff;
+    background-color: #F7F7EF;
     direction: rtl;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 53px;
+    position: relative;
+}
+
+.filterBtnConatiner {
+    position: relative;
+}
+
+.btn {
+    font-size: 16px;
+    margin-right: 14px;
+}
+
+.filterBtn {
+    width: 163px;
+    height: 54px;
+    background-color: #ffff;
+    margin-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.sortBtn {
+    width: 210px;
+    height: 54px;
+    background-color: #ffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.sortBtnConatiner {
+    position: relative;
+}
+
+.filterBtnConatiner {
+    position: relative;
 }

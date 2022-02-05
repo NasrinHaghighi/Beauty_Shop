@@ -3,6 +3,7 @@ export const productsList = {
             "id": "1",
             "name": "رژ لب NYX",
             "price": 880.000,
+            'category': 'صورت',
             'discont': ['0', '25%', '30%', '50%'],
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", "#FF0145", "#F43B86", '#F43B86', '#EFB7B7'],
@@ -28,11 +29,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 20,
+            'brand': 'لانکوم'
         },
         {
             "id": "2",
             "name": "خط چشم NYX",
             "price": 500.000,
+
+            'category': 'پوست',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -59,11 +63,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 30,
+            'brand': 'دیور'
         },
         {
             "id": "3",
             "name": "برس کوچک NYX",
             "price": 60.000,
+
+            'category': 'صورت',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -90,11 +97,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 40,
+            'brand': 'هدا بیوتی'
         },
         {
             "id": "4",
-            "name": "رژگونه NYX",
+            "name": "شامپو  NYX",
             "price": 440.000,
+
+            'category': 'مو',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -121,10 +131,13 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 20,
+            'brand': 'مک'
         }, {
             "id": "5",
-            "name": "رژگونه NYX",
+            "name": "روغن مو NYX",
             "price": 440.000,
+
+            'category': 'مو',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -149,11 +162,15 @@ export const productsList = {
             'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
             'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
             'model': 'GFD-JKH',
-            'identificationCode': 12485 - 54
+            'identificationCode': 12485 - 54,
+            'brand': 'آنستازیا'
+
         }, {
             "id": "6",
-            "name": "رژگونه NYX",
+            "name": "رنگ مو NYX",
             "price": 440.000,
+
+            'category': 'مو',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -178,11 +195,14 @@ export const productsList = {
             'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
             'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
             'model': 'GFD-JKH',
-            'identificationCode': 12485 - 54
+            'identificationCode': 12485 - 54,
+            'brand': 'لانکوم'
         }, {
             "id": "7",
-            "name": "رژگونه NYX",
+            "name": "لوسیون بدن NYX",
             "price": 440.000,
+
+            'category': 'پوست',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/2.png'],
@@ -207,11 +227,14 @@ export const productsList = {
             'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
             'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
             'model': 'GFD-JKH',
-            'identificationCode': 12485 - 54
+            'identificationCode': 12485 - 54,
+            'brand': 'لانکوم'
         }, {
             "id": "8",
-            "name": "رژگونه NYX",
+            "name": "شامپو بدن NYX",
             "price": 440.000,
+
+            'category': 'پوست',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/roj.png'],
@@ -238,11 +261,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 10,
+            'brand': 'لانکوم'
         },
         {
             "id": "9",
-            "name": "رژگونه NYX",
+            "name": "خط چشم NYX",
             "price": 440.000,
+
+            'category': 'صورت',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/roj.png'],
@@ -269,11 +295,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 50,
+            'brand': 'لانکوم'
         },
         {
             "id": "10",
             "name": "رژگونه NYX",
             "price": 440.000,
+
+            'category': 'صورت',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/roj.png'],
@@ -300,11 +329,14 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 60,
+            'brand': 'مک'
         },
         {
             "id": "11",
             "name": "رژگونه NYX",
             "price": 440.000,
+
+            'category': 'صورت',
             'discont': ['0', '25%', '30%', '50%'],
 
             'imgsrc': ['/../public/images/roj.png'],
@@ -331,6 +363,109 @@ export const productsList = {
             'model': 'GFD-JKH',
             'identificationCode': 12485 - 54,
             'likes': 20,
+            'brand': 'مک'
+        },
+        {
+            "id": "12",
+            "name": "رژگونه NYX",
+            "price": 440.000,
+
+            'category': 'صورت',
+            'discont': ['0', '25%', '30%', '50%'],
+
+            'imgsrc': ['/../public/images/roj.png'],
+            "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
+            "company": "NYX",
+            "description": "لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. ",
+            'Available': true,
+            'bestSeller': true,
+            'mostVisited': false,
+            'mostPopular': true,
+            // 'newest':''
+            'garanty': '18',
+            'stars': 5,
+            'comments': [
+                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+
+            ],
+            'dimention': 12.5 * 15.65,
+            'weight': 10,
+            'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
+            'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
+            'model': 'GFD-JKH',
+            'identificationCode': 12485 - 54,
+            'likes': 20,
+            'brand': 'مک'
+        },
+        {
+            "id": "13",
+            "name": "رژگونه NYX",
+            "price": 440.000,
+
+            'category': 'صورت',
+            'discont': ['0', '25%', '30%', '50%'],
+
+            'imgsrc': ['/../public/images/roj.png'],
+            "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
+            "company": "NYX",
+            "description": "لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. ",
+            'Available': true,
+            'bestSeller': true,
+            'mostVisited': false,
+            'mostPopular': true,
+            // 'newest':''
+            'garanty': '18',
+            'stars': 5,
+            'comments': [
+                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+
+            ],
+            'dimention': 12.5 * 15.65,
+            'weight': 10,
+            'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
+            'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
+            'model': 'GFD-JKH',
+            'identificationCode': 12485 - 54,
+            'likes': 20,
+            'brand': 'بیوتی'
+        },
+        {
+            "id": "14",
+            "name": "رژگونه NYX",
+            "price": 440.000,
+
+            'category': 'صورت',
+            'discont': ['0', '25%', '30%', '50%'],
+
+            'imgsrc': ['/../public/images/roj.png'],
+            "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
+            "company": "NYX",
+            "description": "لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. ",
+            'Available': true,
+            'bestSeller': true,
+            'mostVisited': false,
+            'mostPopular': true,
+            // 'newest':''
+            'garanty': '18',
+            'stars': 5,
+            'comments': [
+                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+
+            ],
+            'dimention': 12.5 * 15.65,
+            'weight': 10,
+            'specificDescriptin': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است',
+            'specificCharacter': 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است',
+            'model': 'GFD-JKH',
+            'identificationCode': 12485 - 54,
+            'likes': 20,
+            'brand': 'اوردیناری'
         }
     ]
 }

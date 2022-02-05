@@ -1,0 +1,137 @@
+.conatiner {
+    position: absolute;
+    z-index: 11;
+    margin-top: 5px;
+    width: 497px;
+    height: 850px;
+    display: block;
+    background-color: rgb(216, 126, 126);
+    padding: 0 20px;
+    text-align: right;
+}
+
+.header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.categoryHeader {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.categoryHeader span {
+    font-size: 16px;
+}
+
+.line {
+    height: 8px;
+}
+
+.rang {
+    padding: 10px 0;
+    background-color: #eeee;
+}
+
+.rang p {
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* .headerBtn button {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formControl {
+    background-color: #F1F1F1;
+    padding: 15px 20px;
+}
+
+.formControl select {
+    width: 100%;
+    background-color: #F1F1F1;
+    border: none;
+    outline: none;
+}
+
+.formControl select {
+    width: 100%;
+    background-color: #F1F1F1;
+    border: none;
+    outline: none;
+}
+
+.categoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CategoryForm {
+    width: 100%;
+    direction: ltr;
+    background-color: aqua;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input[type=checkbox] {
+    transform: scale(2);
+} */
+
+
+/* 
+.multipleSelection {
+    width: 100%;
+    background-color: #e61989;
+}
+
+.selectBox {
+    position: relative;
+}
+
+.selectBox select {
+    width: 100%;
+    font-weight: bold;
+}
+
+.overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.checkBoxes {
+    display: block;
+    border: 1px #8DF5E4 solid;
+}
+
+.checkBoxes label {
+    display: none;
+}
+
+.checkBoxes label:hover {
+    background-color: #4F615E;
+} */

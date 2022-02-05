@@ -29,4 +29,67 @@ button {
     background-color: transparent;
     outline: none;
     font-family: IRANSans;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.css-1x32roq-MuiList-root {
+    position: absolute !important;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.css-uob957-MuiListSubheader-root {
+    font-family: 'IRANSans', sans-serif !important;
+    font-size: 16px;
+}
+
+.MuiButtonBase-root {
+    background-color: #eeee !important;
+    display: flex !important;
+}
+
+.MuiTypography-body1 {
+    font-family: 'IRANSans', sans-serif !important;
+    font-size: 16px !important;
+    margin-top: 8px !important;
+    padding: 10px 0;
+}
+
+.css-1p823my-MuiListItem-root {
+    background-color: #EEE;
+}
+
+.css-1p823my-MuiListItem-root {}
+
+.MuiFormControlLabel-root {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between !important;
+    margin-right: 0px !important;
+    margin: -5px 0;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #232122 !important;
+}
+
+.css-pwcg7p-MuiCollapse-root {}
+
+.css-dmmspl-MuiFormGroup-root {
+    background-color: #eeee !important;
+    padding: 10px 0;
+}
+
+
+/* ////style for rang filter price container/// */
+
+.css-1gv0vcd-MuiSlider-track {}
+
+.css-eg0mwd-MuiSlider-thumb {
+    display: none;
 }

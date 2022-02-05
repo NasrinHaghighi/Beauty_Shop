@@ -1,0 +1,30 @@
+.line {
+    height: 8px;
+}
+
+.rang {
+    padding: 10px 0;
+    background-color: #eeee;
+}
+
+.rang p {
+    font-size: 16px;
+}
+
+.slider {
+    width: 85%;
+    margin-right: 20px;
+    color: #28282E;
+    height: 15px;
+}
+
+.priceContainer {
+    margin-top: -10px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin-right: 20px;
+    font-weight: 800;
+}

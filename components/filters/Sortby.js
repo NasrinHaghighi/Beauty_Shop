@@ -2,7 +2,11 @@ import React from 'react';
 import styles from './Sortby.module.css'
 import {sortProductsBy} from '../../redux/action/products'
 import { useDispatch, useSelector } from 'react-redux';
-
+import sortIcon from '../../public/images/Group 117.png'
+import Image from 'next/image';
+import Menu from '@mui/material/Menu';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
 
 const data = [  
     {  
@@ -40,11 +44,60 @@ const data = [
 
 const  Sortby =()=> {
   const dispatch =useDispatch()
+
+
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
  
   
   
 
-  return <div className={styles.sortContainer}>
+  return <>
+  <div className={styles.sortBtnConatiner}>
+      
+  <Button
+   className={styles.sortBtn}
+   id="basic-button"
+   aria-controls={open ? 'basic-menu' : undefined}
+   aria-haspopup="true"
+   aria-expanded={open ? 'true' : undefined}
+   onClick={handleClick}
+     > 
+     <Image src={sortIcon}/> <span className={styles.btn}>مرتب سازی بر اساس </span>
+     </Button>
+
+
+     <Menu
+       id="basic-menu"
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        handleClose={handleClose}
+        onClose={handleClose}
+        getContentAnchorEl={null}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        transformOrigin={{ horizontal: "center" }}
+      >
+        <p className={styles.title}>مرتب سازی براساس</p>
+          {data.map((d)=>{
+            return(<MenuItem key={d.id} onClick={handleClose} className={styles.sortitem}>{d.type}</MenuItem>)
+          })}
+         
+
+      </Menu>
+ 
+  </div>
+  
+  {/* <div className={styles.sortContainer}>
     <p>مرتب سازی بر اساس</p>
     <form >
     <div className={styles.sortlist}>
@@ -60,7 +113,8 @@ const  Sortby =()=> {
   
   
   
-  </div>;
+  </div>; */}
+  </>
 }
 
 export default Sortby;

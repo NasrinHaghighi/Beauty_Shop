@@ -48,7 +48,7 @@ input {
 }
 
 .MuiButtonBase-root {
-    background-color: #eeee !important;
+    background-color: #F1F1F1!important;
     display: flex !important;
 }
 
@@ -60,7 +60,7 @@ input {
 }
 
 .css-1p823my-MuiListItem-root {
-    background-color: #EEE;
+    background-color: #F1F1F1
 }
 
 .css-1p823my-MuiListItem-root {}

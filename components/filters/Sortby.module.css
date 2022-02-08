@@ -8,6 +8,20 @@
     background-color: #ffff;
     padding: 0 20px;
     text-align: right;
+    margin-right: 20px;
+}
+
+.sortBtnConatiner {
+    margin-right: 20px;
+}
+
+.sortBtn {
+    font-family: 'IRANSans', sans-serif;
+    width: 210px;
+    height: 54px;
+    background-color: #ffff;
+    font-size: 16px;
+    color: black;
 }
 
 .sortContainer p {
@@ -15,20 +29,24 @@
     margin: 0;
 }
 
-.sortlist {
-    width: 100%;
-    height: 100%;
-}
-
-.itemBtn {
-    border-bottom: 1px solid red;
-    padding: 8px 0 10px 0;
-    width: 100%;
-    font-size: 14px;
+.sortitem {
     text-align: right;
-    cursor: pointer;
+    background-color: #ffff !important;
+    width: 210px !important;
+    margin: 10px !important;
+    padding: 10px !important;
+    direction: rtl !important;
+    font-size: 12px !important;
+    font-family: 'IRANSans', sans-serif;
+    border-bottom: 1px solid #F1F1F1 !important;
 }
 
-.itemBtn:last-of-type {
+.sortitem:last-of-type {
     border-bottom: none !important;
+}
+
+.title {
+    text-align: right;
+    font-size: 14px;
+    padding-right: 10px;
 }

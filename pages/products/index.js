@@ -3,10 +3,12 @@ import Navbar2 from '../../components/navbar/Navbar2'
 import Footer from '../../components/footer/Footer'
 import Filters from '../../components/filters/Filters';
 import ProductList from '../../components/productList/ProductList';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 import { getAllProducts } from '../../redux/action/products'
 import { useDispatch , useSelector } from 'react-redux';
 import {productsList} from '../../servises/productsList'
+
 
 
 
@@ -28,6 +30,7 @@ const ProductsPage=()=> {
   <Navbar2 />
   <Filters />
   <ProductList />
+  <Sidebar/>
   <Footer /> 
   </div>
   </>;

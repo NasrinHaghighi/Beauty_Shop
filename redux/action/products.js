@@ -11,16 +11,16 @@ export const getAllProducts = () => {
 
 
 //sortvalue is parameter to this func //
-export const sortProductsBy = (sortValue = '') => {
+export const sortProductsBy = (sortValue) => {
     return async(dispatch, getState) => {
-        //all products
-        const products = [...getState.products];
+        const products = [...getState().products]
 
         return await dispatch({
             type: 'SORT_PRODUCTS_BY',
             payload: {
-                sortValue: sortValue,
-                sortedProducts: sortValue === '' ? products : products.filter((p) => p.sortValue === true)
+                sortValue,
+                //filter array 
+                sortedProducts: products.filter((p) => p.mostPopular === false)
                     //now render sortProductBy instead of all products//
             }
         })

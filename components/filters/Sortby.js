@@ -89,7 +89,7 @@ const  Sortby =()=> {
       >
         <p className={styles.title}>مرتب سازی براساس</p>
           {data.map((d)=>{
-            return(<MenuItem key={d.id} onClick={handleClose} className={styles.sortitem}>{d.type}</MenuItem>)
+            return(<MenuItem key={d.id} onClick={ () => { handleClose(); dispatch(sortProductsBy(d.value))} } className={styles.sortitem}>{d.type}</MenuItem>)
           })}
          
 

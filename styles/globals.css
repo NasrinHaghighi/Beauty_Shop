@@ -63,7 +63,9 @@ input {
     background-color: #F1F1F1
 }
 
-.css-1p823my-MuiListItem-root {}
+
+/* 
+//TO PUT THE CHECKBOX IN THE LEFT SIDE */
 
 .MuiFormControlLabel-root {
     width: 100%;
@@ -74,11 +76,15 @@ input {
     margin: -5px 0;
 }
 
+
+/* //style for checkbox squar */
+
 .MuiCheckbox-colorSecondary.Mui-checked {
     color: #232122 !important;
 }
 
-.css-pwcg7p-MuiCollapse-root {}
+
+/* STYLE FOR CHECHBOX LINE 3 AND 4 */
 
 .css-dmmspl-MuiFormGroup-root {
     background-color: #eeee !important;
@@ -86,9 +92,15 @@ input {
 }
 
 
-/* ////style for rang filter price container/// */
+/* ///scroll in the brand section */
 
-.css-1gv0vcd-MuiSlider-track {}
+.css-1mk9mw3-MuiList-root {
+    overflow-y: scroll;
+    height: 180px;
+}
+
+
+/* ////style for rang filter price container/// */
 
 .css-eg0mwd-MuiSlider-thumb {
     display: none;

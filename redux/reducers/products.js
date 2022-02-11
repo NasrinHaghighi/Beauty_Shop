@@ -15,6 +15,16 @@ export const sortReducer = (state = '', action) => {
             return state;
     }
 }
+export const amountReducer = (state = 1, action) => {
+    switch (action.type) {
+        case ('INCREMENT'):
+            return action.payload;
+        case ('DECREMENT'):
+            return action.payload;
+        default:
+            return state;
+    }
+}
 
 
 

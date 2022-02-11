@@ -1,16 +1,52 @@
 import React from 'react';
 import {useRouter} from 'next/router'
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
+import Navbar2 from '../../components/navbar/Navbar2';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import Footer from '../../components/footer/Footer';
 
-function ProductItem() {
+import SingleProductInfo from '../../components/singleProduct/SingleProductInfo';
+import ProductImages from '../../components/singleProduct/ProductImages';
+
+
+import styles from './productId.module.css'
+import ReleventProduct from '../../components/singleProduct/ReleventProduct';
+
+
+const ProductSinglePage=()=> {
     const router =useRouter()
-const productId = router.query.productId
-  return <>
+    const productId = router.query.productId
+
+    const products =useSelector(state =>state.products)
+    const singleProduct =products.find((p)=>p.id === productId)
+    //console.log(singleProduct)
+    
    
-   <div>Product Item / {productId} </div>
-    <div>  <Link href='/products'><a>Back home</a></Link>     </div> 
+  
+ 
+
+   return <>
+  <Navbar2 />
+  
+  <div className={styles.ProductSinglePageContainer}>
+    <div className={styles.singlepageBanner}>
+     <div><ProductImages {...singleProduct}/></div>
+     <div><SingleProductInfo {...singleProduct}/></div> 
+    </div>
+  
+<ReleventProduct {...singleProduct}/>
+  </div>
+
+    <Sidebar />
+    <Footer />
   </>
    
+
+
+
+
 }
 
-export default ProductItem;
+export default ProductSinglePage ;
+  

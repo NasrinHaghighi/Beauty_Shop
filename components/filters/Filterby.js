@@ -87,7 +87,9 @@ const products = useSelector(state => state.products)
 
 {/* ****start of fliter menu -HEADER***** */}
          <div className={styles.header}> 
-         <div className={styles.headerBtn}><button type='button' onClick={handelclearAll}>پاک کردن همه</button><button  type='button' onClick={handelSave}>ذخیره</button></div>
+         <div className={styles.headerBtn}>
+           <button type='button' onClick={handelclearAll}>پاک کردن همه</button><button  type='button' onClick={handelSave}>ذخیره</button>
+         </div>
          <p>فیلتر براساس</p>
           </div>
           {/* ****END of fliter menu -HEADER***** */}

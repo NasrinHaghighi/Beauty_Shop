@@ -1,0 +1,16 @@
+.ProductSinglePageContainer {
+    background-color: #D7D7CB;
+    padding: 54px;
+}
+
+.singlepageBanner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1.40fr;
+    gap: 15px 15px;
+    padding: 0;
+}
+
+.releventProduct {
+    background-color: blueviolet;
+}

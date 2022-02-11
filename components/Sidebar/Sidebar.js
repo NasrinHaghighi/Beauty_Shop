@@ -1,4 +1,5 @@
 import React ,{useRef , useEffect}from 'react'
+import { useRouter } from 'next/router';
 import styles from './Sidebar.module.css'
 import Image from 'next/image';
 import closeIcon from '../../public/images/Group 345.png'
@@ -9,7 +10,12 @@ import Submenu from './Submenu';
 import { handelOpenSidebar } from '../../redux/action/banner';
 import { useSelector , useDispatch } from 'react-redux'
 
+
 const Sidebar = () =>{
+  
+  const router = useRouter();
+  
+ 
 
     const ref = useRef();
 
@@ -37,8 +43,8 @@ const Sidebar = () =>{
     return (
         <>
 <div className={styles.wrapper} ref={ref}>
-        {/*bar icon*/}
-         <div className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}><Image src={sidebarIcon}/></div>
+        {/*bar icon **conditional render  to show icon just in th eindex page*/}
+        {router.pathname == '/' ?  <div className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}><Image src={sidebarIcon}/></div> : null}
 
          {/*sidebar page*/}
       <div className={sidebarIsOpen ? styles.sidebarOpen: styles.sidebar}>

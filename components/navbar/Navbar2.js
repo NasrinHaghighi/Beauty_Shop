@@ -12,10 +12,13 @@ import { handelOpenSidebar } from '../../redux/action/banner';
 
 import SearchInput from './SearchInput'
 
+import { useRouter } from 'next/router';
+
 
 
 const Navbar2 =()=> {
-  
+  const router = useRouter();
+  console.log(router)
   const sidebarIsOpen = useSelector(state=>state.sidebarIsOpen)
   const dispatch =useDispatch()
 
@@ -35,7 +38,17 @@ const Navbar2 =()=> {
        {/* ICON BAR */}
       <button type='button' className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}> <Image src={sidebarIcon}/></button> 
         {/* { product && <Link to='/products'> / Products </Link> }   /{title} */}
-        <h3>   <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link> <span> <Image src={arrowLeft}/> </span> <Link href='/products'><a>محصولات</a></Link> </h3>
+        <h3> 
+            <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link>
+             <span> <Image src={arrowLeft}/> </span> 
+             <Link href='/products'><a>محصولات</a></Link>
+
+              {router.pathname !='/products' ? 
+
+              // link for 'کالا' ????
+              <div><span><Image src={arrowLeft}/> </span><Link href='*'><a>کالا</a></Link> </div>
+              
+              :null} </h3>
      </div>
 
 

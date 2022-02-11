@@ -13,7 +13,7 @@ export const getAllProducts = () => {
 //sortvalue is parameter to this func //
 export const sortProductsBy = (sortValue) => {
     return async(dispatch, getState) => {
-        const products = [...getState().products]
+        const products = getState().products
 
         return await dispatch({
             type: 'SORT_PRODUCTS_BY',
@@ -26,6 +26,32 @@ export const sortProductsBy = (sortValue) => {
         })
     }
 }
+export const increment = () => {
+    return async(dispatch, getState) => {
+        console.log(getState)
+        const amount = getState().amount
+
+        return await dispatch({
+            type: 'INCREMENT',
+            payload: amount + 1
+
+
+        })
+    }
+}
+
+//avoid from negative value???//
+export const decrement = () => {
+    return async(dispatch, getState) => {
+        const amount = getState().amount
+
+        return await dispatch({
+            type: 'DECREMENT',
+            payload: amount - 1
+        })
+    }
+}
+
 
 
 //  export const sortProductsBy = (e) => {

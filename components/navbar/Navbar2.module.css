@@ -28,6 +28,7 @@
     .navRight h3 {
         color: #A9A9BA;
         font-size: 20px;
+        display: flex;
     }
     
     .navRight .sidebarIcon {

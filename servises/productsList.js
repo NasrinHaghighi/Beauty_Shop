@@ -4,9 +4,9 @@ export const productsList = {
             "name": "رژ لب NYX",
             "price": 880.000,
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
-            'imgsrc': ['/../public/images/2.png'],
-            "colors": ["#ff0000", "#FF0145", "#F43B86", '#F43B86', '#EFB7B7'],
+            'discont': '25%',
+            'imgsrc': '/images/Component 15 – 17.jpg',
+            "colors": ["#ff0000", "#FF0145", "#F43B86", '#F47B86', '#EFB7B7'],
             "company": "NYX",
             "description": "لورم ایپسوم یا طرح‌نما به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. ",
             'Available': true,
@@ -37,7 +37,8 @@ export const productsList = {
             "price": 500.000,
 
             'category': 'پوست',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
+
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#565D47", "#B49C73", "#323232", "#655D8A"],
@@ -71,7 +72,7 @@ export const productsList = {
             "price": 60.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#EC9CD3', '#6ECB63', '#90AACB'],
@@ -105,7 +106,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'مو',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '50%',
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -138,7 +139,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'مو',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '25%',
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -171,7 +172,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'مو',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '0',
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -203,7 +204,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'پوست',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '0',
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -235,7 +236,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'پوست',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -269,7 +270,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '50%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -303,7 +304,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '50%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -337,7 +338,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -371,7 +372,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '50%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -405,7 +406,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -439,7 +440,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': ['0', '25%', '30%', '50%'],
+            'discont': '30%',
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],

@@ -1,0 +1,10 @@
+.box {
+    direction: rtl;
+}
+
+.tab {
+    font-size: 20px;
+    font-family: 'IRANSans', sans-serif !important;
+    background-color: transparent !important;
+    color: #28282E;
+}

@@ -105,3 +105,10 @@ input {
 .css-eg0mwd-MuiSlider-thumb {
     display: none;
 }
+
+
+/* ///style for tab in single product page */
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #28282E;
+}

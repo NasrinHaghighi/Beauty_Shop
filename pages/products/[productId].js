@@ -12,6 +12,8 @@ import ProductImages from '../../components/singleProduct/ProductImages';
 
 import styles from './productId.module.css'
 import ReleventProduct from '../../components/singleProduct/ReleventProduct';
+import SeeMoreBtn from '../../components/SeeMoreBtn/SeeMoreBtn';
+import TabPart from '../../components/tabs/TabPart';
 
 
 const ProductSinglePage=()=> {
@@ -22,9 +24,6 @@ const ProductSinglePage=()=> {
     const singleProduct =products.find((p)=>p.id === productId)
     //console.log(singleProduct)
     
-   
-  
- 
 
    return <>
   <Navbar2 />
@@ -33,11 +32,14 @@ const ProductSinglePage=()=> {
     <div className={styles.singlepageBanner}>
      <div><ProductImages {...singleProduct}/></div>
      <div><SingleProductInfo {...singleProduct}/></div> 
+ 
     </div>
   
-<ReleventProduct {...singleProduct}/>
-  </div>
-
+     <ReleventProduct {...singleProduct}/>
+     <SeeMoreBtn />
+     <TabPart {...singleProduct}/> 
+   </div>
+  
     <Sidebar />
     <Footer />
   </>

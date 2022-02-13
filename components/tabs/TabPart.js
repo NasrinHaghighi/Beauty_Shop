@@ -7,6 +7,7 @@ import { TabPanel } from '@mui/lab';
 import styles from './TabPart.module.css'
 
 import Description from './Description';
+import Propertytable from './Propertytable'
 
 
 
@@ -30,7 +31,7 @@ const TabPart = ({...singleProduct})=>{
           </TabList>
         </Box>
         <TabPanel value="1"> <Description {...singleProduct}/></TabPanel>
-        <TabPanel value="2">مشخصات کالا</TabPanel>
+        <TabPanel value="2"><Propertytable {...singleProduct}/></TabPanel>
         <TabPanel value="3">امتیاز و دیدگاه کاربران</TabPanel>
       </TabContext>
     </Box>

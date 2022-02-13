@@ -17,9 +17,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 2,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '2' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'عالی', 'commentLikes': '0' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '10' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '35' },
+
 
             ],
             'model': '157-23',
@@ -58,9 +61,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 1,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '35' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '25' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '15' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '0' },
+
 
             ],
             'model': '157-23',
@@ -99,9 +105,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '3' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '2' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '1' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '0' },
+
 
             ],
             'model': '157-23',
@@ -139,9 +148,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '4' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '54' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '0' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '0' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '0' },
+
 
             ],
             'model': '157-23',
@@ -178,9 +190,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '15' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '0' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '25' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '35' },
+
 
             ],
             'model': '157-23',
@@ -218,9 +233,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '12' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '11' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '3' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -257,9 +275,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -296,9 +317,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -335,9 +359,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -374,9 +401,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -413,9 +443,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -452,9 +485,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -491,9 +527,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: 'افتضاحه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: ' فاطمه جعفری', date: ' دی 1400 ', text: 'خیلی ', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',
@@ -530,9 +569,12 @@ export const productsList = {
             'garanty': '18',
             'stars': 5,
             'comments': [
-                { name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'سارا حسینی', date: ' دی 1400 ', text: 'خیلی خوبه' },
-                { name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه' },
+                { 'id': '1', name: 'مریم عسکری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '2', name: 'سارا حسینی', date: ' دی 1400 ', text: ' خوبه', 'commentLikes': '5' },
+                { 'id': '3', name: 'مریم جعفری', date: ' دی 1400 ', text: 'خیلی خوبه', 'commentLikes': '5' },
+                { 'id': '4', name: 'سارا علوی', date: ' دی 1400 ', text: ' خوبه', 'commentLikes': '5' },
+                { 'id': '5', name: 'مریم جعفری', date: ' دی 1400 ', text: 'بد', 'commentLikes': '5' },
+
 
             ],
             'model': '157-23',

@@ -36,7 +36,7 @@ console.log(length)
 })}
 	</tbody>
 </table>
-<button type='button' className={styles.showMore} onClick={openTable}>نمایش کامل نقد و بررسی</button>
+<button type='button' className={styles.showMore} onClick={openTable}>نمایش کامل مشخصات کالا</button>
    </>
   )
 }

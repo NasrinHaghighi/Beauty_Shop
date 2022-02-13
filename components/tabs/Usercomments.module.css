@@ -1,0 +1,59 @@
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title p {
+    color: #676464;
+    font-size: 20px;
+}
+
+.title button {
+    width: 167px;
+    height: 46px;
+    background-color: #ffff;
+    border: 1px solid #676464;
+    ;
+}
+
+.name {
+    color: #676464;
+    font-size: 14px;
+}
+
+.container {
+    border-bottom: 1px solid #676464;
+}
+
+.container p {
+    font-size: 20px;
+    color: #676464;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #676464;
+}
+
+.info1 span {
+    margin: 0 35px;
+}
+
+.info2 span {
+    margin: 0 20px;
+}
+
+.info2 button {
+    font-size: 16px;
+}
+
+.showMore {
+    color: #81815B;
+    font-size: 18px;
+    margin: 20px;
+}

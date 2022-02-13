@@ -1,0 +1,14 @@
+.modal {
+    direction: rtl;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.modalHeader {
+    font-size: 24px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.textfield {
+    width: 100%;
+    outline: none;
+}

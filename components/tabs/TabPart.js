@@ -8,6 +8,7 @@ import styles from './TabPart.module.css'
 
 import Description from './Description';
 import Propertytable from './Propertytable'
+import Usercomments from './Usercomments';
 
 
 
@@ -30,9 +31,9 @@ const TabPart = ({...singleProduct})=>{
             <Tab label="دیدگاه کاربران" value="3" className={styles.tab}/>
           </TabList>
         </Box>
-        <TabPanel value="1"> <Description {...singleProduct}/></TabPanel>
-        <TabPanel value="2"><Propertytable {...singleProduct}/></TabPanel>
-        <TabPanel value="3">امتیاز و دیدگاه کاربران</TabPanel>
+        <TabPanel value="1" className={styles.TabPanel}> <Description {...singleProduct}/></TabPanel>
+        <TabPanel value="2" className={styles.TabPanel}><Propertytable {...singleProduct}/></TabPanel>
+        <TabPanel value="3" className={styles.TabPanel}><Usercomments  {...singleProduct}/></TabPanel>
       </TabContext>
     </Box>
   )

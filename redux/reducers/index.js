@@ -4,6 +4,9 @@ import { openSubmenuReducer } from "./banner";
 import { productsReducer } from './products'
 import { sortReducer } from './products'
 import { amountReducer } from './products'
+import { SelectedColorReducer } from './products'
+import { cartReducer } from "./cart";
+
 
 
 
@@ -13,4 +16,6 @@ export const reducers = combineReducers({
     products: productsReducer,
     sort: sortReducer,
     amount: amountReducer,
+    cart: cartReducer,
+    selectedColor: SelectedColorReducer
 });

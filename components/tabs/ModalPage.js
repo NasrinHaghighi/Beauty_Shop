@@ -57,8 +57,8 @@ const ModalPage=({onClose})=> {
                multiline
                rows={6}
              variant="outlined"
-          className={styles.textfield}/>
-             <Button>ffff</Button>
+             className={styles.textfield}/>
+             <Button >ثبت نظر</Button>
           </Box>
         </Fade>
 

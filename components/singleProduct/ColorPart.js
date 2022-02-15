@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 import styles from './ColorPart.module.css'
+import { useDispatch, useSelector } from 'react-redux'
+import {colorSelected} from '../../redux/action/products'
 
 const  ColorPart=({colors=[]})=> {
+  const dispatch = useDispatch()
     const [mainColor , setMainColor]=useState(colors[0])
    
   return (
@@ -15,8 +18,8 @@ const  ColorPart=({colors=[]})=> {
             key={index}
              style={{background:color}}
               className={mainColor === color? styles.colorBtnActive : styles.colorBtn}
-              onClick= {()=>setMainColor(color)}
-              > 
+              onClick={() => {setMainColor(color);dispatch(colorSelected(color))}}
+                           > 
               
             </button>
           )

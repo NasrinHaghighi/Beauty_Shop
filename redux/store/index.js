@@ -13,6 +13,7 @@ const enhancer = composeEnhancers(
 );
 
 export const store = createStore(reducers, enhancer);
+//console.log(store) ok
 
 
 store.subscribe(() => console.log(store.getState()));

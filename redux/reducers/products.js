@@ -17,10 +17,21 @@ export const sortReducer = (state = '', action) => {
 }
 export const amountReducer = (state = 1, action) => {
     switch (action.type) {
-        case ('INCREMENT'):
+        case 'INCREMENT':
+            //console.log(action.payload)// it is increasing well
             return action.payload;
-        case ('DECREMENT'):
+        case 'DECREMENT':
             return action.payload;
+        default:
+            return state;
+    }
+}
+export const SelectedColorReducer = (state = '', action) => {
+    switch (action.type) {
+        case 'SETCOLOR':
+            //console.log(action.payload)// it is increasing well
+            return action.payload;
+
         default:
             return state;
     }

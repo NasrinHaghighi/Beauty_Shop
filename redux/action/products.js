@@ -34,8 +34,6 @@ export const increment = () => {
         return await dispatch({
             type: 'INCREMENT',
             payload: amount + 1
-
-
         })
     }
 }
@@ -44,10 +42,18 @@ export const increment = () => {
 export const decrement = () => {
     return async(dispatch, getState) => {
         const amount = getState().amount
-
         return await dispatch({
             type: 'DECREMENT',
             payload: amount - 1
+        })
+    }
+}
+export const colorSelected = (color) => {
+    return async(dispatch, getState) => {
+
+        return await dispatch({
+            type: 'SETCOLOR',
+            payload: color
         })
     }
 }

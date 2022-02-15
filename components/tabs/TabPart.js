@@ -15,7 +15,7 @@ import Usercomments from './Usercomments';
 
 const TabPart = ({...singleProduct})=>{
   const {name, garanty, discont ,price ,colors, likes, comments,description, identificationCode} =singleProduct
-  console.log(name)
+  //console.log(name)
     const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {

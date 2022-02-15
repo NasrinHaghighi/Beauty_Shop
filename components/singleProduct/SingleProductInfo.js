@@ -7,15 +7,25 @@ import shareIcon from '../../public/images/Component 30 – 1.png'
 import likeIcon from '../../public/images/like.png'
 import commentsIcon from '../../public/images/bubble-chat.png'
 
-
+import { useDispatch, useSelector } from 'react-redux';
 
 import AmountControl from './AmountControl';
 import ColorPart from './ColorPart';
 
+import {addToCartHandel} from '../../redux/action/cart'
+
+
+
 const SingleProductInfo=({...singleProduct})=> {
+  const amount = useSelector(state => state.amount)
+  const selectedColor = useSelector(state => state.color)
+  const dispatch =useDispatch()
 
    
-    const {name, garanty, discont ,price ,colors, likes, comments} =singleProduct
+    const {name, garanty, discont,id ,price ,colors, likes, comments} =singleProduct
+
+   
+
     
   return <section className={styles.container}>
       <div className={styles.icons}>
@@ -33,12 +43,14 @@ const SingleProductInfo=({...singleProduct})=> {
 
     <div className={styles.discont}>{discont} : تخفیف </div>
     <div className={styles.price}>{price} قیمت : تومان </div>
-    <div className={styles.addToCart}><Link href='/'><a>افزودن به سبد خرید </a></Link></div>
+
+
+    <button className={styles.addToCart} onClick={()=>dispatch(addToCartHandel(singleProduct, amount, selectedColor))}> افزودن به سبد خرید </button>
   
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>
     <p><Image src={likeIcon}/> <span>{likes}</span></p>
-    {/* <p>            <Image src={commentsIcon}/><span>      
+   {/* <p>            <Image src={commentsIcon}/><span>      
        {comments.length}</span></p> */}
     </div>
     </div>

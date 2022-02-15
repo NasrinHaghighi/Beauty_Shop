@@ -7,7 +7,7 @@ import nonFillStar from '../../public/images/Group 34.png'
 
 const Stars=({stars})=> {
     //const products =useSelector(state=>state.products)
-    console.log(stars)
+    //console.log(stars)
   return <div>
         <span>   {stars>=1 ?   <Image src={fillStar} />  :  <Image src={nonFillStar} />} </span>
         <span>   {stars>=2 ?   <Image src={fillStar} />  :  <Image src={nonFillStar} />} </span>

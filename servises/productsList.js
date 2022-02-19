@@ -38,7 +38,8 @@ export const productsList = {
             ],
 
             'likes': 20,
-            'brand': 'لانکوم'
+            'brand': 'لانکوم',
+
         },
         {
             "id": "2",
@@ -83,7 +84,8 @@ export const productsList = {
 
 
             'likes': 30,
-            'brand': 'دیور'
+            'brand': 'دیور',
+
         },
         {
             "id": "3",
@@ -126,7 +128,8 @@ export const productsList = {
             ],
 
             'likes': 40,
-            'brand': 'هدا بیوتی'
+            'brand': 'هدا بیوتی',
+
         },
         {
             "id": "4",
@@ -168,7 +171,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'مک'
+            'brand': 'مک',
+
         },
         {
             "id": "5",
@@ -210,7 +214,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'آنستازیا'
+            'brand': 'آنستازیا',
+
 
         },
         {
@@ -253,7 +258,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'لانکوم'
+            'brand': 'لانکوم',
+
         },
         {
             "id": "7",
@@ -295,7 +301,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': '6',
-            'brand': 'لانکوم'
+            'brand': 'لانکوم',
+
         },
         {
             "id": "8",
@@ -337,7 +344,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 10,
-            'brand': 'لانکوم'
+            'brand': 'لانکوم',
+
         },
         {
             "id": "9",
@@ -379,7 +387,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 50,
-            'brand': 'لانکوم'
+            'brand': 'لانکوم',
+
         },
         {
             "id": "10",
@@ -421,7 +430,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 60,
-            'brand': 'مک'
+            'brand': 'مک',
+
         },
         {
             "id": "11",
@@ -463,7 +473,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'مک'
+            'brand': 'مک',
+
         },
         {
             "id": "12",
@@ -505,7 +516,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'مک'
+            'brand': 'مک',
+
         },
         {
             "id": "13",
@@ -547,7 +559,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': 20,
-            'brand': 'بیوتی'
+            'brand': 'بیوتی',
+
         },
         {
             "id": "14",
@@ -589,7 +602,8 @@ export const productsList = {
                 { 'id': '8', 'value': '12485 - 54', 'title': 'شناسه کالا' },
             ],
             'likes': '30',
-            'brand': 'اوردیناری'
+            'brand': 'اوردیناری',
+
         }
     ]
 }

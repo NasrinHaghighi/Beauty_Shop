@@ -7,7 +7,7 @@ const SeeMoreBtn =()=> {
   return (
     <div className={styles.container}>
      <div className={styles.line}></div>
-      <button type='button' ><Link href={'/'}><a>مشاهده بیشتر</a></Link></button>
+      <button type='button' ><Link href={'/products'}><a>مشاهده بیشتر</a></Link></button>
     </div>
   )
 }

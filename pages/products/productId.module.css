@@ -11,6 +11,18 @@
     padding: 0;
 }
 
-.releventProduct {
-    background-color: blueviolet;
+.icons {
+    width: 60%;
+    height: 214px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

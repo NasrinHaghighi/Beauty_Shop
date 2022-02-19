@@ -1,0 +1,6 @@
+.cartContainer {
+    background-color: rgb(225, 206, 241);
+    padding: 54px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}

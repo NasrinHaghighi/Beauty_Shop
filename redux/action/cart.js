@@ -1,19 +1,58 @@
-export const addToCartHandel = (product, amount, selectedColor) => {
+export const addToCartHandel = (product, mainAmount, mainColor) => {
 
-    //console.log(product)   ok
+
 
     return async(dispatch, getState) => {
         const cart = [...getState().cart]
-        if (cart.length < 1) {
-            cart.push({...product, amount: amount, selectedColor: selectedColor })
-        } else {
-            cart.forEach((item) => {
-                if (item.id === product.id) {
-                    item.amount++
+        let tempItem = cart.find((item) => item.id === product.id + mainColor)
+        if (tempItem) {
+            let tempcart = cart.map((item) => {
+
+                if (item.id === product.id + mainColor) {
+                    console.log('same id')
+                    return {...item, amount: item.amount + mainAmount }
+                } else {
+                    console.log('dif id')
+                    return {...item }
                 }
+
             })
+            cart = tempcart
+        } else {
+            const newItem = {
+                id: product.id + mainColor,
+                amount: mainAmount,
+                color: mainColor,
+                name: product.name,
+                //image: product.images[0].url,
+                price: product.price,
+                discont: product.discont,
+                garanty: product.garanty
+
+            }
+            cart.push(newItem)
         }
 
+        // if (cart.length > 0) {
+
+        //     let alreadyExist = false
+        //     cart.forEach((item) => {
+        //         if (item.id === product.id) {
+        //             alreadyExist = true
+        //             item.amount = item.amount + mainAmount
+        //             item.selectedColor = mainColor
+        //         }
+        //         if (!alreadyExist) {
+        //             cart.push({...product, amount: mainAmount, selectedColor: mainColor })
+        //         }
+
+        //     })
+
+
+        // } else {
+        //     cart.push({...product, amount: mainAmount, selectedColor: mainColor })
+        // }
+        //localStorage.setItem('cart', JSON.stringify(cart))
         return await dispatch({ type: 'ADD_TO_CART', payload: cart })
 
     }

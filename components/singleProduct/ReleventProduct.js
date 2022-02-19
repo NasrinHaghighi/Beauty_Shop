@@ -4,7 +4,7 @@ import Product from '../../components/productList/Product'
 import styles from './ReleventProduct.module.css'
 import { useSelector } from 'react-redux';
 
-const ReleventProduct =({...singleProduct})=> {
+const ReleventProduct =()=> {
 
     const products =useSelector(state =>state.products)
 
@@ -12,6 +12,7 @@ const ReleventProduct =({...singleProduct})=> {
   return (
     <div className={styles.releventProduct}>
     <p>محصولات مرتبط</p>
+   
     <div className={styles.content}>
     {products.slice(0,5).map((item)=>{
     return(

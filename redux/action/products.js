@@ -1,4 +1,5 @@
 import { productsList } from '../../servises/productsList'
+import { cartReducer } from '../reducers/cart'
 
 
 
@@ -26,27 +27,52 @@ export const sortProductsBy = (sortValue) => {
         })
     }
 }
-export const increment = () => {
+export const increment = (product, amount) => {
+    console.log(product, amount)
+
     return async(dispatch, getState) => {
-        console.log(getState)
-        const amount = getState().amount
+        const cart = [...getState().cart]
+
+        if (cart) {
+            cart.map((item) => {
+                if (item.id === product.id) {
+                    let newAmount = item.amount + amount
+                    return {...item, amount: newAmount }
+                } else {
+                    return {...item, amount: amount }
+                }
+            })
+        } else {
+            cart.push({...product, amount: 2 })
+        }
 
         return await dispatch({
             type: 'INCREMENT',
-            payload: amount + 1
+            payload: cart
         })
     }
 }
 
 //avoid from negative value???//
-export const decrement = () => {
+export const decrement = (id) => {
+
     return async(dispatch, getState) => {
-        const amount = getState().amount
+
+        const cart = [...getState().cart]
+        let tempCart = cart.map((item) => {
+            if (item.id === id) {
+                let newAmount = item.amount - 1
+                return {...item, amount: newAmount }
+            } else {
+                return {...item }
+            }
+        })
         return await dispatch({
             type: 'DECREMENT',
-            payload: amount - 1
+            payload: tempCart
         })
     }
+
 }
 export const colorSelected = (color) => {
     return async(dispatch, getState) => {
@@ -83,4 +109,13 @@ export const colorSelected = (color) => {
 //         const products = [...getState().products]
 //         await dispatch({ type: 'GET_ALL_PRODUCTS', payload: productslist.products })
 //     }
+// }
+// if (cart) {
+//     cart.forEach((item) => {
+//         if (item.id === id) {
+//             item.amount++
+//         } 
+//     })
+// }else{
+//     amount++
 // }

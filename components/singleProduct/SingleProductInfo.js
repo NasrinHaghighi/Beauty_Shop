@@ -17,16 +17,31 @@ import {addToCartHandel} from '../../redux/action/cart'
 
 
 const SingleProductInfo=({...singleProduct})=> {
-  const amount = useSelector(state => state.amount)
-  const selectedColor = useSelector(state => state.color)
+
+
   const dispatch =useDispatch()
+  const {name, garanty, discont,id ,price ,colors, likes, comments} =singleProduct
 
-   
-    const {name, garanty, discont,id ,price ,colors, likes, comments} =singleProduct
 
-   
 
-    
+  ///get amount depend of + or - from AmountCntrol component//
+
+  const [mainAmount, setAmount] =useState(1)
+  const increment = () => {
+    setAmount(mainAmount + 1)
+  }
+  const decrement = () => {
+    setAmount(mainAmount -1)
+  }
+
+  ///get selected color depend of user from colorpart component//
+  const [mainColor , setMainColor]=useState(colors[0])
+
+  const selectColor = (color) => {
+    setMainColor(color)
+  }
+
+
   return <section className={styles.container}>
       <div className={styles.icons}>
           <div><Image src={heartIcon}/></div>
@@ -38,14 +53,15 @@ const SingleProductInfo=({...singleProduct})=> {
       <div className={styles.main}>
         <h1>{name}</h1>
       <p>  گارانتی  <span> {garanty} </span>  ماهه</p>
-     <div><AmountControl /></div>
-    <div><ColorPart colors={colors}/></div>
+     <div><AmountControl  increment={increment}  decrement={decrement} mainAmount={mainAmount}/></div>
+    <div><ColorPart {...singleProduct} mainColor={mainColor} selectColor={selectColor}/></div>
+
 
     <div className={styles.discont}>{discont} : تخفیف </div>
     <div className={styles.price}>{price} قیمت : تومان </div>
 
 
-    <button className={styles.addToCart} onClick={()=>dispatch(addToCartHandel(singleProduct, amount, selectedColor))}> افزودن به سبد خرید </button>
+    <button className={styles.addToCart} onClick={()=>dispatch(addToCartHandel(singleProduct, mainAmount,mainColor))}> <Link href='/cart'><a>افزودن به سبد خرید</a></Link></button>
   
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>

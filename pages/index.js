@@ -4,6 +4,9 @@ import styles from '../styles/Home.module.css'
 import Banner from '../components/banner/Banner'
 import Footer from '../components/footer/Footer'
 import Beauty from '../components/beauty/Beauty'
+import ReleventProduct from '../components/singleProduct/ReleventProduct';
+import SeeMoreBtn from '../components/SeeMoreBtn/SeeMoreBtn'
+
 
 
 export default function Home() {
@@ -17,7 +20,10 @@ export default function Home() {
 
       <main className={styles.main}>
          <Banner />
+        <ReleventProduct />
+        <SeeMoreBtn />
          <Beauty />
+      
       </main>
 
       <footer className={styles.footer}>

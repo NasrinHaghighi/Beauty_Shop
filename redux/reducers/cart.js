@@ -7,11 +7,8 @@ export const cartReducer = (state = cart, action) => {
     switch (action.type) {
         case ('ADD_TO_CART'):
             return [...action.payload];
-        case ('INCREMENT'):
-            console.log('inc')
-            return [...action.payload];
-        case ('DECREMENT'):
-            console.log('dec')
+        case ('TOGGLE-AMOUNT-CART'):
+            console.log('to')
             return [...action.payload];
         default:
             return state;

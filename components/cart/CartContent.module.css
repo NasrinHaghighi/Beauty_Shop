@@ -1,3 +1,12 @@
-.cartContent {
+.cartItem {
     background-color: rgb(107, 47, 47);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 10px
+}
+
+.colorBtn {
+    width: 42px;
+    height: 42px;
+    margin: 30px 13px;
 }

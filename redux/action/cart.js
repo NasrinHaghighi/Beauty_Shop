@@ -1,21 +1,14 @@
 export const addToCartHandel = (product, mainAmount, mainColor) => {
-
-
-
     return async(dispatch, getState) => {
         const cart = [...getState().cart]
         let tempItem = cart.find((item) => item.id === product.id + mainColor)
         if (tempItem) {
             let tempcart = cart.map((item) => {
-
                 if (item.id === product.id + mainColor) {
-                    console.log('same id')
                     return {...item, amount: item.amount + mainAmount }
                 } else {
-                    console.log('dif id')
                     return {...item }
                 }
-
             })
             cart = tempcart
         } else {
@@ -28,35 +21,42 @@ export const addToCartHandel = (product, mainAmount, mainColor) => {
                 price: product.price,
                 discont: product.discont,
                 garanty: product.garanty
-
             }
             cart.push(newItem)
         }
-
-        // if (cart.length > 0) {
-
-        //     let alreadyExist = false
-        //     cart.forEach((item) => {
-        //         if (item.id === product.id) {
-        //             alreadyExist = true
-        //             item.amount = item.amount + mainAmount
-        //             item.selectedColor = mainColor
-        //         }
-        //         if (!alreadyExist) {
-        //             cart.push({...product, amount: mainAmount, selectedColor: mainColor })
-        //         }
-
-        //     })
-
-
-        // } else {
-        //     cart.push({...product, amount: mainAmount, selectedColor: mainColor })
-        // }
-        //localStorage.setItem('cart', JSON.stringify(cart))
         return await dispatch({ type: 'ADD_TO_CART', payload: cart })
 
     }
 
+}
+export const toggleAmountcart = (id, value) => {
+
+    return async(dispatch, getState) => {
+        const cart = [...getState().cart]
+        let tempcart = cart.map((item) => {
+
+            if (item.id === id) {
+                console.log('same')
+                if (value === 'inc') {
+                    let newAmount = item.amount + 1
+                    if (newAmount > 10) {
+                        newAmount = 10
+                    }
+                    return {...item, amount: newAmount }
+                }
+                if (value === 'dec') {
+                    let newAmount = item.amount - 1
+                    if (newAmount < 1) {
+                        newAmount = 1
+                    }
+                    return {...item, amount: newAmount }
+                }
+            } else {
+                return item
+            }
+        })
+        return await dispatch({ type: 'TOGGLE-AMOUNT-CART', payload: tempcart })
+    }
 }
 
 //localStorage.setItem('cart', JSON.stringify(cart)????

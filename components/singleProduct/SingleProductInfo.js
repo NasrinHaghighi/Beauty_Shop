@@ -61,7 +61,7 @@ const SingleProductInfo=({...singleProduct})=> {
     <div className={styles.price}>{price} قیمت : تومان </div>
 
 
-    <button className={styles.addToCart} onClick={()=>dispatch(addToCartHandel(singleProduct, mainAmount,mainColor))}> <Link href='/cart'><a>افزودن به سبد خرید</a></Link></button>
+    <button className={styles.addToCart} onClick={()=>dispatch(addToCartHandel(singleProduct, mainAmount, mainColor))}> <Link href='/cart'><a>افزودن به سبد خرید</a></Link></button>
   
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>

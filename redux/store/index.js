@@ -16,4 +16,4 @@ export const store = createStore(reducers, enhancer);
 //console.log(store) ok
 
 
-store.subscribe(() => console.log(store.getState()));
+//store.subscribe(() => console.log(store.getState()));

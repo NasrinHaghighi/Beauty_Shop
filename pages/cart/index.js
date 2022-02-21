@@ -11,10 +11,12 @@ function CartPage() {
   return (<>
   
         <Navbar2 />
+        <div className={styles.cartContainerMain}>
+        <p>سبد خرید</p>
         <div className={styles.cartContainer}>
-       
-        <CartTotal />
+          <CartTotal />
         <Cartcontent />
+        </div>
         </div>
         <Footer />
         </>

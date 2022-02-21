@@ -1,0 +1,25 @@
+.modal {
+    text-align: center;
+    background-color: #fff;
+    width: 610px;
+    height: 180px;
+    border: none;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.btn button {
+    width: 140px;
+    height: 46px;
+    margin: 0 5px;
+}
+
+.yes {
+    background-color: #B8B8BC;
+}
+
+.no {
+    background-color: #F1F1F1;
+}

@@ -4,7 +4,7 @@ export const productsList = {
             "name": "رژ لب NYX",
             "price": 880.000,
             'category': 'صورت',
-            'discont': '25%',
+            'discont': 25,
             'imgsrc': '/images/Component 15 – 17.jpg',
             "colors": ["#ff0000", "#FF0145", "#F43B86", '#F47B86', '#EFB7B7'],
             "company": "NYX",
@@ -47,7 +47,7 @@ export const productsList = {
             "price": 500.000,
 
             'category': 'پوست',
-            'discont': '30%',
+            'discont': 30,
 
 
             'imgsrc': ['/../public/images/2.png'],
@@ -93,7 +93,7 @@ export const productsList = {
             "price": 60.000,
 
             'category': 'صورت',
-            'discont': '30%',
+            'discont': 30,
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#EC9CD3', '#6ECB63', '#90AACB'],
@@ -137,7 +137,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'مو',
-            'discont': '50%',
+            'discont': 50,
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -180,7 +180,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'مو',
-            'discont': '25%',
+            'discont': 25,
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -267,7 +267,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'پوست',
-            'discont': '0',
+            'discont': 0,
 
             'imgsrc': ['/../public/images/2.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -310,7 +310,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'پوست',
-            'discont': '30%',
+            'discont': 30,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -353,7 +353,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '50%',
+            'discont': 50,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -396,7 +396,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '50%',
+            'discont': 50,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -439,7 +439,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '30%',
+            'discont': 30,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -482,7 +482,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '50%',
+            'discont': 50,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -525,7 +525,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '30%',
+            'discont': 30,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],
@@ -568,7 +568,7 @@ export const productsList = {
             "price": 440.000,
 
             'category': 'صورت',
-            'discont': '30%',
+            'discont': 30,
 
             'imgsrc': ['/../public/images/roj.png'],
             "colors": ["#ff0000", '#FF6363', '#FFAB76', '#D22779', '#FFAFAF'],

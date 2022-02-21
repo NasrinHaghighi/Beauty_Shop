@@ -6,6 +6,8 @@ import { sortReducer } from './products'
 import { amountReducer } from './products'
 import { SelectedColorReducer } from './products'
 import { cartReducer } from "./cart";
+import { totalReducer } from './cart'
+import { discontReducer } from './cart'
 
 
 
@@ -17,5 +19,8 @@ export const reducers = combineReducers({
     sort: sortReducer,
     amount: amountReducer,
     cart: cartReducer,
-    selectedColor: SelectedColorReducer
+    selectedColor: SelectedColorReducer,
+    total: totalReducer,
+    discont: discontReducer
+
 });

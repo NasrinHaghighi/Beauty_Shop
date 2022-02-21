@@ -1,6 +1,15 @@
-.cartContainer {
-    background-color: rgb(225, 206, 241);
+.cartContainerMain {
+    background-color: #D7D7CB;
     padding: 54px 20px;
+}
+
+.cartContainerMain p {
+    text-align: right;
+    margin-right: 50px;
+}
+
+.cartContainer {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 0 24px;
 }

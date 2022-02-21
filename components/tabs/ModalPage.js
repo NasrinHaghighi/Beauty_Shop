@@ -61,8 +61,7 @@ const ModalPage=({onClose})=> {
              <Button >ثبت نظر</Button>
           </Box>
         </Fade>
-
-     
+ 
       </Modal>
   )
 }

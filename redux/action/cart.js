@@ -29,6 +29,19 @@ export const addToCartHandel = (product, mainAmount, mainColor) => {
     }
 
 }
+export const removeItemCart = (id) => {
+    return async(dispatch, getState) => {
+        const cart = [...getState().cart]
+        const tempcart = cart.filter((item) => {
+            return item.id !== id
+        })
+
+
+        return await dispatch({ type: 'REMOVE_ITEM_CART', payload: tempcart })
+
+    }
+
+}
 export const toggleAmountcart = (id, value) => {
 
     return async(dispatch, getState) => {
@@ -56,6 +69,38 @@ export const toggleAmountcart = (id, value) => {
             }
         })
         return await dispatch({ type: 'TOGGLE-AMOUNT-CART', payload: tempcart })
+    }
+}
+export const cartTotal = () => {
+    return async(dispatch, getState) => {
+        const cart = [...getState().cart]
+        const { total_price } = cart.reduce((total, cartItem) => {
+            const { price, amount } = cartItem
+
+            total.total_price += price * amount
+
+            return total
+        }, {
+            total_price: 0
+        })
+        return await dispatch({ type: 'CART_TOTAL', payload: total_price })
+    }
+}
+export const cartDiscont = () => {
+    return async(dispatch, getState) => {
+        const cart = [...getState().cart]
+        const { total_discont } = cart.reduce((total, cartItem) => {
+            const { price, amount, discont } = cartItem
+
+            total.total_discont += (price * discont * amount) / 100
+
+            return total
+        }, {
+            total_discont: 0
+        })
+
+
+        return await dispatch({ type: 'CART_DISCONT', payload: total_discont })
     }
 }
 

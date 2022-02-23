@@ -43,12 +43,11 @@ const Navbar2 =()=> {
              <span> <Image src={arrowLeft}/> </span> 
              <Link href='/products'><a>محصولات</a></Link>
 
-              {router.pathname !='/products' ? 
-
-              // link for 'کالا' ????
-              <div><span><Image src={arrowLeft}/> </span><Link href='*'><a>کالا</a></Link> </div>
+              {router.pathname !='/products' ?  <div><span><Image src={arrowLeft}/> </span><Link href='*'><a>کالا</a></Link> </div>:null} 
               
-              :null} </h3>
+              {/* {router.pathname ='/cart' ?<div><span><Image src={arrowLeft}/> </span><Link href='*'><a>uuu</a></Link> </div> : null} */}
+ 
+              </h3>
      </div>
 
 

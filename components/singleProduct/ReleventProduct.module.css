@@ -1,11 +1,11 @@
 .releventProduct {
     margin: 30px 0;
-    text-align: center;
 }
 
-.releventProduct p {
+.title {
     font-size: 28px;
     color: #484035;
+    text-align: center;
 }
 
 .content {

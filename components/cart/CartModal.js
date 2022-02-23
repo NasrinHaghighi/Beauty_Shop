@@ -47,7 +47,7 @@ const CartModal =({onClose , id}) =>{
          </Typography>
         <Typography id="transition-modal-description" sx={{ mt: 2 }} className={styles.btn}>
        
-           <button className={styles.yes} onClick={()=>{dispatch(removeItemCart(id)); onClose}}>بله</button> 
+           <button className={styles.yes} onClick={()=>{dispatch(removeItemCart(id)); onClose()}}>بله</button> 
            <button onClick={onClose} className={styles.no}>خیر</button>
         </Typography>
         

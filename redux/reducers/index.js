@@ -8,6 +8,7 @@ import { SelectedColorReducer } from './products'
 import { cartReducer } from "./cart";
 import { totalReducer } from './cart'
 import { discontReducer } from './cart'
+import { isLoginReducer } from './login'
 
 
 
@@ -21,6 +22,7 @@ export const reducers = combineReducers({
     cart: cartReducer,
     selectedColor: SelectedColorReducer,
     total: totalReducer,
-    discont: discontReducer
+    discont: discontReducer,
+    isLogin: isLoginReducer
 
 });

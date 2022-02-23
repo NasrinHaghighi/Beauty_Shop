@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux'
 import styles from './CartTotal.module.css'
 
 
-const CartTotal=()=> {
+
+const CartTotal=({handelChangeContent, changeContent})=> {
   const total= useSelector(state=> state.total)
   const discont=useSelector(state=> state.discont)
   const cart=useSelector(state=> state.cart)
@@ -28,9 +29,10 @@ const CartTotal=()=> {
         </div>
         <div className={styles.secendRow}>
         <button className={styles.finalprice}>  {total_price} : قیمت نهایی</button>
-        <button className={styles.continue}>ادامه فرآیند خرید</button>
+        <button className={styles.continue} onClick={handelChangeContent}>{changeContent?  'پرداخت': 'ادامه فرایند خرید'}</button>
         </div>
       </div>
+    
 
     </div>
   )

@@ -11,7 +11,7 @@ const ReleventProduct =()=> {
 
   return (
     <div className={styles.releventProduct}>
-    <p>محصولات مرتبط</p>
+    <div className={styles.title}>محصولات مرتبط</div>
    
     <div className={styles.content}>
     {products.slice(0,5).map((item)=>{

@@ -1,0 +1,86 @@
+.cartContinue {}
+
+.address {
+    background-color: #F4F4EC;
+    font-size: 18px;
+    text-align: right;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+}
+
+.cahngeAddress {
+    color: #81815B;
+    margin-right: 38px;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+    align-items: center;
+}
+
+.cahngeAddress span {
+    margin-right: 10px;
+}
+
+
+/*secend row*/
+
+.info {
+    background-color: #F4F4EC;
+}
+
+.cartItems {}
+
+.cartItem {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cartItem div {
+    width: 210px;
+    height: 200px;
+}
+
+
+/*--------table---*/
+
+.table {
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header span {
+    margin-right: 10px;
+}
+
+.mainTable {
+    border-collapse: collapse;
+    width: 100%;
+    direction: rtl;
+    color: #000033;
+    font-size: 20px;
+    table-layout: fixed;
+    width: 100%;
+    margin: 10px;
+}
+
+.row {
+    border: 1px solid #707070;
+    text-align: center;
+    padding: 15px;
+}
+
+.cell {
+    padding: 15px;
+    border: 1px solid #707070;
+}

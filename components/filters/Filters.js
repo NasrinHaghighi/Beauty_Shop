@@ -5,9 +5,8 @@ import Image from 'next/image';
 import sortIcon from '../../public/images/Group 117.png'
 import Sortby from './Sortby';
 import Filterby from './Filterby';
-import Menu from '@mui/material/Menu';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+
+
 
 
 

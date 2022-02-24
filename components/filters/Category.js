@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import List from '@mui/material/List';
 import { ListItem, ListItemButton, Box, Slider } from '@mui/material';
 import { ListItemText } from '@mui/material';
@@ -13,38 +13,19 @@ import { IoChevronDown } from "react-icons/io5";
 
 
 
-const Category =()=> {
-    const products = useSelector(state => state.products)
+const Category =({categoryChangeHandel})=> {
+  const dispatch=useDispatch()
+ ///open and close collapse//
     const [open, setOpen] = React.useState(false);
+    const handleClick = () => {
+      setOpen(!open);
+      };
 
 //  //check for uniqe categorey//
+const products = useSelector(state => state.products)
 let categories = [...new Set(products.map(item => item.category))];
 //console.log(categories)
-
-    const [checkedState, setCheckedState] = useState(
-      new Array(categories.length).fill(false)
-  );
-  console.log(checkedState)
-
-
-    const handleClick = () => {
-          setOpen(!open);
-          };
-
-    //make a array of the barnd that clicked//      
- const handleChange = (position) => {
-     const updatedCheckedState = checkedState.map((item, index) =>
-        index === position ? !item : item
-            );
-     setCheckedState(updatedCheckedState);
-     //console.log(updatedCheckedState)
-    const selectedBrand =updatedCheckedState.map((item, i)=>{
-     if (item === true){
-       return categories[i]
-     }
-    })
- console.log(selectedBrand)
-      }
+    
    
   return <>
     
@@ -66,7 +47,7 @@ let categories = [...new Set(products.map(item => item.category))];
                  return(
                   <ListItem>
                  <FormControlLabel 
-                  control={<Checkbox id={c} checked={checkedState[index]} name={c} onChange={()=>handleChange(index)} />}
+                  control={<Checkbox value={c} onChange={categoryChangeHandel} />}
                   label={c}
             />
                 </ListItem>

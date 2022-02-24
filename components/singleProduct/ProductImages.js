@@ -14,6 +14,7 @@ const images =[
 
 const ProductImages=({...singleProduct}) =>{
     const {imgsrc} =  singleProduct
+    console.log(imgsrc, singleProduct)
    
   return (
       <div className={styles.conatiner}>
@@ -23,7 +24,7 @@ const ProductImages=({...singleProduct}) =>{
 
     {/* STYLES****???  https://maxmarinich.github.io/react-alice-carousel/#custom-components*/}
     <div className={styles.gallary}>
-        {images.map((i)=><div key={i.id} className={styles.img}><Image src={Roj}/></div>)}
+        {/* {imgsrc.map((i)=><div key={i.id} className={styles.img}><Image src={Roj}/></div>)} */}
     </div>
     </div>
   )

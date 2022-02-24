@@ -1,16 +1,16 @@
-import * as React from 'react';
+import React , { useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import styles from './FilterRang.module.css'
 
-function valuetext(value) {
-  return `${value}°C`;
+const valuetext=(value) =>{
+  return `${value}`;
 }
 
 const minDistance = 10;
 
- const FilterRange =() =>{
-  const [value1, setValue1] = React.useState([20, 37]);
+ const FilterRange =({minPriceChangeHandel ,maxPriceChangeHandel}) =>{
+  const [value1, setValue1] = React.useState([200, 800]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -24,7 +24,13 @@ const minDistance = 10;
     }
   };
 
+useEffect(() => {
+  minPriceChangeHandel(value1[0])
+}, [value1[0]])
 
+useEffect(() => {
+  maxPriceChangeHandel(value1[1])
+}, [value1[1]])
 
   return (
       <>
@@ -35,12 +41,15 @@ const minDistance = 10;
       className={styles.slider}
         getAriaLabel={() => 'Minimum distance'}
         value={value1}
+        min={100}
+        max={1000}
         onChange={handleChange1}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap
       />
-      <di className={styles.priceContainer}> <p>{value1[0]}</p> <p>{value1[1]}</p>  </di>
+      <di className={styles.priceContainer}> <p>{value1[0]}</p> <p>{value1[1]}</p>  </di> 
+
      
     </Box>
     </>

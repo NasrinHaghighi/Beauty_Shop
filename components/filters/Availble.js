@@ -6,12 +6,12 @@ import { FormGroup } from '@mui/material';
 
 import styles from './Availble.module.css'
 
-const  Availble=()=>{
+const  Availble=({availableChangeHandel})=>{
   return <>
   
   
   <FormGroup className={styles.availble}>
-           <FormControlLabel control={<Checkbox defaultChecked />} label='فقط کالا های موجود'/>
+           <FormControlLabel control={<Checkbox defaultChecked onChange={availableChangeHandel} />} label='فقط کالا های موجود'/>
           </FormGroup>
   
   </>;

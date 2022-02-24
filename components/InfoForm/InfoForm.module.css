@@ -1,0 +1,38 @@
+.infoForm {
+    width: 100%;
+    background-color: #F4F4EC;
+    direction: rtl;
+}
+
+.form {
+    padding: 25px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.input input {
+    height: 72px;
+}
+
+.input input::placeholder {
+    font-size: 16px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.cityState {
+    display: flex;
+    width: 100%;
+}
+
+.cityState .input {
+    width: 100%;
+}

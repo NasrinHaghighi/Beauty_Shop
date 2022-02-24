@@ -3,11 +3,11 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { FormGroup } from '@mui/material';
 import styles from './Withdiscont.module.css'
-const Withdiscont=()=> {
+const Withdiscont=({discontChangeHandel})=> {
   return <>
   
   <FormGroup className={styles.discont}>
-           <FormControlLabel control={<Checkbox defaultChecked />} label='فقط کالا های تخفیف دار'/>
+           <FormControlLabel control={<Checkbox onChange={discontChangeHandel}/>} label='فقط کالا های تخفیف دار'/>
           </FormGroup>
   
   </>;

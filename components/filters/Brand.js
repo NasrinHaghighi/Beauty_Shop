@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState}from 'react';
 import { useSelector } from 'react-redux';
 import List from '@mui/material/List';
 import { ListItem, ListItemButton, Box, Slider } from '@mui/material';
@@ -11,20 +11,19 @@ import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 
 
-const Brand =()=> {
+const Brand =({barndChangeHandel})=> {
     const products = useSelector(state => state.products)
+    
+   
+    //open and clsoe collapse of brand//
     const [open, setOpen] = React.useState(false);
     const handleClick = () => {
           setOpen(!open);
           };
-          const handleChange = (e)=>{
-          console.log(e.target.checked)
-         }
-     //  //check for uniqe categorey//
+  
+   
+     //  //check for uniqe brand//
      let brands = [...new Set(products.map(item => item.brand))];
-    console.log(brands)
-
-
 
   return <>
     
@@ -46,7 +45,7 @@ const Brand =()=> {
                  return(
                   <ListItem>
                  <FormControlLabel 
-                  control={<Checkbox  onChange={handleChange} />}
+                  control={<Checkbox value={c} onChange={barndChangeHandel} />}
                   label={c}
             />
                 </ListItem>

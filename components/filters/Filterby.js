@@ -3,7 +3,6 @@ import Select from 'react-select';
 import { components } from "react-select";
 
 import styles from './Filterby.module.css'
-import { useSelector, useDispatch } from 'react-redux';
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 import Category from './Category';
@@ -29,14 +28,16 @@ import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
+import { useSelector, useDispatch } from 'react-redux';
+import {fillterProducts} from '../../redux/action/products'
+
 
 
 
 const Filterby = () => {
-const products = useSelector(state => state.products)
-
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const dispatch=useDispatch()
+  //open and close collapse//
+   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -45,15 +46,38 @@ const products = useSelector(state => state.products)
      setAnchorEl(null);
    };
 
-   const handelclearAll=()=>{
-     console.log('clear all')
-   }
-   const handelSave=()=>{
-    console.log('save all')
-   }
- 
+     //make a array from barnd that user selected//
+   const [selectedBrand, setSelectedBrand] =useState([])
+   const barndChangeHandel = (e)=>{
+         setSelectedBrand([...selectedBrand,e.target.value])
+     }
+       //make a array from category that user selected//
+   const [selectedCategory, setselectedCategory] =useState([])
+   const categoryChangeHandel = (e)=>{
+        setselectedCategory([...selectedCategory,e.target.value])
+    }
+    //min price and max price/
+    const [minPrice, selectMinPrice] =useState(100)
+    const minPriceChangeHandel = (mp)=>{
+      selectMinPrice(mp)
+     }
+     const [maxPrice, selectMaxPrice] =useState(1000)
+     const maxPriceChangeHandel = (mp)=>{
+       selectMaxPrice(mp)
+      }
 
+      ///discont///
+      const [discont, setDiscont] =useState(false)
+     const discontChangeHandel = ()=>{
+      setDiscont(!discont)
+      } 
+        ///available///
+        const [availability, setavailable] =useState(true)
+        const availableChangeHandel = ()=>{
+          setavailable(!availability)
+         } 
 
+   
   return(
     <div className={styles.filterBtnConatiner}>
     <Button
@@ -85,29 +109,48 @@ const products = useSelector(state => state.products)
         {/* ****start of fliter menu***** */}
        <div className={styles.filterMenu}>
 
-{/* ****start of fliter menu -HEADER***** */}
+         {/* ****start of fliter menu -HEADER***** */}
          <div className={styles.header}> 
          <div className={styles.headerBtn}>
-           <button type='button' onClick={handelclearAll}>پاک کردن همه</button><button  type='button' onClick={handelSave}>ذخیره</button>
+           <button type='button'>پاک کردن همه</button>
+
+
+           <button  type='button'  onClick={handleClose} onClick={()=>{handleClose();dispatch(fillterProducts(
+             selectedBrand, 
+             selectedCategory, 
+             minPrice,
+             maxPrice,
+             discont,
+             availability
+             ))}}>
+             ذخیره</button>
+
+
          </div>
          <p>فیلتر براساس</p>
           </div>
           {/* ****END of fliter menu -HEADER***** */}
         <MenuItem className={styles.filteritems}>
    
-   <Category />
+   <Category categoryChangeHandel={categoryChangeHandel}/>
+        </MenuItem>
+
+
+        <MenuItem className={styles.filteritems}>
+   <Brand barndChangeHandel={barndChangeHandel} />
+     
+        </MenuItem>
+
+
+
+        <MenuItem className={styles.filteritems}>
+   <Withdiscont discontChangeHandel={discontChangeHandel}/>
         </MenuItem>
         <MenuItem className={styles.filteritems}>
-   <Brand />
+  <Availble availbleChangeHandel={availableChangeHandel}/>
         </MenuItem>
         <MenuItem className={styles.filteritems}>
-   <Withdiscont />
-        </MenuItem>
-        <MenuItem className={styles.filteritems}>
-  <Availble />
-        </MenuItem>
-        <MenuItem className={styles.filteritems}>
-<FilterRang />
+<FilterRang minPriceChangeHandel={minPriceChangeHandel} maxPriceChangeHandel={maxPriceChangeHandel}/>
         </MenuItem>
        </div>
       </Menu>
@@ -116,191 +159,7 @@ const products = useSelector(state => state.products)
     </div>
   )
 
-    //    const [open, setOpen] = React.useState(false);
-    //   const [openSecend, setOpenSecend] = React.useState(false);
-    //   const handleClick = () => {
-    //     setOpen(!open);
-    //   };
-    //   const handleChange = (e)=>{
-    //     console.log(e.target.checked)
-    //   }
-    //   const handleChange1 =(e)=>{
-    //     console.log(e)
-    //   }
-
-
-    //  //check for uniqe categorey//
-    // let categories = [...new Set(products.map(item => item.category))];
-    // //console.log(categories)
-    // let brands = [...new Set(products.map(item => item.brand))];
-    // //console.log(brands)
-    // //how to put farsi category name in the options//
-    // //how to make the first option whit the name of category//
-
-
-
-
-    //   return (
-
-
-    //     <List
-    //     sx={{ width: '100%', maxWidth: 470}}
-    //      component="nav"
-    //      aria-labelledby="nested-list-subheader"
-    //      style={{zIndex:10, margin:10 , padding:10 ,backgroundColor:'#fff',direction:'rtl' }}
-
-    //      subheader={
-    //       <ListSubheader component="div" id="nested-list-subheader">
-    //  <div className={styles.header}>
-    //    <p>فیلتر براساس</p> 
-    //  <div><button>ذخیره</button> <button type='button' onClick={handleClose}>پاک کردن همه</button></div>
-    //  </div>
-    //       </ListSubheader>
-
-    //     }
-
-    //      >
-
-    //         <ListItemButton >
-    //         <ListItemText primary="دسته بندی"  style={{textAlign:'right'}}  onClick={handleClick}/>
-    //           {open ? <IoChevronUp /> : <IoChevronDown />}  
-    //         </ListItemButton>
-
-    //         <Collapse in={open} timeout="auto" unmountOnExit>
-    //         <List component="div" disablePadding>
-    //           {categories.map((c)=>{
-    //             return(
-    //               <ListItem>
-    //               <FormControlLabel 
-
-    //               control={<Checkbox  onChange={handleChange} />}
-    //               label={c}
-    //             />
-    //             </ListItem>
-    //             )
-    //           })}
-    //         </List>
-    //         </Collapse>
-
-    // <div className={styles.line}></div>
-
-    //         <ListItemButton >
-    //         <ListItemText primary="برند"  style={{textAlign:'right'}}  onClick={()=>setOpenSecend(!openSecend)}/>
-    //           {openSecend ? <IoChevronUp /> : <IoChevronDown />}  
-    //         </ListItemButton>
-    //         <Collapse in={openSecend} timeout="auto" unmountOnExit style={{overflowY:'scroll', height:100}}>
-    //         <List component="div" disablePadding>
-    //           {brands.map((c)=>{
-    //             return(
-    //               <ListItem>
-    //               <FormControlLabel 
-
-    //               control={<Checkbox  onChange={handleChange} />}
-    //               label={c}
-    //             />
-    //             </ListItem>
-    //             )
-    //           })}
-    //         </List>
-    //         </Collapse>
-
-    //         {/* line 3..................... */}
-    //         <div className={styles.line}></div>
-    //         <FormGroup>
-    //            <FormControlLabel control={<Checkbox defaultChecked />} label="فقط کالاهای موجود
-    //       " />
-    //        </FormGroup>
-    //        <div className={styles.line}></div>
-    //        <FormGroup>
-    //            <FormControlLabel control={<Checkbox defaultChecked />} label="فقط کالا های تخفیف دار   " />
-    //        </FormGroup>
-    //         {/* line 4 .........................*/}
-    //         <FilterRang />
-
-    //       </List>
-
-
-
-    //)
-
 }
 
 export default Filterby;
 
-
-
-{
-    /* <select name="categoty"  className='categoty' className={styles.select}> 
-    {/* first option by disable */
-}
-///{categories.map((c, index)=><option className={styles.options} key={index} >{c}</option>) }
-
-//</select> */}
-
-
-
-
-{
-    /* <Multiselect
-    options={categories} // Options to display in the dropdown
-    isObject={false}
-    //selectedValues={'bbbbbbbb'} // Preselected value to persist in dropdown
-    onSelect={(e)=>console.log(e)} // Function will trigger on select event
-    onRemove={(e)=>console.log(e)} // Function will trigger on remove event
-    //displayValue="name" // Property name to display in the dropdown options
-    showCheckbox
-    /> */
-}
-
-
-//// <div className={styles.categoryHeader}> <p>دسته بندی</p><span>2</span> </div>
-
-// <form className={styles.CategoryForm}>
-// <div className={styles.item}> <input type="checkbox" id="skin" name="skin" className={styles.input}/>
-//  <label for="skin">پوست</label>
-// </div>
-// <div className={styles.item}> <input type="checkbox" id="hair" name="hair" className={styles.input}/>
-//  <label for="hair">مو</label>
-// </div>
-// <div className={styles.item}> <input type="checkbox" id="face" name="face" className={styles.input}/>
-//  <label for="face">صورت</label>
-// </div>
-
-// </form>
-
-// <div className={styles.categoryHeader}> <p>برند</p><span>2</span> </div>
-
-///  <Select
-// styles={customStyles}
-// defaultValue={selectedOption}
-// onChange={onChange}
-// width='460px'
-// marginTop='0'
-// options={options}
-// components={{
-//     Option
-//   }}
-// isMulti
-// placeholder={'دسته بندی'}
-// />
-
-
-{
-    /* <div className={styles.categoryContainer}>
-    <div className={styles.categoryHeader}> <span>دسته بندی</span> <span><IoChevronUp/></span></div>
-    <ul>
-    {categories.map((c, index)=>{return()})}
-    </ul>
-    </div> */
-}
-
-
-{
-    /* <div className={styles.header}>
-    <p>فیلتر بر اساس</p>
-    <div className={styles.headerBtn}>
-        <button type="submit">ذخیره</button>
-        <button type="button">پاک کردن همه</button>
-    </div>
-    </div> */
-}

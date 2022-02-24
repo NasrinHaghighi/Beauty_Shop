@@ -11,6 +11,7 @@ import CartContinue from '../../components/cart/CartContinue'
 import SeeMoreBtn from '../../components/SeeMoreBtn/SeeMoreBtn'
 import ReleventProduct from '../../components/singleProduct/ReleventProduct'
 import styles from './CartPage.module.css'
+import InfoForm from '../../components/InfoForm/InfoForm'
 
 function CartPage() {
   const [changeContent, setChangeContent]=useState(false)
@@ -26,8 +27,8 @@ function CartPage() {
         <div className={styles.cartContainer}>
         <CartTotal handelChangeContent={handelChangeContent} changeContent={changeContent}/>
      
-
-        {changeContent ? <CartContinue />: <Cartcontent />}
+{/* <InfoForm /> */}
+         {changeContent ? <CartContinue />: <Cartcontent />} 
       
         </div>
         <ReleventProduct />

@@ -10,11 +10,11 @@ export const getAllProducts = () => {
 export const fillterProducts = (selectedBrand, selectedCategory, minPrice, maxPrice, discont, availability) => {
 
     return async dispatch => {
+
         let tempProducts = [...productsList.products]
-       
+
         tempProducts = tempProducts.filter((p) => {
-            if (p.price >= minPrice && p.price<=maxPrice) {
-          
+            if (p.price >= minPrice && p.price <= maxPrice) {
                 return tempProducts
             }
         })
@@ -22,36 +22,49 @@ export const fillterProducts = (selectedBrand, selectedCategory, minPrice, maxPr
             tempProducts = tempProducts.filter((p) => {
                 return selectedBrand.indexOf(p.brand) !== -1
             })
-
         }
         if (selectedCategory.length > 0) {
             tempProducts = tempProducts.filter((p) => {
                 return selectedCategory.indexOf(p.category) !== -1
             })
-
         }
         if (discont === true) {
             tempProducts = tempProducts.filter((p) => {
-              if(p.discont > 0){
-                  return tempProducts
-              }
+                if (p.discont > 0) {
+                    return tempProducts
+                }
+            })
+        }
+        if (availability === true) {
+            tempProducts = tempProducts.filter((p) => {
+                if (p.Available === true) {
+                    return tempProducts
+                }
             })
 
+        } else {
+            return tempProducts
         }
-        if (availability) {
-            tempProducts =tempProducts.filter((p)=>{
-             if(p.Available === true){
-                 return tempProducts
-             }
-            })
-        }else{
-            return tempProducts=[...productsList.products]
-        }
-        
-        
-console.log(tempProducts)
 
         return await dispatch({ type: 'FILLTER_PRODUCTS', payload: tempProducts })
+    }
+}
+export const sortProducts = (value, filtered) => {
+    return async dispatch => {
+        if (value === 'bestSeller') {
+            filtered = filtered.filter((p) => {
+                return p.bestSeller === true
+            })
+        }
+        return await dispatch({ type: 'SORT_PRODUCTS', payload: filtered })
+    }
+}
+
+
+export const clearAllProducts = () => {
+    return async dispatch => {
+        let tempProducts = [...productsList.products]
+        return await dispatch({ type: 'CLEAR_ALL_PRODUCTS', payload: tempProducts })
     }
 }
 

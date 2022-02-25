@@ -11,7 +11,7 @@ const  Availble=({availableChangeHandel})=>{
   
   
   <FormGroup className={styles.availble}>
-           <FormControlLabel control={<Checkbox defaultChecked onChange={availableChangeHandel} />} label='فقط کالا های موجود'/>
+           <FormControlLabel control={<Checkbox  onChange={availableChangeHandel} />} label='فقط کالا های موجود'/>
           </FormGroup>
   
   </>;

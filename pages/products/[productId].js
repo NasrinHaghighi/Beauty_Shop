@@ -31,7 +31,7 @@ const ProductSinglePage=()=> {
     
 
    return <>
-  <Navbar2 />
+  <Navbar2 title1='کالا'/>
   
   <div className={styles.ProductSinglePageContainer}>
     <div className={styles.singlepageBanner}>

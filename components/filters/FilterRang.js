@@ -10,7 +10,7 @@ const valuetext=(value) =>{
 const minDistance = 10;
 
  const FilterRange =({minPriceChangeHandel ,maxPriceChangeHandel}) =>{
-  const [value1, setValue1] = React.useState([200, 800]);
+  const [value1, setValue1] = React.useState([100, 1000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {

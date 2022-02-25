@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 
 
 
-const Navbar2 =()=> {
+const Navbar2 =({title1, title2})=> {
   const router = useRouter();
   console.log(router)
   const sidebarIsOpen = useSelector(state=>state.sidebarIsOpen)
@@ -36,9 +36,19 @@ const Navbar2 =()=> {
      </div>
      <div className={styles.navRight}>
        {/* ICON BAR */}
+          
       <button type='button' className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}> <Image src={sidebarIcon}/></button> 
+       <h3>
+       <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link>
+       <span> <Image src={arrowLeft}/> </span> 
+             <Link href='/products'><a>محصولات</a></Link>
+             {title1 ?  <span> <Image src={arrowLeft}/> {title1} </span>   :null}
+             {title1 && title2 ?  <div><span> <Image src={arrowLeft}/> {title2} </span> </div>  :null}
+       </h3>
+       
+       
         {/* { product && <Link to='/products'> / Products </Link> }   /{title} */}
-        <h3> 
+        {/* <h3> 
             <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link>
              <span> <Image src={arrowLeft}/> </span> 
              <Link href='/products'><a>محصولات</a></Link>
@@ -47,7 +57,7 @@ const Navbar2 =()=> {
               
               {/* {router.pathname ='/cart' ?<div><span><Image src={arrowLeft}/> </span><Link href='*'><a>uuu</a></Link> </div> : null} */}
  
-              </h3>
+              {/* </h3> */} 
      </div>
 
 

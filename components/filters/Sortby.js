@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Sortby.module.css'
-import {sortProductsBy} from '../../redux/action/products'
+
+import {sortProducts} from '../../redux/action/products'
+
 import { useDispatch, useSelector } from 'react-redux';
 import sortIcon from '../../public/images/Group 117.png'
 import Image from 'next/image';
@@ -30,19 +32,10 @@ const data = [
       type: "جدید ترین", 
       value:'newest' 
     },  
-    {  
-      id: 5, 
-      type: "گران ترین ها",  
-      value:'mostexpensive'
-    },  
-    {  
-        id:6,  
-        type: "ارزان ترین ها", 
-        value:'cheapest' 
-      }, 
-  ];  
+     ];  
 
 const  Sortby =()=> {
+  const filtered =useSelector(state=>state.filtered)
   const dispatch =useDispatch()
 
 
@@ -55,7 +48,6 @@ const  Sortby =()=> {
   const handleClose = () => {
     setAnchorEl(null);
   };
- 
   
   
 
@@ -75,7 +67,7 @@ const  Sortby =()=> {
 
 
      <Menu
-       id="basic-menu"
+        id="basic-menu"
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         handleClose={handleClose}
@@ -89,7 +81,7 @@ const  Sortby =()=> {
       >
         <p className={styles.title}>مرتب سازی براساس</p>
           {data.map((d)=>{
-            return(<MenuItem key={d.id} onClick={ () => { handleClose(); dispatch(sortProductsBy(d.value))} } className={styles.sortitem}>{d.type}</MenuItem>)
+            return(<MenuItem key={d.id} onClick={ () => {handleClose(); dispatch(sortProducts(d.value, filtered))}} className={styles.sortitem}>{d.type}</MenuItem>)
           })}
          
 

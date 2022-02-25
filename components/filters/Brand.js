@@ -10,6 +10,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 
+import styles from './Brand.module.css'
 
 const Brand =({barndChangeHandel})=> {
     const products = useSelector(state => state.products)
@@ -39,8 +40,8 @@ const Brand =({barndChangeHandel})=> {
                {open ? <IoChevronUp /> : <IoChevronDown />}  
             </ListItemButton>
 
-            <Collapse in={open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
+            <Collapse in={open} timeout="auto" TransitionProps={{ unmountOnExit: true }}>
+            <List component="div" className={styles.list}>
                {brands.map((c)=>{
                  return(
                   <ListItem>

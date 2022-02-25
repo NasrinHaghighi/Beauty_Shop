@@ -30,6 +30,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 import { useSelector, useDispatch } from 'react-redux';
 import {fillterProducts} from '../../redux/action/products'
+import {clearAllProducts} from '../../redux/action/products'
 
 
 
@@ -92,7 +93,8 @@ const Filterby = () => {
 
      
      <Menu
-       id="basic-menu"
+     
+        id="basic-menu"
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         handleClose={handleClose}
@@ -112,10 +114,10 @@ const Filterby = () => {
          {/* ****start of fliter menu -HEADER***** */}
          <div className={styles.header}> 
          <div className={styles.headerBtn}>
-           <button type='button'>پاک کردن همه</button>
+           <button type='button' onClick={()=>{handleClose();dispatch(clearAllProducts())}}>پاک کردن همه</button>
 
 
-           <button  type='button'  onClick={handleClose} onClick={()=>{handleClose();dispatch(fillterProducts(
+           <button  type='button'  onClick={()=>{handleClose();dispatch(fillterProducts(
              selectedBrand, 
              selectedCategory, 
              minPrice,

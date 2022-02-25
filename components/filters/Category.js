@@ -41,13 +41,13 @@ let categories = [...new Set(products.map(item => item.category))];
                {open ? <IoChevronUp /> : <IoChevronDown />}  
             </ListItemButton>
 
-            <Collapse in={open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
+            <Collapse in={open} timeout="auto" TransitionProps={{ unmountOnExit: true }}>
+            <List component="div">
                {categories.map((c, index)=>{
                  return(
-                  <ListItem>
+                  <ListItem >
                  <FormControlLabel 
-                  control={<Checkbox value={c} onChange={categoryChangeHandel} />}
+                  control={<Checkbox value={c}  onChange={categoryChangeHandel} />}
                   label={c}
             />
                 </ListItem>

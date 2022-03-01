@@ -107,3 +107,16 @@ input {
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: #28282E;
 }
+
+
+/*---------slider in the single page product--------------*/
+
+.slide.selected {
+    margin: 0 auto;
+    background-color: #F3F6F2;
+}
+
+.slide.selected div img {
+    width: 550px;
+    height: 550px;
+}

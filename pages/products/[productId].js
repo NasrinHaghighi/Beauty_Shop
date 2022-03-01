@@ -27,11 +27,9 @@ const ProductSinglePage=()=> {
 
     const products =useSelector(state =>state.products)
     const singleProduct =products.find((p)=>p.id === productId)
-    //console.log(singleProduct)
-    
-
+ 
    return <>
-  <Navbar2 title1='کالا'/>
+  <Navbar2 title1='کالا' productId={productId}/>
   
   <div className={styles.ProductSinglePageContainer}>
     <div className={styles.singlepageBanner}>

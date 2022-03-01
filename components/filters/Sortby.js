@@ -32,6 +32,16 @@ const data = [
       type: "جدید ترین", 
       value:'newest' 
     },  
+    {  
+      id: 5,     
+      type: "گران ترین", 
+      value:'mostExpensive' 
+    }, 
+    {  
+      id: 6,     
+      type: "ارزان ترین", 
+      value:'mostCheapest' 
+    }, 
      ];  
 
 const  Sortby =()=> {
@@ -78,6 +88,7 @@ const  Sortby =()=> {
         }}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         transformOrigin={{ horizontal: "center" }}
+        className={styles.sortmenu}
       >
         <p className={styles.title}>مرتب سازی براساس</p>
           {data.map((d)=>{

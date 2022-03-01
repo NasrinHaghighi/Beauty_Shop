@@ -6,6 +6,7 @@ import Footer from '../../components/footer/Footer'
 import Cartcontent from '../../components/cart/CartContent'
 import CartTotal from '../../components/cart/CartTotal'
 import CartContinue from '../../components/cart/CartContinue'
+import Sidebar from '../../components/Sidebar/Sidebar'
 
 
 import SeeMoreBtn from '../../components/SeeMoreBtn/SeeMoreBtn'
@@ -21,7 +22,7 @@ function CartPage() {
   }
   return (<>
   
-        <Navbar2  title1='کالا' title2='سبد خرید' />
+        <Navbar2  title2='سبد خرید'/>
         <div className={styles.cartContainerMain}>
         <p>سبد خرید</p>
         <div className={styles.cartContainer}>
@@ -34,6 +35,7 @@ function CartPage() {
         <ReleventProduct />
         <SeeMoreBtn/>
         </div>
+        <Sidebar />
         <Footer />
         </>
   )

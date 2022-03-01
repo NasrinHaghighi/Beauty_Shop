@@ -13,9 +13,9 @@ import {productsList} from '../../servises/productsList'
 
 
 const ProductsPage=()=> {
- 
+ const products =useSelector(state=>state.products)
   const dispatch = useDispatch();
-
+//console.log(products)  //ok
 //???  empty array    ??//
 
 
@@ -27,7 +27,7 @@ const ProductsPage=()=> {
 
   return <>
   <div>
-  <Navbar2 />
+  <Navbar2 title0='محصولات'/>
   <Filters />
   <ProductList />
   <Sidebar/>

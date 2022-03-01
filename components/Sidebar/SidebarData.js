@@ -11,10 +11,16 @@ import myfavoraite from '../../public/images/Group 335.png'
 
 export const sidebarData = [{
         title: 'پروفایل',
-        path: '/',
+        path: '',
         icon: < Image src = { profile }
         />,
         subNav: [{
+                title: 'پروفایل من',
+                path: '/profile',
+                icon: < Image src = { profile }
+                />
+            },
+            {
                 title: 'سفارش های من',
                 path: '/profile/myorder',
                 icon: < Image src = { myorder }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
+import {useRouter} from 'next/router'
 import { useSelector , useDispatch } from 'react-redux';
 import sidebarIcon from '../../public/images/Group 27.png'
 import logo from '../../public/images/Group 10.png'
@@ -12,18 +13,15 @@ import { handelOpenSidebar } from '../../redux/action/banner';
 
 import SearchInput from './SearchInput'
 
-import { useRouter } from 'next/router';
 
 
-
-const Navbar2 =({title1, title2})=> {
-  const router = useRouter();
-  console.log(router)
-  const sidebarIsOpen = useSelector(state=>state.sidebarIsOpen)
+const Navbar2 =({productId, title1,title2,title3,title0, ...products})=> {
   const dispatch =useDispatch()
+const activeRout =useRouter()
 
 
-
+ 
+    
   return <>
   <div  className={styles.navContainer}>
       <div className={styles.nav}>
@@ -38,27 +36,23 @@ const Navbar2 =({title1, title2})=> {
        {/* ICON BAR */}
           
       <button type='button' className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}> <Image src={sidebarIcon}/></button> 
+      
+      
+       <h3><Link href='/'><a>فروشگاه بیوتی شاپ</a></Link></h3>
        <h3>
-       <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link>
-       <span> <Image src={arrowLeft}/> </span> 
-             <Link href='/products'><a>محصولات</a></Link>
-             {title1 ?  <span> <Image src={arrowLeft}/> {title1} </span>   :null}
-             {title1 && title2 ?  <div><span> <Image src={arrowLeft}/> {title2} </span> </div>  :null}
+   
+      {title0 ? <span> <Image src={arrowLeft}/> <Link href='/products'><a>{title0}</a></Link></span>  : null}
+       {title1 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title1}</a></Link>  </span>  :null}  
+       {title2 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title2}</a></Link>  </span>  :null} 
+    
        </h3>
-       
-       
-        {/* { product && <Link to='/products'> / Products </Link> }   /{title} */}
-        {/* <h3> 
-            <Link href='/'><a>فروشگاه بیوتی شاپ</a></Link>
-             <span> <Image src={arrowLeft}/> </span> 
-             <Link href='/products'><a>محصولات</a></Link>
+       {title3 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title3}</a></Link>  </span>  :null} 
+     
+   
+    
 
-              {router.pathname !='/products' ?  <div><span><Image src={arrowLeft}/> </span><Link href='*'><a>کالا</a></Link> </div>:null} 
-              
-              {/* {router.pathname ='/cart' ?<div><span><Image src={arrowLeft}/> </span><Link href='*'><a>uuu</a></Link> </div> : null} */}
- 
-              {/* </h3> */} 
-     </div>
+       
+    </div>
 
 
         </div>
@@ -70,4 +64,10 @@ const Navbar2 =({title1, title2})=> {
 export default Navbar2;
 
 
-{/* <span> <Image src={arrowLeft}/> </span>  <Link href='/'><a>کالا</a></Link> */}
+{/* <span> <Image src={arrowLeft}/> </span>  <Link href='/'><a>کالا</a></Link> 
+ <span> <Image src={arrowLeft}/> <Link href='/products'><a>محصولات</a></Link></span> 
+        {title2 ?         <span>  <Image src={arrowLeft}/> <Link href='/*'><a>{title2}</a></Link>  </span>    :null}  
+           {title3 ?  <span> <Image src={arrowLeft}/> <Link href='/products'><a>{title3}</a></Link></span>   :null}
+
+
+*/}

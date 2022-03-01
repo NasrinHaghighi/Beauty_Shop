@@ -41,22 +41,43 @@ export const fillterProducts = (selectedBrand, selectedCategory, minPrice, maxPr
                     return tempProducts
                 }
             })
-
         } else {
             return tempProducts
         }
-
         return await dispatch({ type: 'FILLTER_PRODUCTS', payload: tempProducts })
     }
 }
 export const sortProducts = (value, filtered) => {
     return async dispatch => {
+        let tempProducts = [...productsList.products]
         if (value === 'bestSeller') {
-            filtered = filtered.filter((p) => {
-                return p.bestSeller === true
-            })
+            if (filtered.length > 0) {
+                tempProducts = filtered.filter((p) => {
+                    return p.bestSeller === true
+                })
+            } else {
+                tempProducts = tempProducts.filter((p) => {
+                    return p.bestSeller === true
+                })
+            }
+
         }
-        return await dispatch({ type: 'SORT_PRODUCTS', payload: filtered })
+        if (value === 'mostExpensive') {
+            if (filtered.length > 0) {
+                tempProducts = filtered.sort((a, b) => b.price - a.price)
+            } else {
+                tempProducts = tempProducts.sort((a, b) => b.price - a.price)
+            }
+        }
+        if (value === 'mostCheapest') {
+            if (filtered.length > 0) {
+                tempProducts = filtered.sort((a, b) => a.price - b.price)
+            } else {
+                tempProducts = tempProducts.sort((a, b) => a.price - b.price)
+            }
+        }
+
+        return await dispatch({ type: 'SORT_PRODUCTS', payload: tempProducts })
     }
 }
 

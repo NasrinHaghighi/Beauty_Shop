@@ -18,7 +18,7 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
 
   return <div className={styles.container}>
    
-      <Image src={Roj} />
+      <img src={imgsrc[0].src} />
       <div className={styles.infoContainer}>
           <p>{name}</p>
           <p>قیمت : {price} تومان</p>

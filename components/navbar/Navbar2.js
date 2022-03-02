@@ -40,14 +40,13 @@ const activeRout =useRouter()
       
        <h3><Link href='/'><a>فروشگاه بیوتی شاپ</a></Link></h3>
        <h3>
-   
-      {title0 ? <span> <Image src={arrowLeft}/> <Link href='/products'><a>{title0}</a></Link></span>  : null}
+       {title0 ? <span> <Image src={arrowLeft}/> <Link href='/products'><a>{title0}</a></Link></span>  : null}
        {title1 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title1}</a></Link>  </span>  :null}  
        {title2 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title2}</a></Link>  </span>  :null} 
-    
        </h3>
+       <h3>
        {title3 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title3}</a></Link>  </span>  :null} 
-     
+       </h3>
    
     
 

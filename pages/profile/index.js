@@ -5,16 +5,19 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import Aside from '../../components/profile/Aside'
 import styles from './profileIndex.module.css'
 
+
+import Register from '../../components/Register/Register'
+
 const profileIndex =() =>{
+  
   return (
       
     <div>
       <Navbar2 title3='پروفایل' />  
-         {/* <div className={styles.mainContainer}>
-         
-         <div>fffffffffffff</div>
+         <div className={styles.mainContainer}>
+          <Register />
          <Aside />
-         </div>  */}
+         </div> 
          <Sidebar /> 
          <Footer />
     </div>

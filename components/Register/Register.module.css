@@ -1,0 +1,26 @@
+.form {
+    background-color: #D7D7CB;
+    padding-top: 40px;
+    padding-right: 24px;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+.label {
+    font-size: 14px;
+    color: #555577;
+    margin-bottom: 15px;
+}
+
+.input {
+    height: 72px;
+    padding: 15px;
+}

@@ -1,3 +1,33 @@
 .main {
-    background-color: aquamarine;
+    background-color: #373736;
+}
+
+.imgContainer {
+    text-align: center;
+    padding: 75px 65px;
+}
+
+.imgContainer img {
+    width: 130px;
+    height: 130px;
+}
+
+.asideUl {
+    text-align: right;
+    color: #fff;
+}
+
+.asideLi {
+    margin: 43px 10px;
+}
+
+.asideLiactive {
+    background-color: #fff;
+    color: black;
+}
+
+.title {}
+
+.icon {
+    color: #fff;
 }

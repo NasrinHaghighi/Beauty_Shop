@@ -28,7 +28,7 @@ export const sidebarData = [{
             },
             {
                 title: 'آدرس های من',
-                path: '/profile/myadress',
+                path: '/profile/myaddress',
                 icon: < Image src = { myadress }
                 />,
             },

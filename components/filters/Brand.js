@@ -1,30 +1,38 @@
 import React , {useState}from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import List from '@mui/material/List';
 import { ListItem, ListItemButton, Box, Slider } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { Collapse } from '@mui/material';
-import { textAlign } from '@mui/system';
+
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
+import {barndChangeHandel} from '../../redux/action/products'
 
 import styles from './Brand.module.css'
 
-const Brand =({barndChangeHandel})=> {
+
+const Brand =()=> {
+  const dispatch =useDispatch()
     const products = useSelector(state => state.products)
-    
+    const filterOption= useSelector(state=>state.filterOption)
+    const selectedBrand =filterOption.map((item)=>{
+      return item.selectedBrand
+    })
+    console.log(selectedBrand)
+ const brandss =selectedBrand
    
+
     //open and clsoe collapse of brand//
     const [open, setOpen] = React.useState(false);
     const handleClick = () => {
           setOpen(!open);
           };
-  
-   
      //  //check for uniqe brand//
      let brands = [...new Set(products.map(item => item.brand))];
+     
 
   return <>
     
@@ -42,16 +50,25 @@ const Brand =({barndChangeHandel})=> {
 
             <Collapse in={open} timeout="auto" TransitionProps={{ unmountOnExit: true }}>
             <List component="div" className={styles.list}>
-               {brands.map((c)=>{
-                 return(
+            {brands.map((c)=>{
+             
+            return(  
+
                   <ListItem>
-                 <FormControlLabel 
-                  control={<Checkbox value={c} onChange={barndChangeHandel} />}
-                  label={c}
-            />
-                </ListItem>
-                )
+                 <FormControlLabel control={<Checkbox
+                  type="checkbox"
+                  name={c}
+                 value={c}
+                
+                 onClick={(e)=>{dispatch(barndChangeHandel(e,filterOption))}} 
+                  />} 
+               label={c}/> 
+                   </ListItem>
+             )
               })}
+
+
+
             </List>
             </Collapse>
             </List>
@@ -59,3 +76,6 @@ const Brand =({barndChangeHandel})=> {
 }
 
 export default Brand;
+{/*  <ListItem>
+                  <FormControlLabel control={<Checkbox  value={c} onChange={(e)=>dispatch(barndChangeHandel(e,filterOption ))} />}  label={c}/>
+                  </ListItem> */}

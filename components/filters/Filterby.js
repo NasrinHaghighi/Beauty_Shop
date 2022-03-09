@@ -30,12 +30,14 @@ import MenuItem from '@mui/material/MenuItem';
 
 import { useSelector, useDispatch } from 'react-redux';
 import {fillterProducts} from '../../redux/action/products'
+import { fillterOptinHandler} from '../../redux/action/products'
 import {clearAllProducts} from '../../redux/action/products'
 
 
 
 
 const Filterby = () => {
+ 
   const dispatch=useDispatch()
   //open and close collapse//
    const [anchorEl, setAnchorEl] = React.useState(null);
@@ -47,36 +49,6 @@ const Filterby = () => {
      setAnchorEl(null);
    };
 
-     //make a array from barnd that user selected//
-   const [selectedBrand, setSelectedBrand] =useState([])
-   const barndChangeHandel = (e)=>{
-         setSelectedBrand([...selectedBrand,e.target.value])
-     }
-       //make a array from category that user selected//
-   const [selectedCategory, setselectedCategory] =useState([])
-   const categoryChangeHandel = (e)=>{
-        setselectedCategory([...selectedCategory,e.target.value])
-    }
-    //min price and max price/
-    const [minPrice, selectMinPrice] =useState(100)
-    const minPriceChangeHandel = (mp)=>{
-      selectMinPrice(mp)
-     }
-     const [maxPrice, selectMaxPrice] =useState(1000)
-     const maxPriceChangeHandel = (mp)=>{
-       selectMaxPrice(mp)
-      }
-
-      ///discont///
-      const [discont, setDiscont] =useState(false)
-     const discontChangeHandel = ()=>{
-      setDiscont(!discont)
-      } 
-        ///available///
-        const [availability, setavailable] =useState(true)
-        const availableChangeHandel = ()=>{
-          setavailable(!availability)
-         } 
 
    
   return(
@@ -117,14 +89,8 @@ const Filterby = () => {
            <button type='button' onClick={()=>{handleClose();dispatch(clearAllProducts())}}>پاک کردن همه</button>
 
 
-           <button  type='button'  onClick={()=>{handleClose();dispatch(fillterProducts(
-             selectedBrand, 
-             selectedCategory, 
-             minPrice,
-             maxPrice,
-             discont,
-             availability
-             ))}}>
+           <button  type='button'  onClick={()=>{handleClose()}}>
+           {/* dispatch(fillterOptinHandler(filterOption)) */}
              ذخیره</button>
 
 
@@ -134,25 +100,28 @@ const Filterby = () => {
           {/* ****END of fliter menu -HEADER***** */}
         <MenuItem className={styles.filteritems}>
    
-   <Category categoryChangeHandel={categoryChangeHandel}/>
+   <Category />
+        </MenuItem>
+       
+
+        <MenuItem className={styles.filteritems}>
+   <Brand  />
+ 
         </MenuItem>
 
 
-        <MenuItem className={styles.filteritems}>
-   <Brand barndChangeHandel={barndChangeHandel} />
-     
-        </MenuItem>
-
-
 
         <MenuItem className={styles.filteritems}>
-   <Withdiscont discontChangeHandel={discontChangeHandel}/>
+   <Withdiscont />
+  
         </MenuItem>
         <MenuItem className={styles.filteritems}>
-  <Availble availbleChangeHandel={availableChangeHandel}/>
+  <Availble />
+ 
         </MenuItem>
         <MenuItem className={styles.filteritems}>
-<FilterRang minPriceChangeHandel={minPriceChangeHandel} maxPriceChangeHandel={maxPriceChangeHandel}/>
+<FilterRang />
+
         </MenuItem>
        </div>
       </Menu>
@@ -165,3 +134,34 @@ const Filterby = () => {
 
 export default Filterby;
 
+
+     //make a array from barnd that user selected//
+  //  const [selectedBrand, setSelectedBrand] =useState([])
+  //  const barndChangeHandel = (e)=>{
+  //        setSelectedBrand([...selectedBrand,e.target.value])
+  //    }
+       //make a array from category that user selected//
+  //  const [selectedCategory, setselectedCategory] =useState([])
+  //  const categoryChangeHandel = (e)=>{
+  //       setselectedCategory([...selectedCategory,e.target.value])
+  //   }
+  //   //min price and max price/
+  //   const [minPrice, selectMinPrice] =useState(100)
+  //   const minPriceChangeHandel = (mp)=>{
+  //     selectMinPrice(mp)
+  //    }
+  //    const [maxPrice, selectMaxPrice] =useState(1000)
+  //    const maxPriceChangeHandel = (mp)=>{
+  //      selectMaxPrice(mp)
+  //     }
+
+  //     ///discont///
+  //     const [discont, setDiscont] =useState(false)
+  //    const discontChangeHandel = ()=>{
+  //     setDiscont(!discont)
+  //     } 
+  //       ///available///
+  //       const [availability, setavailable] =useState(true)
+  //       const availableChangeHandel = ()=>{
+  //         setavailable(!availability)
+  //        } 

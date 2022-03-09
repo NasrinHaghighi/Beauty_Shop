@@ -1,7 +1,11 @@
 import React , { useEffect} from 'react';
 import Box from '@mui/material/Box';
+import { useDispatch , useSelector} from 'react-redux';
 import Slider from '@mui/material/Slider';
 import styles from './FilterRang.module.css'
+import {minpriceChangeHandel} from '../../redux/action/products'
+
+import {maxpriceChangeHandel} from '../../redux/action/products'
 
 const valuetext=(value) =>{
   return `${value}`;
@@ -9,7 +13,17 @@ const valuetext=(value) =>{
 
 const minDistance = 10;
 
- const FilterRange =({minPriceChangeHandel ,maxPriceChangeHandel}) =>{
+ const FilterRange =() =>{
+   const dispatch =useDispatch()
+   const filterOption= useSelector(state=>state.filterOption)
+  //  const minPrice=filterOption.map((item)=>{
+  //    return item.minPrice
+  //  })
+  //  const maxPrice=filterOption.map((item)=>{
+  //   return item.maxPrice
+  // })
+ 
+
   const [value1, setValue1] = React.useState([100, 1000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
@@ -24,13 +38,14 @@ const minDistance = 10;
     }
   };
 
-useEffect(() => {
-  minPriceChangeHandel(value1[0])
-}, [value1[0]])
+// useEffect(() => {
+//   dispatch(minpriceChangeHandel(value1[0],filterOption))
+//   }, [value1[0]])
 
-useEffect(() => {
-  maxPriceChangeHandel(value1[1])
-}, [value1[1]])
+// useEffect(() => {
+//   dispatch(maxpriceChangeHandel(value1[1],filterOption))
+//   }, [value1[1]])
+
 
   return (
       <>
@@ -43,6 +58,7 @@ useEffect(() => {
         value={value1}
         min={100}
         max={1000}
+        step={100}
         onChange={handleChange1}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}

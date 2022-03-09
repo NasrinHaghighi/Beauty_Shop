@@ -9,11 +9,12 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
+import {categotyChangeHandel} from '../../redux/action/products'
 
 
 
 
-const Category =({categoryChangeHandel})=> {
+const Category =()=> {
   const dispatch=useDispatch()
  ///open and close collapse//
     const [open, setOpen] = React.useState(false);
@@ -23,10 +24,15 @@ const Category =({categoryChangeHandel})=> {
 
 //  //check for uniqe categorey//
 const products = useSelector(state => state.products)
+const filterOption= useSelector(state=>state.filterOption)
 let categories = [...new Set(products.map(item => item.category))];
 //console.log(categories)
     
-   
+  //  const categoryChangeHandel=(e)=>{
+  //   filterOption.map((item)=>{
+  //     item.selectedCategory.push(e.target.value)
+  //   })
+  //  }
   return <>
     
          <List
@@ -47,7 +53,7 @@ let categories = [...new Set(products.map(item => item.category))];
                  return(
                   <ListItem >
                  <FormControlLabel 
-                  control={<Checkbox value={c}  onChange={categoryChangeHandel} />}
+                  control={<Checkbox value={c}  onChange={(e)=>dispatch(categotyChangeHandel(e, filterOption))}/>}
                   label={c}
             />
                 </ListItem>

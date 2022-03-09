@@ -1,0 +1,34 @@
+.table {
+    width: 100%;
+    text-align: right;
+    border-collapse: collapse;
+    border: 1px solid #B8B8BC;
+    table-layout: fixed;
+    font-size: 20px;
+    background-color: #F1F1F1;
+}
+
+.th {
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #B8B8BC;
+    padding: 20px;
+}
+
+.td {
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #B8B8BC;
+    padding: 20px;
+}
+
+.tdLast {
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #B8B8BC;
+    padding: 20px;
+    display: flex;
+    color: #81815B;
+    justify-content: flex-start;
+    align-items: center;
+}

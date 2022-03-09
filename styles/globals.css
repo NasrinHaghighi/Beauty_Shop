@@ -35,12 +35,27 @@ button {
 input {
     border: none;
     outline: none;
+    font-family: 'IRANSans', sans-serif;
 }
 
 input::placeholder {
     font-family: 'IRANSans', sans-serif;
     font-size: 16px;
     color: #393960;
+}
+
+select {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+option {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
 }
 
 .css-1x32roq-MuiList-root {

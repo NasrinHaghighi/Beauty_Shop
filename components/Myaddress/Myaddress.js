@@ -1,17 +1,39 @@
 import React from 'react'
 import Image from 'next/image';
 import trash from '../../public/images/Group 187.png'
+import ModalAddress from './ModalAddress'
 import styles from './Myaddress.module.css'
+
+import {useDispatch,useSelector } from 'react-redux'
 const Myaddress =()=> {
+  const userAddress = useSelector(state=> state.userAddress)
+
+console.log(userAddress)
+    ///close and open modal///
+    const [openModal, setOpenModal] = React.useState(false);
+    const handleOpen = () => setOpenModal(true);
+    const handleClose = () => setOpenModal(false);
   return (
     <div className={styles.conatiner}>
-        <h6>آدرس ها * <span><Image src={trash}/></span></h6>
+
+        {openModal ? <ModalAddress onClose={handleClose}/>: null}
+        <h6>آدرس ها * <span><Image src={trash}/> </span></h6>
         <select className={styles.select}>
-            <option  className={styles.option} value="">پونک ، خیابان فلاح زاده، کوچه 12، پلاک 12</option>
-            <option className={styles.option} value="">پونک ، خیابان فلاح زاده،12</option>
-            <option className={styles.option} value="">پونک ، خیابان فلاح12</option>
+           {userAddress.length>0 ?
+           userAddress.map((item, index)=>{
+             return(
+               <option key={index} >
+                 
+                  {item.address}, {item.plak}, {item.num} 
+                 
+                </option>
+             )
+           })
+              
+           : <option>آدرسی ثبت نشده است.</option>
+          }
         </select>
-        <p className={styles.add}> + اضافه کردن آدرس جدید </p>
+        <button className={styles.add} onClick={handleOpen}> + اضافه کردن آدرس جدید </button>
     </div>
   )
 }

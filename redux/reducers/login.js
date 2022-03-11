@@ -8,3 +8,11 @@ export const isLoginReducer = (state = false, action) => {
             return state;
     }
 }
+export const userAddressReducer = (state = [], action) => {
+    switch (action.type) {
+        case ('USER_ADDRESS'):
+            return action.payload;
+        default:
+            return state;
+    }
+}

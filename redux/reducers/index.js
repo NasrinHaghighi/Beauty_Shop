@@ -11,6 +11,7 @@ import { discontReducer } from './cart'
 import { isLoginReducer } from './login'
 import { filterReducer } from './products'
 import { filterOptionReducer } from './products'
+import { userAddressReducer } from './login'
 
 
 
@@ -28,6 +29,7 @@ export const reducers = combineReducers({
     isLogin: isLoginReducer,
     filtered: filterReducer,
     filterOption: filterOptionReducer,
+    userAddress: userAddressReducer,
 
 
 });

@@ -9,3 +9,10 @@ export const signOut = () => {
         return await dispatch({ type: 'SIGNOUT', payload: false })
     }
 }
+
+export const userAddressHandler = (value) => {
+    return async(dispatch, getState) => {
+        const address = [...getState().userAddress, value]
+        return await dispatch({ type: 'USER_ADDRESS', payload: address })
+    }
+}

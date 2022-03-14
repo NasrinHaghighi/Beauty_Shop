@@ -13,6 +13,7 @@ import AmountControl from './AmountControl';
 import ColorPart from './ColorPart';
 
 import {addToCartHandel} from '../../redux/action/cart'
+import { userFavoriteHandle} from '../../redux/action/login'
 
 
 
@@ -44,7 +45,7 @@ const SingleProductInfo=({...singleProduct})=> {
 
   return <section className={styles.container}>
       <div className={styles.icons}>
-          <div><Image src={heartIcon}/></div>
+          <div onClick={()=>dispatch(userFavoriteHandle(singleProduct, mainColor))}><Image src={heartIcon}/></div>
           <div>   <Image src={shareIcon}/></div>
       </div>
 

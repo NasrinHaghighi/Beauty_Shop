@@ -12,6 +12,7 @@ import { isLoginReducer } from './login'
 import { filterReducer } from './products'
 import { filterOptionReducer } from './products'
 import { userAddressReducer } from './login'
+import { userFavoriteReducer } from './login'
 
 
 
@@ -30,6 +31,7 @@ export const reducers = combineReducers({
     filtered: filterReducer,
     filterOption: filterOptionReducer,
     userAddress: userAddressReducer,
+    userFavorite: userFavoriteReducer
 
 
 });

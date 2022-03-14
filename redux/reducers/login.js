@@ -16,3 +16,11 @@ export const userAddressReducer = (state = [], action) => {
             return state;
     }
 }
+export const userFavoriteReducer = (state = [], action) => {
+    switch (action.type) {
+        case ('USER_FAVORITE'):
+            return [...action.payload];
+        default:
+            return state;
+    }
+}

@@ -56,6 +56,12 @@ export const userFavoriteHandle = (product, mainColor) => {
         return await dispatch({ type: 'USER_FAVORITE', payload: userFavorite })
     }
 }
+export const userRegisterInfoHandler = (value) => {
+    return async(dispatch, getState) => {
+        const userRegisterInfo = [...getState().userRegisterInfo, value]
+        return await dispatch({ type: 'USER_REGISTER', payload: userRegisterInfo })
+    }
+}
 
 
 

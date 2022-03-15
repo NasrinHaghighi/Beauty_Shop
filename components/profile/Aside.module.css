@@ -15,15 +15,22 @@
 .asideUl {
     text-align: right;
     color: #fff;
+    padding-left: 0 !important;
 }
 
 .asideLi {
-    margin: 43px 10px;
+    width: 100%;
+    margin: 10px 10px 10px 0;
+    height: 64px;
+    padding: 20px;
 }
 
 .asideLiactive {
+    width: 100%;
     background-color: #fff;
     color: black;
+    height: 64px;
+    line-height: 64px;
 }
 
 .title {}

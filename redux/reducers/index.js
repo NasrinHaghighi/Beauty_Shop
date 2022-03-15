@@ -9,10 +9,11 @@ import { cartReducer } from "./cart";
 import { totalReducer } from './cart'
 import { discontReducer } from './cart'
 import { isLoginReducer } from './login'
-import { filterReducer } from './products'
+
 import { filterOptionReducer } from './products'
 import { userAddressReducer } from './login'
 import { userFavoriteReducer } from './login'
+import { userRegisterInfoReducer } from './login'
 
 
 
@@ -28,10 +29,10 @@ export const reducers = combineReducers({
     total: totalReducer,
     discont: discontReducer,
     isLogin: isLoginReducer,
-    filtered: filterReducer,
     filterOption: filterOptionReducer,
     userAddress: userAddressReducer,
-    userFavorite: userFavoriteReducer
+    userFavorite: userFavoriteReducer,
+    userRegisterInfo: userRegisterInfoReducer,
 
 
 });

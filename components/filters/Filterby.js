@@ -29,8 +29,8 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 import { useSelector, useDispatch } from 'react-redux';
-import {fillterProducts} from '../../redux/action/products'
-import { fillterOptinHandler} from '../../redux/action/products'
+
+import { fillterProductsHandler} from '../../redux/action/products'
 import {clearAllProducts} from '../../redux/action/products'
 
 
@@ -39,6 +39,8 @@ import {clearAllProducts} from '../../redux/action/products'
 const Filterby = () => {
  
   const dispatch=useDispatch()
+  const filterOption = useSelector(state=>state.filterOption)
+  //console.log(filterOption)ok
   //open and close collapse//
    const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -89,8 +91,8 @@ const Filterby = () => {
            <button type='button' onClick={()=>{handleClose();dispatch(clearAllProducts())}}>پاک کردن همه</button>
 
 
-           <button  type='button'  onClick={()=>{handleClose()}}>
-           {/* dispatch(fillterOptinHandler(filterOption)) */}
+           <button  type='button'  onClick={()=>{handleClose();  dispatch(fillterProductsHandler(filterOption))}}>
+            
              ذخیره</button>
 
 

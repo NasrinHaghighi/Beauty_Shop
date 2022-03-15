@@ -1,12 +1,114 @@
 import React, {useState, useEffect} from 'react'
-import { useForm } from "react-hook-form";
 import styles from './Register.module.css'
+import { useFormik } from 'formik';
+import {useDispatch , useSelector} from 'react-redux'
+import {userRegisterInfoHandler} from '../../redux/action/login'
 
 const Register = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({mode:'onChange'});
-
+  const dispatch = useDispatch()
+  
+ 
 const [sucsses, setSucces]= useState(false)
-const onSubmit = (data) => console.log(data);
+
+
+    useEffect(() => {
+     let timeout
+     if (sucsses) {
+       timeout = setTimeout(() => setSucces(false), 2000);
+    }
+  
+     return () => clearTimeout(timeout);
+ }, [sucsses]);
+
+const formik = useFormik({
+  initialValues:
+    {fullName: '',
+   phone:'',
+   email:'',},
+   onSubmit:(values)=>{
+    setSucces(true)
+    dispatch(userRegisterInfoHandler(values))
+  console.log(values)
+   },
+   validate: values=>{
+    ///values.name values.plak ....
+    //errors.name ...
+    //errors.name ='message'
+let errors ={}
+
+  
+    if(!values.fullName){
+       errors.fullName ='وارد کردن نام کامل اجباری است.'
+   }
+   if(!values.phone){
+               errors.phone ='وارد کردن واحد اجباری است.'
+                 }       
+             else if(!/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/i.test(values.phone)){
+                    errors.phone ='شماره وارد شده معتبر نمی باشد '
+               }
+ if(!values.email){
+                errors.email ='وارد کردن ایمیل اجباری است.'
+                  }       
+               else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i.test(values.email)){
+                     errors.email ='ایمیل وارد شده معتبر نمی باشد '
+                }
+    
+    return errors
+}
+})
+
+
+    return (
+    <>
+    {sucsses ? <p className={styles.sucsses}>اطلاعات و مشخصات شما با موفقیت ذخیره شد</p> : null} 
+    <form className={styles.form} onSubmit={formik.handleSubmit}>
+        <div className={styles.formContainer}>
+        <div className={styles.formControl}>
+         <label className={styles.label}> نام و نام خانوادگی *</label>
+        <input className={styles.input}
+          type="text" placeholder='مریم عسکری'
+          name="fullName"
+          onBlur={formik.handleBlur}
+          value={formik.values.fullName}
+          onChange={formik.handleChange}
+          />
+           {formik.touched.fullName && formik.errors.fullName ? <div className={styles.error}>{formik.errors.fullName}</div>: null}
+        </div>
+        
+
+
+        <div className={styles.formControl}>
+         <label className={styles.label}> شماره تلفن همراه*</label>
+        <input className={styles.input}   type="text" 
+        name="phone"
+        onBlur={formik.handleBlur}
+        value={formik.values.phone}
+        onChange={formik.handleChange}
+        />
+        {formik.touched.phone && formik.errors.phone ? <div className={styles.error}>{formik.errors.phone}</div>: null}
+        </div>
+        
+
+
+        <div className={styles.formControl}>
+         <label className={styles.label}> ایمیل *</label>
+        <input className={styles.input}     type="email"
+         name="email"
+         onBlur={formik.handleBlur}
+         value={formik.values.email}
+         onChange={formik.handleChange}
+        />
+         {formik.touched.email && formik.errors.email ? <div className={styles.error}>{formik.errors.email}</div>: null}
+        </div>
+        </div>
+        <input type="submit" value='ذخیره' className={styles.submitBtn}/>
+    </form>
+   
+    </>
+    )
+}
+
+export default Register
 
   //  useEffect(() => {
   //   let timeout
@@ -17,46 +119,6 @@ const onSubmit = (data) => console.log(data);
   //   return () => clearTimeout(timeout);
   // }, [sucsses]);
  
-
-    return (
-    <>
-    {sucsses ? <p className={styles.sucsses}>اطلاعات و مشخصات شما با موفقیت ذخیره شد</p> : null}
-    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <div className={styles.formContainer}>
-        <div className={styles.formControl}>
-         <label className={styles.label}> نام و نام خانوادگی *</label>
-        <input className={styles.input}
-          type="text" placeholder='مریم عسکری'
-           {...register("firstName", { required:true,  minLength:3, pattern: /^[A-Za-z]+$/i })}/>
-        </div>
-       {errors.firstName && errors.firstName.type === "required" && <span className={styles.error}>وارد کردن فیلد ستاره دار اجباری است</span>} 
-       
-        <div className={styles.formControl}>
-         <label className={styles.label}> شماره تلفن همراه*</label>
-        <input className={styles.input}   type="text" {...register("phone",
-        {required: true, minLength: 9 , maxLength: 12, pattern:  /^\d{10}$/ })}/>
-        </div>
-         {errors.phone && errors.phone.type === "required" && <span className={styles.error}>وارد کردن فیلد ستاره دار اجباری است</span>}
-        {errors.phone && errors.phone.type === "maxLength" && <span className={styles.error}>شماره تلفن وارد شده معتبر نیست</span> }
-        {errors.phone && errors.phone.type === "minLength" && <span className={styles.error}>شماره تلفن وارد شده معتبر نیست</span> } 
-        <div className={styles.formControl}>
-         <label className={styles.label}> ایمیل *</label>
-        <input className={styles.input}     type="email"  {...register("email",
-          { required: true,   pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                        })}/>
-        </div>
-   {errors.email && errors.email.type === "required" && <span className={styles.error}>وارد کردن فیلد ستاره دار اجباری است</span>}
-        {errors.email && errors.email.type === "pattern" && <span className={styles.error}>ایمیل وارد شده معتبر نیست</span> } 
-          </div>
-        <input type="submit" value='ذخیره' className={styles.submitBtn}/>
-    </form>
-   
-    </>
-    )
-}
-
-export default Register
-
 
 // const [name, setName] = useState('');
 // const [phone, setPhone] = useState('');

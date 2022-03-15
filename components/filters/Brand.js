@@ -17,13 +17,13 @@ import styles from './Brand.module.css'
 const Brand =()=> {
   const dispatch =useDispatch()
     const products = useSelector(state => state.products)
-    const filterOption= useSelector(state=>state.filterOption)
-    const selectedBrand =filterOption.map((item)=>{
-      return item.selectedBrand
-    })
-    console.log(selectedBrand)
- const brandss =selectedBrand
-   
+    const filterOption = useSelector(state=>state.filterOption)
+    console.log(filterOption)
+    // const selectedBrand =filterOption.map((item)=>{
+    //   return item.selectedBrand
+    // })
+    // console.log(selectedBrand)
+ 
 
     //open and clsoe collapse of brand//
     const [open, setOpen] = React.useState(false);
@@ -60,7 +60,7 @@ const Brand =()=> {
                   name={c}
                  value={c}
                 
-                 onClick={(e)=>{dispatch(barndChangeHandel(e,filterOption))}} 
+                 onClick={(e)=>{dispatch(barndChangeHandel(e,filterOption, products))}} 
                   />} 
                label={c}/> 
                    </ListItem>

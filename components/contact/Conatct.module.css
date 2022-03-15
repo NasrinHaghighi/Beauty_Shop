@@ -1,0 +1,27 @@
+.conatiner {
+    margin: 70px 10px;
+    text-align: right;
+}
+
+.header {
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 50px;
+}
+
+.conatiner p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contactInfo span {
+    width: 300px;
+    height: 64px;
+    background-color: #F1F1F1;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.body p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}

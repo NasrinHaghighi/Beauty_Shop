@@ -10,6 +10,7 @@ import email from '../../public/images/email (1).png'
 
 import kanoon from '../../public/images/download (1).png'
 import sabt from '../../public/images/samandehi-ir-4_graphic222shop-ir.png'
+import namad from '../../public/images/Mask Group 7.png'
 
 
 
@@ -55,7 +56,7 @@ const  Footer=()=> {
   
       <div className={styles.colabrationItems}>
          <div className={styles.colabrationItem}>   <Image src={kanoon}/>         </div>
-         <div className={styles.colabrationItem}>               </div>
+         <div className={styles.colabrationItem}>   <Image src={namad}/>            </div>
          <div className={styles.colabrationItem}> <Image src={sabt}/>             </div>
       </div>
       

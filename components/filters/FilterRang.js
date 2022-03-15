@@ -18,9 +18,9 @@ const minDistance = 10;
    const filterOption= useSelector(state=>state.filterOption)
   //  const minPrice=filterOption.map((item)=>{
   //    return item.minPrice
-  //  })
-  //  const maxPrice=filterOption.map((item)=>{
-  //   return item.maxPrice
+  //   })
+  //   const maxPrice=filterOption.map((item)=>{
+  // return item.maxPrice
   // })
  
 
@@ -38,13 +38,13 @@ const minDistance = 10;
     }
   };
 
-// useEffect(() => {
-//   dispatch(minpriceChangeHandel(value1[0],filterOption))
-//   }, [value1[0]])
+useEffect(() => {
+  dispatch(minpriceChangeHandel(value1[0],filterOption))
+  }, [value1[0]])
 
-// useEffect(() => {
-//   dispatch(maxpriceChangeHandel(value1[1],filterOption))
-//   }, [value1[1]])
+useEffect(() => {
+  dispatch(maxpriceChangeHandel(value1[1],filterOption))
+  }, [value1[1]])
 
 
   return (

@@ -33,44 +33,52 @@ useEffect(() => {
     <>
    
     <div className={styles.cartContent}>
-    {cart.map((item)=>{
+      {cart.length >0 ?
+       cart.map((item)=>{
       
-      return(
-        
-        <div className={styles.cartItem}>
-           {openModalCart ? <CartModal id={item.id} onClose={handleClose}/> : null}
-          {/* ()=>dispatch(removeItemCart(item.id)) */}
-
-          {/* first cloumn */}
-           <div className={styles.removeIcon}  onClick={handleOpen}><Image src={RemoveIcone}/></div>
-        {/* secend cloumn */}
-          <div className={styles.info}>
-            <h1>{item.name}</h1>
-         <div>  گارانتی  <span> {item.garanty} </span>  ماهه</div>
-       
-            
-        <div className={styles.amountContainer}>
-
-        <button onClick={()=>dispatch(toggleAmountcart(item.id,'inc'))}>+</button>
-         <span className={styles.amountNumber}>{item.amount} </span> 
-        <button onClick={()=>dispatch(toggleAmountcart(item.id,'dec'))}>-</button>
-          <span>  : تعداد </span>
-         </div>
-
-
-
-       <div className={styles.colorContainer}> <div className={styles.colorBtn} style={{background:item.color}}></div> : رنگ </div>  
-         <div className={styles.discont}>{item.discont} %: تخفیف </div>
-         <div className={styles.price}>{item.price} قیمت : تومان </div> 
-
+        return(
+          
+          <div className={styles.cartItem}>
+             {openModalCart ? <CartModal id={item.id} onClose={handleClose}/> : null}
+            {/* ()=>dispatch(removeItemCart(item.id)) */}
+  
+            {/* first cloumn */}
+             <div className={styles.removeIcon}  onClick={handleOpen}><Image src={RemoveIcone}/></div>
+          {/* secend cloumn */}
+            <div className={styles.info}>
+              <h1>{item.name}</h1>
+           <div>  گارانتی  <span> {item.garanty} </span>  ماهه</div>
+         
+              
+          <div className={styles.amountContainer}>
+  
+          <button onClick={()=>dispatch(toggleAmountcart(item.id,'inc'))}>+</button>
+           <span className={styles.amountNumber}>{item.amount} </span> 
+          <button onClick={()=>dispatch(toggleAmountcart(item.id,'dec'))}>-</button>
+            <span>  : تعداد </span>
+           </div>
+  
+  
+  
+         <div className={styles.colorContainer}> <div className={styles.colorBtn} style={{background:item.color}}></div> : رنگ </div>  
+           <div className={styles.discont}>{item.discont} %: تخفیف </div>
+           <div className={styles.price}>{item.price} قیمت : تومان </div> 
+  
+            </div>
+                {/* third cloumn */}
+        <div className={styles.imgContainer}><Image src={Roj}/></div>
+  
           </div>
-              {/* third cloumn */}
-      <div className={styles.imgContainer}><Image src={Roj}/></div>
-
-        </div>
-      )
+        )
+       
+      })
+      :
+      <p className={styles.empty}>! سبد خرید خالی است  </p>
      
-    })}
+    
+    
+    }
+   
     </div>
     </>
   )

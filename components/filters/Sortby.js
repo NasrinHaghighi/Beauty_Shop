@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Sortby.module.css'
 
-import {sortProducts} from '../../redux/action/products'
+import {sortProductsHandle} from '../../redux/action/products'
 
 import { useDispatch, useSelector } from 'react-redux';
 import sortIcon from '../../public/images/Group 117.png'
@@ -92,7 +92,7 @@ const  Sortby =()=> {
       >
         <p className={styles.title}>مرتب سازی براساس</p>
           {data.map((d)=>{
-            return(<MenuItem key={d.id} onClick={ () => {handleClose(); dispatch(sortProducts(d.value, filtered))}} className={styles.sortitem}>{d.type}</MenuItem>)
+            return(<MenuItem key={d.id} onClick={ () => {handleClose(); dispatch(sortProductsHandle(d.value))}} className={styles.sortitem}>{d.type}</MenuItem>)
           })}
          
 

@@ -4,13 +4,6 @@ export const productsReducer = (state = [], action) => {
     switch (action.type) {
         case ('GET_ALL_PRODUCTS'):
             return [...action.payload];
-
-        default:
-            return state;
-    }
-}
-export const filterReducer = (state = [], action) => {
-    switch (action.type) {
         case ('FILLTER_PRODUCTS'):
             return [...action.payload];
         case ('SORT_PRODUCTS'):
@@ -21,28 +14,28 @@ export const filterReducer = (state = [], action) => {
             return state;
     }
 }
-const filterOption = [{
+const filterOption = {
     selectedBrand: [],
     selectedCategory: [],
     availability: false,
     discont: false,
     minPrice: 100,
     maxPrice: 1000,
-}]
+}
 export const filterOptionReducer = (state = filterOption, action) => {
     switch (action.type) {
         case ('BRAND_OPTION'):
-            return [...action.payload];
-            // case ('CATEGORY_OPTION'):
-            //     return [...action.payload];
-            // case ('MINPRICE_OPTION'):
-            //     return [...action.payload];
-            // case ('MAXPRICE_OPTION'):
-            //     return [...action.payload];
-            // case ('AVAILIBILITY_OPTION'):
-            //     return [...action.payload];
-            // case ('DISCOT_OPTION'):
-            //     return [...action.payload];
+            return action.payload;
+        case ('CATEGORY_OPTION'):
+            return action.payload;
+        case ('MINPRICE_OPTION'):
+            return action.payload;
+        case ('MAXPRICE_OPTION'):
+            return action.payload;
+        case ('AVAILIBILITY_OPTION'):
+            return action.payload;
+        case ('DISCOT_OPTION'):
+            return action.payload;
         default:
             return state;
     }

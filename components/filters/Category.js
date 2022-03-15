@@ -25,6 +25,7 @@ const Category =()=> {
 //  //check for uniqe categorey//
 const products = useSelector(state => state.products)
 const filterOption= useSelector(state=>state.filterOption)
+
 let categories = [...new Set(products.map(item => item.category))];
 //console.log(categories)
     

@@ -22,7 +22,7 @@ function CartPage() {
   }
   return (<>
   
-        <Navbar2  title2='سبد خرید'/>
+        <Navbar2  title2='سبد خرید' title0='محصولات'/>
         <div className={styles.cartContainerMain}>
         <p>سبد خرید</p>
         <div className={styles.cartContainer}>

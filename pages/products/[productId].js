@@ -29,7 +29,7 @@ const ProductSinglePage=()=> {
     const singleProduct =products.find((p)=>p.id === productId)
  
    return <>
-  <Navbar2 title1='کالا' productId={productId}/>
+  <Navbar2 title1='کالا' title0='محصولات' productId={productId}/>
   
   <div className={styles.ProductSinglePageContainer}>
     <div className={styles.singlepageBanner}>

@@ -15,6 +15,8 @@ import ColorPart from './ColorPart';
 import {addToCartHandel} from '../../redux/action/cart'
 import { userFavoriteHandle} from '../../redux/action/login'
 
+import redheart from '../../public/images/profileicon/redheart.png'
+
 
 
 const SingleProductInfo=({...singleProduct})=> {
@@ -23,7 +25,7 @@ const SingleProductInfo=({...singleProduct})=> {
   const dispatch =useDispatch()
   const {name, garanty, discont,id ,price ,colors, likes, comments} =singleProduct
 
-
+  const [isFavoraite, setisFavoraite] =useState(false)
 
   ///get amount depend of + or - from AmountCntrol component//
 
@@ -45,7 +47,14 @@ const SingleProductInfo=({...singleProduct})=> {
 
   return <section className={styles.container}>
       <div className={styles.icons}>
-          <div onClick={()=>dispatch(userFavoriteHandle(singleProduct, mainColor))}><Image src={heartIcon}/></div>
+          <div 
+          onClick={()=>{setisFavoraite(!isFavoraite); dispatch(userFavoriteHandle(singleProduct, mainColor))}}
+          
+          >
+            {isFavoraite ?  <Image src={redheart}/> : <Image src={heartIcon}/> }
+            
+            
+         </div>
           <div>   <Image src={shareIcon}/></div>
       </div>
 

@@ -25,7 +25,7 @@ const Submenu =({item}) =>{
  
   {submenu && item.subNav ? item.subNav.map((item, index)=>{
     {/*can i have two dispatch in a tag????*/}
-      return(<li key={index} className={styles.innerLi} onClick={()=>dispatch(handelCloseSidebar())} onClick={()=>dispatch(handelcloseSubmenu())}> 
+      return(<li key={index} className={styles.innerLi} onClick={()=>{dispatch(handelCloseSidebar()) ;dispatch(handelcloseSubmenu())}}> 
       <Link href={item.path}><a>{item.title} <span className={styles.icon} > {item.icon} </span></a></Link>
      
          </li>)

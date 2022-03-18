@@ -41,7 +41,7 @@ let errors ={}
        errors.fullName ='وارد کردن نام کامل اجباری است.'
    }
    if(!values.phone){
-               errors.phone ='وارد کردن واحد اجباری است.'
+               errors.phone ='وارد کردن شماره تلفن اجباری است.'
                  }       
              else if(!/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/i.test(values.phone)){
                     errors.phone ='شماره وارد شده معتبر نمی باشد '

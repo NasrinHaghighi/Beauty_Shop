@@ -23,7 +23,6 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
           <p>{name}</p>
           <p>قیمت : {price} تومان</p>
 
-       
           <div className={styles.link}><Link href={`/products/${id}`}><a> مشاهده محصول</a></Link></div>
           <div className={styles.rank}>
               <Stars stars={stars}/>

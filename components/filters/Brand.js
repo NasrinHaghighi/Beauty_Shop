@@ -17,8 +17,8 @@ import styles from './Brand.module.css'
 const Brand =()=> {
   const dispatch =useDispatch()
     const products = useSelector(state => state.products)
-    const filterOption = useSelector(state=>state.filterOption)
-    console.log(filterOption)
+    // const filterOption = useSelector(state=>state.filterOption)
+    // console.log(filterOption)
     // const selectedBrand =filterOption.map((item)=>{
     //   return item.selectedBrand
     // })
@@ -59,8 +59,8 @@ const Brand =()=> {
                   type="checkbox"
                   name={c}
                  value={c}
-                
-                 onClick={(e)=>{dispatch(barndChangeHandel(e,filterOption, products))}} 
+                //checked={newarray.includes(c)}
+                 onChange={(e)=>{dispatch(barndChangeHandel(e))}} 
                   />} 
                label={c}/> 
                    </ListItem>

@@ -28,14 +28,14 @@ export const filterOptionReducer = (state = filterOption, action) => {
             return action.payload;
         case ('CATEGORY_OPTION'):
             return action.payload;
-        case ('MINPRICE_OPTION'):
-            return action.payload;
-        case ('MAXPRICE_OPTION'):
-            return action.payload;
-        case ('AVAILIBILITY_OPTION'):
-            return action.payload;
-        case ('DISCOT_OPTION'):
-            return action.payload;
+            // case ('MINPRICE_OPTION'):
+            //     return action.payload;
+            // case ('MAXPRICE_OPTION'):
+            //     return action.payload;
+            // case ('AVAILIBILITY_OPTION'):
+            //     return action.payload;
+            // case ('DISCOT_OPTION'):
+            //     return action.payload;
         default:
             return state;
     }

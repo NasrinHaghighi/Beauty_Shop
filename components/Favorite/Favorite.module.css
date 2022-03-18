@@ -5,6 +5,12 @@
     display: flex;
 }
 
+.empty {
+    padding: 15px;
+    width: 100%;
+    color: rgb(7, 7, 7);
+}
+
 
 /* .container {
     width: 349px;

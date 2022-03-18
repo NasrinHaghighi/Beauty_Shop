@@ -9,15 +9,21 @@ const Favorite =()=> {
   
     return (
         <div className={styles.conatiner}>
-            {userFavorite.map((item)=>{
-                return(
-                    <FavoraiteItem {...item}/>
-                )
-            })}
+            {userFavorite.length >0 ? 
+                userFavorite.map((item)=>{
+                    return(
+                        <FavoraiteItem {...item}/>
+                    )
+                })
+            
+            : 
+            <p className={styles.empty}>لیست مورد علاقه ها خالی است !  </p>
+            }
+        
         </div>
-     
+    
     )
-
+    
 }
 
 export default Favorite

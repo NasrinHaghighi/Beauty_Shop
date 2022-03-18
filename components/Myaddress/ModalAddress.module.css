@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
 }
 
 .icon {
@@ -21,7 +20,7 @@
 }
 
 .fildes input {
-    height: 72px;
+    height: 60px;
     border: 1px solid #E8E9ED;
 }
 
@@ -34,7 +33,7 @@
 }
 
 .fildes1 input {
-    height: 72px;
+    height: 60px;
     border: 1px solid #E8E9ED;
 }
 
@@ -49,6 +48,7 @@
 }
 
 .checkBox {
+    height: 40px;
     font-size: 14px;
     color: #555577;
 }
@@ -66,7 +66,7 @@
 }
 
 .fildes2 input {
-    height: 72px;
+    height: 60px;
     border: 1px solid #E8E9ED;
 }
 
@@ -83,11 +83,10 @@
 .fildes3 {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .fildes3 input {
-    height: 72px;
+    height: 60px;
     border: 1px solid #E8E9ED;
 }
 
@@ -96,14 +95,12 @@
     background-color: #81815B;
     width: 233px;
     height: 54px;
-    margin-top: 20px;
     float: left;
 }
 
 .label {
     font-size: 14px;
     color: #555577;
-    margin-top: 25px;
 }
 
 .container {
@@ -119,7 +116,7 @@
 }
 
 .select {
-    height: 72px;
+    height: 60px;
     border: 1px solid #E8E9ED;
 }
 

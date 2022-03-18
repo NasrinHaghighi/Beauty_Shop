@@ -9,34 +9,42 @@ export const getAllProducts = () => {
 }
 
 //BRAND OPTION///
-export const barndChangeHandel = (e, filterOption) => {
-        return async(dispatch) => {
-            //console.log(filterOption)
+export const barndChangeHandel = (e) => {
+        return async(dispatch, getState) => {
+            let filterOption = {...getState().filterOption }
+            let selectedBrand = filterOption.selectedBrand
+                //console.log(selectedBrand)
             if (e.target.checked) {
-                if (!filterOption.selectedBrand.find((i) => i === e.target.value)) {
-                    return filterOption.selectedBrand.push(e.target.value)
+                //console.log('fisrt click:' + e.target.value)
+                if (!selectedBrand.find((i) => i === e.target.value)) {
+                    selectedBrand = selectedBrand.push(e.target.value)
                 }
             } else {
-                const index = filterOption.selectedBrand.indexOf(e.target.value)
+                //console.log('fisrt un click:' + e.target.value)
+                const index = selectedBrand.indexOf(e.target.value)
                 if (index > -1) {
-                    return (filterOption.selectedBrand.splice(index, 1))
+                    selectedBrand = (selectedBrand.splice(index, 1))
                 }
             }
+
 
             return await dispatch({ type: 'BRAND_OPTION', payload: filterOption })
         }
     }
     //CATEGORAY OPTION///
-export const categotyChangeHandel = (e, filterOption) => {
-        return async(dispatch) => {
+export const categotyChangeHandel = (e) => {
+        return async(dispatch, getState) => {
+            const filterOption = {...getState().filterOption }
+            let selectedCategory = filterOption.selectedCategory
+
             if (e.target.checked) {
-                if (!filterOption.selectedCategory.find((i) => i === e.target.value)) {
-                    return filterOption.selectedCategory.push(e.target.value)
+                if (!selectedCategory.find((i) => i === e.target.value)) {
+                    selectedCategory = selectedCategory.push(e.target.value)
                 }
             } else {
-                const index = filterOption.selectedCategory.indexOf(e.target.value)
+                const index = selectedCategory.indexOf(e.target.value)
                 if (index > -1) {
-                    return (filterOption.selectedCategory.splice(index, 1))
+                    selectedCategory = selectedCategory.splice(index, 1)
                 }
             }
 

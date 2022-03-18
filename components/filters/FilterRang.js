@@ -16,15 +16,13 @@ const minDistance = 10;
  const FilterRange =() =>{
    const dispatch =useDispatch()
    const filterOption= useSelector(state=>state.filterOption)
-  //  const minPrice=filterOption.map((item)=>{
-  //    return item.minPrice
-  //   })
-  //   const maxPrice=filterOption.map((item)=>{
-  // return item.maxPrice
-  // })
+   const minPrice= filterOption.minPrice
+   const maxPrice= filterOption.maxPrice
+  
+  
  
 
-  const [value1, setValue1] = React.useState([100, 1000]);
+  const [value1, setValue1] = React.useState([minPrice, maxPrice]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {

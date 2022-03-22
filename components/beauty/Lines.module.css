@@ -1,0 +1,18 @@
+.lines {
+    text-align: center;
+    padding: 30px 0 150px 0;
+}
+
+.linesBg {
+    background-color: #484035;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    padding-top: 50px;
+}
+
+.linesitem h4 {
+    color: #FFF0DB;
+}

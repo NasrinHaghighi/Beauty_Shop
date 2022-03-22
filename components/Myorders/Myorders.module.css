@@ -1,0 +1,17 @@
+.box {
+    background-color: #D7D7CB;
+    direction: rtl;
+    padding: 90px 20px;
+}
+
+.tab {
+    font-size: 20px;
+    font-family: 'IRANSans', sans-serif !important;
+    background-color: transparent !important;
+    color: #28282E;
+    margin-left: 20px !important;
+}
+
+.tabContext {
+    border-bottom: #fff !important;
+}

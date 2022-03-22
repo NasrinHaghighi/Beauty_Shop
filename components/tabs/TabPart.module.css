@@ -1,0 +1,15 @@
+.box {
+    direction: rtl;
+}
+
+.tab {
+    font-size: 20px;
+    font-family: 'IRANSans', sans-serif !important;
+    background-color: transparent !important;
+    color: #28282E;
+    margin-left: 20px !important;
+}
+
+.TabPanel {
+    background-color: #EBEBE3;
+}

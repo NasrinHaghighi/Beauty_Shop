@@ -1,0 +1,23 @@
+.overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 345px;
+    border: 1px solid #707070;
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.header {
+    font-size: 72px;
+    margin: 0;
+}
+
+.subheader {
+    font-size: 46px;
+    font-weight: 400;
+}

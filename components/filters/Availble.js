@@ -1,0 +1,23 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { FormGroup } from '@mui/material';
+import {availabilityChangeHandel} from '../../redux/action/products'
+
+import styles from './Availble.module.css'
+
+const  Availble=()=>{
+  const dispatch =useDispatch()
+  const filterOption= useSelector(state=>state.filterOption)
+  return <>
+  
+  
+  <FormGroup className={styles.availble}>
+           <FormControlLabel control={<Checkbox  onChange={()=>dispatch(availabilityChangeHandel(filterOption ))} />} label='فقط کالا های موجود'/>
+          </FormGroup>
+  
+  </>;
+}
+
+export default Availble;

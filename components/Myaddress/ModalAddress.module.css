@@ -1,0 +1,126 @@
+.modal {
+    direction: rtl;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    transform: rotate(45deg);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fildes {
+    display: flex;
+    flex-direction: column;
+}
+
+.fildes input {
+    height: 60px;
+    border: 1px solid #E8E9ED;
+}
+
+.fildes1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+}
+
+.fildes1 input {
+    height: 60px;
+    border: 1px solid #E8E9ED;
+}
+
+.plakRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.subTit {
+    font-size: 14px;
+    color: #A9A9BA;
+}
+
+.checkBox {
+    height: 40px;
+    font-size: 14px;
+    color: #555577;
+}
+
+.labelCheckbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fildes2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.fildes2 input {
+    height: 60px;
+    border: 1px solid #E8E9ED;
+}
+
+.nameRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.lastnameRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.fildes3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.fildes3 input {
+    height: 60px;
+    border: 1px solid #E8E9ED;
+}
+
+.submitBtn {
+    color: #ffff;
+    background-color: #81815B;
+    width: 233px;
+    height: 54px;
+    float: left;
+}
+
+.label {
+    font-size: 14px;
+    color: #555577;
+}
+
+.container {
+    direction: rtl;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+}
+
+.select {
+    height: 60px;
+    border: 1px solid #E8E9ED;
+}
+
+.error {
+    font-size: 14px;
+    color: red;
+}

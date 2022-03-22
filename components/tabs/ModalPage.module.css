@@ -1,0 +1,16 @@
+.modal {
+    background-color: #F7F7EF;
+    direction: rtl;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.modalHeader {
+    font-size: 24px;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.textfield {
+    background-color: #ffff;
+    width: 100%;
+    outline: none;
+}

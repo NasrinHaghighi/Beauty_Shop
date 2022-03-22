@@ -1,0 +1,35 @@
+.conatiner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 4.5fr 1fr;
+    gap: 0px 15px;
+}
+
+.carousel {
+    margin: 0 20px;
+}
+
+
+/* .main {
+    margin: 0 auto;
+    width: 600px;
+    background-color: #F3F6F2;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.gallary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
+.imgItem {
+    background-color: bisque;
+    width: 115px;
+    height: 110px;
+    margin: 0 10px;
+    cursor: pointer;
+} */

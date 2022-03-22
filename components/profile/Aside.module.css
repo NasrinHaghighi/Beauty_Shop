@@ -1,0 +1,39 @@
+.main {
+    background-color: #373736;
+}
+
+.imgContainer {
+    text-align: center;
+    padding: 75px 10px 20px 10px;
+}
+
+.imgContainer img {
+    width: 130px;
+    height: 130px;
+}
+
+.asideUl {
+    text-align: right;
+    color: #fff;
+    padding-left: 0 !important;
+}
+
+.asideLi {
+    width: 100%;
+    height: 64px;
+    padding: 20px;
+}
+
+.asideLiactive {
+    width: 100%;
+    background-color: #fff;
+    color: black;
+    height: 64px;
+    line-height: 64px;
+}
+
+.title {}
+
+.icon {
+    color: #fff;
+}

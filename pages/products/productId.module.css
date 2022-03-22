@@ -1,0 +1,28 @@
+.ProductSinglePageContainer {
+    background-color: #D7D7CB;
+    padding: 54px 20px;
+}
+
+.singlepageBanner {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1.40fr;
+    gap: 15px 15px;
+    padding: 0;
+}
+
+.icons {
+    width: 60%;
+    height: 214px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'IRANSans';
+    src: local('../used-fonts/IRANSans');
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'IRANSans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: IRANSans;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-family: 'IRANSans', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    color: #393960;
+}
+
+select {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+option {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.css-1x32roq-MuiList-root {
+    position: absolute !important;
+    font-family: 'IRANSans', sans-serif;
+}
+
+.css-uob957-MuiListSubheader-root {
+    font-family: 'IRANSans', sans-serif !important;
+    font-size: 16px;
+}
+
+.MuiButtonBase-root {
+    background-color: #F1F1F1!important;
+    display: flex !important;
+}
+
+.MuiTypography-body1 {
+    font-family: 'IRANSans', sans-serif !important;
+    font-size: 16px !important;
+    margin-top: 8px !important;
+    padding: 10px 0;
+}
+
+.css-1p823my-MuiListItem-root {
+    background-color: #F1F1F1
+}
+
+
+/* 
+//TO PUT THE CHECKBOX IN THE LEFT SIDE */
+
+.MuiFormControlLabel-root {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between !important;
+    margin-right: 0px !important;
+    margin: -5px 0;
+}
+
+
+/* //style for checkbox squar */
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #232122 !important;
+}
+
+
+/* STYLE FOR CHECHBOX LINE 3 AND 4 */
+
+.css-dmmspl-MuiFormGroup-root {
+    background-color: #eeee !important;
+    padding: 10px 0;
+}
+
+
+/* ///scroll in the brand section */
+
+
+/* ////style for rang filter price container/// */
+
+.css-eg0mwd-MuiSlider-thumb {
+    display: none;
+}
+
+
+/* ///style for tab in single product page */
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #28282E;
+}
+
+
+/*---------slider in the single page product--------------*/
+
+.slide.selected {
+    margin: 0 auto;
+    background-color: #F3F6F2;
+}
+
+.slide.selected div img {
+    width: 550px;
+    height: 550px;
+}

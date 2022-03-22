@@ -1,0 +1,20 @@
+.colors {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.colorBtn {
+    width: 42px;
+    height: 42px;
+    margin: 30px 13px;
+}
+
+.colorBtnActive {
+    width: 42px;
+    height: 42px;
+    margin: 30px 13px;
+    box-shadow: -1px -2px 23px 5px rgba(74, 74, 74, 0.74)
+}

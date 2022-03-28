@@ -49,7 +49,7 @@ export const toggleAmountcart = (id, value) => {
         let tempcart = cart.map((item) => {
 
             if (item.id === id) {
-                console.log('same')
+                // console.log('same')
                 if (value === 'inc') {
                     let newAmount = item.amount + 1
                     if (newAmount > 10) {
@@ -78,7 +78,7 @@ export const cartTotal = () => {
             const { price, amount } = cartItem
 
             total.total_price += price * amount
-
+            console.log(total)
             return total
         }, {
             total_price: 0

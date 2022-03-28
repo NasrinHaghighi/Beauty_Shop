@@ -1,18 +1,16 @@
 .container {
-    padding: 0 0;
     display: grid;
-    grid-template-rows: 1fr auto 1fr;
 }
 
 .main {
     width: 100%;
+    background-color: #D7D7CB;
+    z-index: 100;
 }
 
 .footer {
     display: flex;
     flex: 1;
-    padding: 2rem 0;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0;
 }

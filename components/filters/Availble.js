@@ -10,11 +10,14 @@ import styles from './Availble.module.css'
 const  Availble=()=>{
   const dispatch =useDispatch()
   const filterOption= useSelector(state=>state.filterOption)
+  const checked1=filterOption.availability
   return <>
   
   
   <FormGroup className={styles.availble}>
-           <FormControlLabel control={<Checkbox  onChange={()=>dispatch(availabilityChangeHandel(filterOption ))} />} label='فقط کالا های موجود'/>
+           <FormControlLabel control={<Checkbox
+           checked={checked1}
+             onChange={(e)=>dispatch(availabilityChangeHandel(e ))} />} label='فقط کالا های موجود'/>
           </FormGroup>
   
   </>;

@@ -20,6 +20,7 @@ const Beauty =()=> {
       <div  className={styles.img4}><Image src={img4}/></div> 
       <div  className={styles.img1}><Image src={img1}/></div> 
    </div>
+ 
   </div>
   <Lines />
   

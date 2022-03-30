@@ -26,7 +26,7 @@ export const clearFilterOption = () => {
             filterOption.selectedCategory = []
             filterOption.minPrice = 100
             filterOption.maxPrice = 1000
-            filterOption.availability = false
+            filterOption.availability = true
             filterOption.discont = false
             return await dispatch({ type: 'CLEAR_FILLTER_OPTION', payload: filterOption })
         }
@@ -90,21 +90,26 @@ export const maxpriceChangeHandel = (value, filterOption) => {
         return await dispatch({ type: 'MAXPRICE_OPTION', payload: filterOption })
     }
 }
-export const availabilityChangeHandel = (filterOption) => {
-    return async(dispatch) => {
-        filterOption.map((item) => {
-            return (item.availability = !item.availability)
-        })
+export const availabilityChangeHandel = (e) => {
+    return async(dispatch, getState) => {
+        let filterOption = {...getState().filterOption }
+        if (!e.target.checked) {
+            filterOption.availability = false
+        } else {
+            filterOption.availability = true
+        }
 
         return await dispatch({ type: 'AVAILIBILITY_OPTION', payload: filterOption })
     }
 }
-export const discontChangeHandel = (filterOption) => {
-    return async(dispatch) => {
-        filterOption.map((item) => {
-            return (item.discont = !item.discont)
-        })
-
+export const discontChangeHandel = (e) => {
+    return async(dispatch, getState) => {
+        let filterOption = {...getState().filterOption }
+        if (e.target.checked) {
+            filterOption.discont = true
+        } else {
+            filterOption.discont = false
+        }
         return await dispatch({ type: 'DISCOT_OPTION', payload: filterOption })
     }
 }
@@ -139,6 +144,22 @@ export const fillterProductsHandler = () => {
             products = tempProducts
                 //console.log(products)
         }
+        if (filterOption.discont = true) {
+            tempProducts = tempProducts.filter((p) => {
+                return p.discont > 0
+            })
+            products = tempProducts
+        } else {
+            products = tempProducts
+        }
+        if (filterOption.availability = true) {
+            tempProducts = tempProducts.filter((p) => {
+                return p.Available = true
+            })
+            products = tempProducts
+        } else {
+            products = tempProducts
+        }
 
 
         return await dispatch({ type: 'FILLTER_PRODUCTS', payload: products })
@@ -167,21 +188,11 @@ export const sortProductsHandle = (value) => {
             })
         }
         if (value === 'mostExpensive') {
-            products = products.sort((a, b) => a.price - b.price)
-        } else {
-            products = products.sort((a, b) => a.price - b.price)
-
-
+            products = products.sort((a, b) => b.price - a.price)
         }
         if (value === 'mostCheapest') {
-
-            products = products.sort((a, b) => b.price - a.price)
-        } else {
-            products = products.sort((a, b) => b.price - a.price)
-
-
+            products = products.sort((a, b) => a.price - b.price)
         }
-
         return await dispatch({ type: 'SORT_PRODUCTS', payload: products })
     }
 }

@@ -42,10 +42,10 @@ const activeRout =useRouter()
        <h3>
        {title0 ? <span className={styles.space}> <Image src={arrowLeft}/> <Link href='/products'><a>{title0}</a></Link></span>  : null}
        { title0 && title1 ?  <span className={styles.space}>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title1}</a></Link>  </span>  :null}  
-       {title0 && title2 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title2}</a></Link>  </span>  :null} 
+       {title0 && title2 ?  <span className={styles.space}>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title2}</a></Link>  </span>  :null} 
        </h3>
        <h3>
-       {title3 ?  <span>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title3}</a></Link>  </span>  :null} 
+       {title3 ?  <span className={styles.space}>  <Image src={arrowLeft}/> <Link href='/products/*'><a>{title3}</a></Link>  </span>  :null} 
        </h3>
    
     

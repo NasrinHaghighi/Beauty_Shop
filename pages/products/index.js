@@ -4,6 +4,7 @@ import Footer from '../../components/footer/Footer'
 import Filters from '../../components/filters/Filters';
 import ProductList from '../../components/productList/ProductList';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import ToTop from '../../components/ToTop/ToTop';
 
 import { getAllProducts } from '../../redux/action/products'
 import { useDispatch , useSelector } from 'react-redux';
@@ -31,6 +32,7 @@ const ProductsPage=()=> {
   <Filters />
   <ProductList />
   <Sidebar/>
+ 
   <Footer /> 
   </div>
   </>;

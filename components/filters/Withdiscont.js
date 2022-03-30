@@ -10,10 +10,13 @@ const Withdiscont=()=> {
 
   const dispatch =useDispatch()
   const filterOption= useSelector(state=>state.filterOption)
+  const checked1=filterOption.discont
   return <>
   
   <FormGroup className={styles.discont}>
-           <FormControlLabel control={<Checkbox onChange={()=>dispatch(discontChangeHandel(filterOption ))}/>} label='فقط کالا های تخفیف دار'/>
+           <FormControlLabel control={<Checkbox 
+           checked={checked1}
+           onChange={(e)=>dispatch(discontChangeHandel(e))}/>} label='فقط کالا های تخفیف دار'/>
           </FormGroup>
   
   </>;

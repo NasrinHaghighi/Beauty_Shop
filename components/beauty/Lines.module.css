@@ -16,3 +16,19 @@
 .linesitem h4 {
     color: #FFF0DB;
 }
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 500px;
+    margin: 200px auto 100px auto;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.box span {
+    margin-top: 40px;
+}

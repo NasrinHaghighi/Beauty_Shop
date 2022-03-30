@@ -42,9 +42,16 @@
     margin-bottom: 10px;
 }
 
-.cartItem div {
+.cartItemImg {
     width: 210px;
     height: 200px;
+    background-color: #cc2121;
+}
+
+.cartItemImg img {
+    width: 210px;
+    height: 200px;
+    object-fit: cover;
 }
 
 

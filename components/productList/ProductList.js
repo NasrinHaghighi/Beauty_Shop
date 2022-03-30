@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from '../productList/Product';
+import ToTop from '../ToTop/ToTop';
 
 
 import { useSelector } from 'react-redux';
@@ -20,10 +21,13 @@ const  ProductList =()=> {
 
 
 {products.map((item)=>{  return <Product key={item.id} {...item}/>   })}
-
-
-   
+ 
   </div>
+
+  
+  <div>
+  <ToTop />
+</div>
   </>;
 }
 

@@ -2,16 +2,22 @@ import { productsList } from '../../servises/productsList'
 
 
 export const getAllProducts = () => {
-    return async(dispatch, getState) => {
-        //let products = [...getState().products]
-        return await dispatch({ type: 'GET_ALL_PRODUCTS', payload: productsList.products })
+        return async(dispatch, getState) => {
+            //let products = [...getState().products]
+            return await dispatch({ type: 'GET_ALL_PRODUCTS', payload: productsList.products })
+        }
     }
-}
+    // export const getInitialProducts = () => {
+    //     return async(dispatch, getState) => {
+    //         console.log(productsList.products)
+    //         return await dispatch({ type: 'GET_INITIAL_PRODUCTS', payload: productsList.products })
+    //     }
+    // }
 
 export const clearAllProducts = () => {
     return async(dispatch, getState) => {
         let tempProducts = [...getState().products]
-        let filterOption = {...getState().filterOption }
+
 
         tempProducts = productsList.products
         return await dispatch({ type: 'CLEAR_ALL_PRODUCTS', payload: tempProducts })
@@ -92,18 +98,19 @@ export const maxpriceChangeHandel = (value, filterOption) => {
 }
 export const availabilityChangeHandel = (filterOption) => {
     return async(dispatch) => {
-        filterOption.map((item) => {
-            return (item.availability = !item.availability)
-        })
 
         return await dispatch({ type: 'AVAILIBILITY_OPTION', payload: filterOption })
     }
 }
-export const discontChangeHandel = (filterOption) => {
-    return async(dispatch) => {
-        filterOption.map((item) => {
-            return (item.discont = !item.discont)
-        })
+export const discontChangeHandel = (e) => {
+    return async(dispatch, getState) => {
+
+        if (e.target.checked) {
+            console.log('checked and to true')
+        } else {
+            console.log('checked and to false')
+        }
+
 
         return await dispatch({ type: 'DISCOT_OPTION', payload: filterOption })
     }

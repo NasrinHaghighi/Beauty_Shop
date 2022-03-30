@@ -17,7 +17,7 @@ export const addToCartHandel = (product, mainAmount, mainColor) => {
                 amount: mainAmount,
                 color: mainColor,
                 name: product.name,
-                //image: product.images[0].url,
+                image: product.imgsrc,
                 price: product.price,
                 discont: product.discont,
                 garanty: product.garanty

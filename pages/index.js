@@ -8,9 +8,10 @@ import Beauty from '../components/beauty/Beauty'
 import ReleventProduct from '../components/singleProduct/ReleventProduct';
 import SeeMoreBtn from '../components/SeeMoreBtn/SeeMoreBtn'
 import { getAllProducts } from '../redux/action/products'
+import {getInitialProducts} from '../redux/action/products'
 import { useDispatch , useSelector } from 'react-redux';
 
-
+console.log(getInitialProducts)
 
 export default function Home() {
 
@@ -18,10 +19,11 @@ export default function Home() {
 
 //???  empty array    ??//
 
-
-    useEffect(()=>{
+useEffect(()=>{
       dispatch(getAllProducts())
+     
     },[])
+
    
     
     

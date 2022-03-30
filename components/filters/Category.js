@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState ,useEffect} from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import List from '@mui/material/List';
 import { ListItem, ListItemButton, Box, Slider } from '@mui/material';
@@ -10,9 +10,10 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 import {categotyChangeHandel} from '../../redux/action/products'
+import {getInitialProducts} from '../../redux/action/products'
 
 
-
+import { productsList } from '../../servises/productsList'
 
 const Category =()=> {
   const dispatch=useDispatch()
@@ -22,18 +23,16 @@ const Category =()=> {
       setOpen(!open);
       };
 
-//  //check for uniqe categorey//
-const products = useSelector(state => state.products)
+
+//const products = useSelector(state => state.products)
 const filterOption= useSelector(state=>state.filterOption)
 
-let categories = [...new Set(products.map(item => item.category))];
-//console.log(categories)
+
+//  //check for uniqe categorey//
+let categories = [...new Set(productsList.products.map(item => item.category))];
+console.log(categories)
     
-  //  const categoryChangeHandel=(e)=>{
-  //   filterOption.map((item)=>{
-  //     item.selectedCategory.push(e.target.value)
-  //   })
-  //  }
+
   return <>
     
          <List
@@ -54,7 +53,9 @@ let categories = [...new Set(products.map(item => item.category))];
                  return(
                   <ListItem >
                  <FormControlLabel 
-                  control={<Checkbox value={c}  onChange={(e)=>dispatch(categotyChangeHandel(e, filterOption))}/>}
+                  control={<Checkbox value={c} 
+                  checked={filterOption.selectedCategory.includes(c)}
+                  onChange={(e)=>dispatch(categotyChangeHandel(e, filterOption))}/>}
                   label={c}
             />
                 </ListItem>

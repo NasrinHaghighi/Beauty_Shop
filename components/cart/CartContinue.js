@@ -19,7 +19,7 @@ const CartContinue=()=> {
           </div>
            
             <div className={styles.cahngeAddress}>
-            <Link href='/*' ><a><span><Image src={arrow}/></span>تغییر یا ویرایش آدرس</a></Link>
+            <Link href='/profile/myaddress' ><a><span><Image src={arrow}/></span>تغییر یا ویرایش آدرس</a></Link>
             </div>
         </div>
 
@@ -27,7 +27,7 @@ const CartContinue=()=> {
         <div className={styles.info}>
             <div className={styles.cartItems}>
              {cart.map((item)=>{
-                return(<div className={styles.cartItem}><p>{item.name}</p><div><Image src={Roj}/></div></div>)
+                return(<div className={styles.cartItem}><p>{item.name}</p><div className={styles.cartItemImg}><img src={item.image[0].src} /></div></div>)
                   })}
              </div>
           <div className={styles.table}>

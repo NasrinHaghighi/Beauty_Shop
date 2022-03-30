@@ -35,6 +35,7 @@ useEffect(() => {
     <div className={styles.cartContent}>
       {cart.length >0 ?
        cart.map((item)=>{
+         console.log(item)
       
         return(
           
@@ -66,7 +67,7 @@ useEffect(() => {
   
             </div>
                 {/* third cloumn */}
-        <div className={styles.imgContainer}><Image src={Roj}/></div>
+        <div className={styles.imgContainer}> <img src={item.image[0].src} /></div>
   
           </div>
         )

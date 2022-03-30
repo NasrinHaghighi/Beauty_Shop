@@ -4,6 +4,9 @@ import Image from 'next/image';
 import face from '../../public/images/Component 20 – 1.png'
 import hair from '../../public/images/Component 22 – 1.png'
 import skin from '../../public/images/Component 21 – 1.png'
+import img1 from '../../public/images/Group 66.png'
+import img2 from '../../public/images/Group 68.png'
+import img3 from '../../public/images/Group 70.png'
 const Lines =() =>{
   return <>
   <div className={styles.lines}>
@@ -16,7 +19,13 @@ const Lines =() =>{
         
      </div>
 
+ <div className={styles.icons}>
+ <div className={styles.box}><Image src={img2}/> <span>ارسال رایگان</span></div>
+   <div className={styles.box}><Image src={img1}/> <span>هدایای ویژه</span></div>
   
+   <div className={styles.box}><Image src={img3}/> <span>بسته بندی ایمن</span></div>
+
+ </div>
   </div>
   </>;
 }

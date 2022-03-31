@@ -2,16 +2,22 @@ import { productsList } from '../../servises/productsList'
 
 
 export const getAllProducts = () => {
-    return async(dispatch, getState) => {
-        //let products = [...getState().products]
-        return await dispatch({ type: 'GET_ALL_PRODUCTS', payload: productsList.products })
+        return async(dispatch, getState) => {
+            //let products = [...getState().products]
+            return await dispatch({ type: 'GET_ALL_PRODUCTS', payload: productsList.products })
+        }
     }
-}
+    // export const getInitialProducts = () => {
+    //     return async(dispatch, getState) => {
+    //         console.log(productsList.products)
+    //         return await dispatch({ type: 'GET_INITIAL_PRODUCTS', payload: productsList.products })
+    //     }
+    // }
 
 export const clearAllProducts = () => {
     return async(dispatch, getState) => {
         let tempProducts = [...getState().products]
-        let filterOption = {...getState().filterOption }
+
 
         tempProducts = productsList.products
         return await dispatch({ type: 'CLEAR_ALL_PRODUCTS', payload: tempProducts })
@@ -26,7 +32,7 @@ export const clearFilterOption = () => {
             filterOption.selectedCategory = []
             filterOption.minPrice = 100
             filterOption.maxPrice = 1000
-            filterOption.availability = true
+            filterOption.availability = false
             filterOption.discont = false
             return await dispatch({ type: 'CLEAR_FILLTER_OPTION', payload: filterOption })
         }
@@ -90,26 +96,22 @@ export const maxpriceChangeHandel = (value, filterOption) => {
         return await dispatch({ type: 'MAXPRICE_OPTION', payload: filterOption })
     }
 }
-export const availabilityChangeHandel = (e) => {
-    return async(dispatch, getState) => {
-        let filterOption = {...getState().filterOption }
-        if (!e.target.checked) {
-            filterOption.availability = false
-        } else {
-            filterOption.availability = true
-        }
+export const availabilityChangeHandel = (filterOption) => {
+    return async(dispatch) => {
 
         return await dispatch({ type: 'AVAILIBILITY_OPTION', payload: filterOption })
     }
 }
 export const discontChangeHandel = (e) => {
     return async(dispatch, getState) => {
-        let filterOption = {...getState().filterOption }
+
         if (e.target.checked) {
-            filterOption.discont = true
+            console.log('checked and to true')
         } else {
-            filterOption.discont = false
+            console.log('checked and to false')
         }
+
+
         return await dispatch({ type: 'DISCOT_OPTION', payload: filterOption })
     }
 }
@@ -144,22 +146,6 @@ export const fillterProductsHandler = () => {
             products = tempProducts
                 //console.log(products)
         }
-        if (filterOption.discont = true) {
-            tempProducts = tempProducts.filter((p) => {
-                return p.discont > 0
-            })
-            products = tempProducts
-        } else {
-            products = tempProducts
-        }
-        if (filterOption.availability = true) {
-            tempProducts = tempProducts.filter((p) => {
-                return p.Available = true
-            })
-            products = tempProducts
-        } else {
-            products = tempProducts
-        }
 
 
         return await dispatch({ type: 'FILLTER_PRODUCTS', payload: products })
@@ -188,11 +174,21 @@ export const sortProductsHandle = (value) => {
             })
         }
         if (value === 'mostExpensive') {
-            products = products.sort((a, b) => b.price - a.price)
+            products = products.sort((a, b) => a.price - b.price)
+        } else {
+            products = products.sort((a, b) => a.price - b.price)
+
+
         }
         if (value === 'mostCheapest') {
-            products = products.sort((a, b) => a.price - b.price)
+
+            products = products.sort((a, b) => b.price - a.price)
+        } else {
+            products = products.sort((a, b) => b.price - a.price)
+
+
         }
+
         return await dispatch({ type: 'SORT_PRODUCTS', payload: products })
     }
 }

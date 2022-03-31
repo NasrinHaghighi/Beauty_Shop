@@ -9,15 +9,16 @@ export const productsReducer = (state = [], action) => {
         case ('SORT_PRODUCTS'):
             return [...action.payload];
         case ('CLEAR_ALL_PRODUCTS'):
-            return [...action.payload];
+            return action.payload;
         default:
             return state;
     }
 }
+
 const filterOption = {
     selectedBrand: [],
     selectedCategory: [],
-    availability: false,
+    availability: true,
     discont: false,
     minPrice: 100,
     maxPrice: 1000,
@@ -28,14 +29,16 @@ export const filterOptionReducer = (state = filterOption, action) => {
             return action.payload;
         case ('CATEGORY_OPTION'):
             return action.payload;
-            // case ('MINPRICE_OPTION'):
-            //     return action.payload;
-            // case ('MAXPRICE_OPTION'):
-            //     return action.payload;
-            // case ('AVAILIBILITY_OPTION'):
-            //     return action.payload;
-            // case ('DISCOT_OPTION'):
-            //     return action.payload;
+        case ('MINPRICE_OPTION'):
+            return action.payload;
+        case ('MAXPRICE_OPTION'):
+            return action.payload;
+        case ('AVAILIBILITY_OPTION'):
+            return action.payload;
+        case ('DISCOT_OPTION'):
+            return action.payload;
+        case ('CLEAR_FILLTER_OPTION'):
+            return action.payload;
         default:
             return state;
     }

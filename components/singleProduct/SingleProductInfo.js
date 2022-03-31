@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+ import React , {useState} from 'react';
 import styles from './SingleProductInfo.module.css'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -23,7 +23,8 @@ const SingleProductInfo=({...singleProduct})=> {
 
 
   const dispatch =useDispatch()
-  const {name, garanty, discont,id ,price ,colors, likes, comments} =singleProduct
+  console.log(singleProduct.imgsrc)
+  const {name, garanty, discont,id ,price ,colors, likes, comments, imgsrc} =singleProduct
 
   const [isFavoraite, setisFavoraite] =useState(false)
 
@@ -76,8 +77,7 @@ const SingleProductInfo=({...singleProduct})=> {
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>
     <p><Image src={likeIcon}/> <span>{likes}</span></p>
-   {/* <p>            <Image src={commentsIcon}/><span>      
-       {comments.length}</span></p> */}
+ <p> <Image src={commentsIcon}/><span> {comments.length}</span></p> 
     </div>
     </div>
   </section>;

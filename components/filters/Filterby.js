@@ -32,6 +32,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { fillterProductsHandler} from '../../redux/action/products'
 import {clearAllProducts} from '../../redux/action/products'
+import {clearFilterOption} from '../../redux/action/products'
 
 
 
@@ -88,7 +89,7 @@ const Filterby = () => {
          {/* ****start of fliter menu -HEADER***** */}
          <div className={styles.header}> 
          <div className={styles.headerBtn}>
-           <button type='button' onClick={()=>{handleClose();dispatch(clearAllProducts())}}>پاک کردن همه</button>
+           <button type='button' onClick={()=>{handleClose();dispatch(clearAllProducts()); dispatch(clearFilterOption())}}>پاک کردن همه</button>
 
 
            <button  type='button'  onClick={()=>{handleClose();  dispatch(fillterProductsHandler(filterOption))}}>

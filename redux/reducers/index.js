@@ -14,6 +14,7 @@ import { filterOptionReducer } from './products'
 import { userAddressReducer } from './login'
 import { userFavoriteReducer } from './login'
 import { userRegisterInfoReducer } from './login'
+import { initialProductsReducer } from './products'
 
 
 
@@ -33,6 +34,7 @@ export const reducers = combineReducers({
     userAddress: userAddressReducer,
     userFavorite: userFavoriteReducer,
     userRegisterInfo: userRegisterInfoReducer,
+    initialProducts: initialProductsReducer,
 
 
 });

@@ -13,25 +13,20 @@ import {barndChangeHandel} from '../../redux/action/products'
 
 import styles from './Brand.module.css'
 
+import { productsList } from '../../servises/productsList'
 
 const Brand =()=> {
+  
   const dispatch =useDispatch()
-    const products = useSelector(state => state.products)
-    // const filterOption = useSelector(state=>state.filterOption)
-    // console.log(filterOption)
-    // const selectedBrand =filterOption.map((item)=>{
-    //   return item.selectedBrand
-    // })
-    // console.log(selectedBrand)
- 
-
-    //open and clsoe collapse of brand//
+  const filterOption = useSelector(state=>state.filterOption)
+  console.log(filterOption.selectedBrand)
+ //open and clsoe collapse of brand//
     const [open, setOpen] = React.useState(false);
     const handleClick = () => {
           setOpen(!open);
           };
      //  //check for uniqe brand//
-     let brands = [...new Set(products.map(item => item.brand))];
+     let brands = [...new Set(productsList.products.map(item => item.brand))];
      
 
   return <>
@@ -59,7 +54,7 @@ const Brand =()=> {
                   type="checkbox"
                   name={c}
                  value={c}
-                //checked={newarray.includes(c)}
+                checked={filterOption.selectedBrand.includes(c)}
                  onChange={(e)=>{dispatch(barndChangeHandel(e))}} 
                   />} 
                label={c}/> 

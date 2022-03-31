@@ -24,7 +24,7 @@ const {handleChange, values, handleSubmit} =useForm()
       {/* ---------------------- */}
       <div className={styles.cityState}>
       <div className={styles.input}>
-        <label className='form-label' className={styles.label}>استان : *</label>
+        <label  className={styles.label}>استان : *</label>
         <input
           className='form-input'
           type='text'
@@ -34,7 +34,7 @@ const {handleChange, values, handleSubmit} =useForm()
        
       </div>
       <div className={styles.input}>
-        <label className='form-label' className={styles.label}>شهر : *</label>
+        <label  className={styles.label}>شهر : *</label>
         <input
           className='form-input'
           type='text'
@@ -46,7 +46,7 @@ const {handleChange, values, handleSubmit} =useForm()
       </div>
        {/* ---------------------- */}
       <div className={styles.input}>
-        <label className='form-label' className={styles.label}>آدرس : *</label>
+        <label  className={styles.label}>آدرس : *</label>
         <input
           className='form-input'
           type='text'
@@ -56,7 +56,7 @@ const {handleChange, values, handleSubmit} =useForm()
            
       </div>
            <div className={styles.input}>
-        <label className='form-label' className={styles.label}>کد پستی : *</label>
+        <label  className={styles.label}>کد پستی : *</label>
         <input
           className='form-input'
           type='text'
@@ -66,7 +66,7 @@ const {handleChange, values, handleSubmit} =useForm()
       
       </div>
       <div className={styles.input}>
-        <label className='form-label' className={styles.label}>شماره همراه : *</label>
+        <label  className={styles.label}>شماره همراه : *</label>
         <input
           className='form-input'
           type='text'
@@ -78,7 +78,7 @@ const {handleChange, values, handleSubmit} =useForm()
       </div>
 
       <div className={styles.input}>
-          <label className='form-label' className={styles.label}>ایمیل</label>
+          <label  className={styles.label}>ایمیل</label>
           <input
             className='form-input'
             type='email'

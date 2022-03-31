@@ -1,0 +1,20 @@
+.conatiner {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+.btn {
+    width: 46px;
+    height: 46px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+.active {
+    margin: 5px;
+    width: 46px;
+    height: 46px;
+    background-color: #484035;
+    color: #ffff;
+}

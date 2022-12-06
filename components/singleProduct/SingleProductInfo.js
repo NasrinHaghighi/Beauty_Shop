@@ -77,8 +77,7 @@ const SingleProductInfo=({...singleProduct})=> {
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>
     <p><Image src={likeIcon}/> <span>{likes}</span></p>
-   {/* <p>            <Image src={commentsIcon}/><span>      
-       {comments.length}</span></p> */}
+ <p> <Image src={commentsIcon}/><span> {comments.length}</span></p> 
     </div>
     </div>
   </section>;

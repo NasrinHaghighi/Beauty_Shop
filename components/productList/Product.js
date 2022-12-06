@@ -28,10 +28,10 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
               <Stars stars={stars}/>
               <div className={styles.likeComments}>
                <span><Image src={likeIcon}/> <span>{likes}</span></span>
-                {/* <span>                
+                <span>                
                 <Image src={commentsIcon}/><span>
                        
-                {comments.length}</span></span> */}
+                {comments.length}</span></span> 
                </div>
         </div>
       </div>

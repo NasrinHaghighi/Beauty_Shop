@@ -12,7 +12,7 @@ const Favorite =()=> {
             {userFavorite.length >0 ? 
                 userFavorite.map((item)=>{
                     return(
-                        <FavoraiteItem {...item}/>
+                        <FavoraiteItem key={item} {...item}/>
                     )
                 })
             

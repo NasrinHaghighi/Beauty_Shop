@@ -11,7 +11,7 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 
 import SeeMoreBtn from '../../components/SeeMoreBtn/SeeMoreBtn'
 import ReleventProduct from '../../components/singleProduct/ReleventProduct'
-import styles from './CartPage.module.css'
+import styles from './cartPage.module.css'
 import InfoForm from '../../components/InfoForm/InfoForm'
 
 function CartPage() {

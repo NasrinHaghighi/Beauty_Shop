@@ -27,7 +27,7 @@ console.log(length)
 	<tbody>
 {singleProduct.properties.slice(0,tableRow).map((item)=>{
     return(
-     <tr className={styles.tr}>
+     <tr key={item} className={styles.tr}>
         <td className={styles.td}>{item.title} </td>
         <td className={styles.td}>{item.value} {item.megid}</td>
      

@@ -35,7 +35,7 @@ const Pagination=()=> {
   
         {pages.map((item)=>{
             return(
-                <button className={item.page === page ? styles.active : styles.btn  } onClick={()=>changePageHandle(item.page)}>{item.page}</button>
+                <button key={item} className={item.page === page ? styles.active : styles.btn  } onClick={()=>changePageHandle(item.page)}>{item.page}</button>
             )
             
         })}

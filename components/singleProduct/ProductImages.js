@@ -20,7 +20,7 @@ const ProductImages=({...singleProduct}) =>{
        <Carousel showStatus={false} showArrows={false} className={styles.carousel}>
        {
         imgsrc.map( image => {
-          return <div>
+          return <div key={item}>
             <img src={ image.src } />
             
           </div>

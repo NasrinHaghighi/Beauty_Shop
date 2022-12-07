@@ -179,7 +179,7 @@ const ModalAddress=({onClose})=> {
   
 {/*---------- address posti */}
      <div className={styles.fildes}>
-     <label for="address" className={styles.label}> نشانی پستی :*</label>
+     <label htmlFor="address" className={styles.label}> نشانی پستی :*</label>
       <input
        type="text"
         id="address"
@@ -192,7 +192,7 @@ const ModalAddress=({onClose})=> {
 {/*---------- PELAK */}
 <div className={styles.fildes1}>
       <div className={styles.plakRow}>
-          <label for="plak" className={styles.label}> پلاک:* </label>
+          <label htmlFor="plak" className={styles.label}> پلاک:* </label>
           <input 
           type="text"
            id="plak"
@@ -204,7 +204,7 @@ const ModalAddress=({onClose})=> {
               {formik.touched.plak && formik.errors.plak ? <div className={styles.error}>{formik.errors.plak}</div>: null}
       </div>
       <div className={styles.plakRow}>
-         <label for="num" className={styles.label}> واحد:* </label>
+         <label htmlFor="num" className={styles.label}> واحد:* </label>
          <input 
          type="text" 
          id="num" 
@@ -216,7 +216,7 @@ const ModalAddress=({onClose})=> {
          {formik.touched.num && formik.errors.num ? <div className={styles.error}>{formik.errors.num}</div>: null}
       </div>
       <div className={styles.plakRow}>
-         <label for="code" className={styles.label}> کد پستی:* </label>
+         <label htmlFor="code" className={styles.label}> کد پستی:* </label>
          <input
           type="text"
            id="code"
@@ -243,7 +243,7 @@ const ModalAddress=({onClose})=> {
 {/*---------- name and famill */}
 <div className={styles.fildes2}>
       <div className={styles.nameRow}>
-          <label for="name" className={styles.label}> نام:* </label>
+          <label htmlFor="name" className={styles.label}> نام:* </label>
           <input
            type="text"
            onBlur={formik.handleBlur}
@@ -255,7 +255,7 @@ const ModalAddress=({onClose})=> {
                  {formik.touched.name && formik.errors.name ? <div className={styles.error}>{formik.errors.name}</div>: null}
       </div>
       <div className={styles.lastnameRow}>
-         <label for="lastName" className={styles.label}> نام خانوادگی:* </label>
+         <label htmlFor="lastName" className={styles.label}> نام خانوادگی:* </label>
          <input
           type="text" 
           onBlur={formik.handleBlur}
@@ -270,7 +270,7 @@ const ModalAddress=({onClose})=> {
       </div>
       {/*---------- phone */}
       <div className={styles.fildes3}>
-          <label for="phone" className={styles.label}> شماره موبایل گیرنده:* </label>
+          <label htmlFor="phone" className={styles.label}> شماره موبایل گیرنده:* </label>
           <input
            type="text" 
            id="phone"

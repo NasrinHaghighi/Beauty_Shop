@@ -39,7 +39,7 @@ useEffect(() => {
       
         return(
           
-          <div className={styles.cartItem}>
+          <div key={item} className={styles.cartItem}>
              {openModalCart ? <CartModal id={item.id} onClose={handleClose}/> : null}
             {/* ()=>dispatch(removeItemCart(item.id)) */}
   

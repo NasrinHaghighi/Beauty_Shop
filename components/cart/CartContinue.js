@@ -27,7 +27,7 @@ const CartContinue=()=> {
         <div className={styles.info}>
             <div className={styles.cartItems}>
              {cart.map((item)=>{
-                return(<div className={styles.cartItem}><p>{item.name}</p><div className={styles.cartItemImg}><img src={item.image[0].src} /></div></div>)
+                return(<div key={item} className={styles.cartItem}><p>{item.name}</p><div className={styles.cartItemImg}><img src={item.image[0].src} /></div></div>)
                   })}
              </div>
           <div className={styles.table}>

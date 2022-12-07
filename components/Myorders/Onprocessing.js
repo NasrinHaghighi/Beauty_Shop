@@ -23,7 +23,7 @@ const Onprocessing =() =>{
     {cart.map((item, index)=>{
        
         return(
-        <tr>
+        <tr key={item}>
 			<td  className={styles.td}>{index+1}</td>
 			<td  className={styles.td}>{item.name}</td>
 			<td  className={styles.td}>1400/01/21</td>

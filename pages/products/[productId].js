@@ -44,9 +44,9 @@ const ProductSinglePage=()=> {
      <div className={styles.icons}>
 
       
-       <div className={styles.icon}><Image src={pic208}/> <p>تضمین اصلی بودن کالا</p></div>
-       <div className={styles.icon}><Image src={pic207}/> <p>تضمین گارانتی کالا</p></div>
-       <div className={styles.icon}><Image src={pic206}/> <p>امکان تحویل کالا</p></div>
+       <div className={styles.icon}><Image alt='img'src={pic208}/> <p>تضمین اصلی بودن کالا</p></div>
+       <div className={styles.icon}><Image alt='img'src={pic207}/> <p>تضمین گارانتی کالا</p></div>
+       <div className={styles.icon}><Image alt='img'src={pic206}/> <p>امکان تحویل کالا</p></div>
      </div>
    </div>
   

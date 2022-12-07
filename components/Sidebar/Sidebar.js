@@ -37,21 +37,21 @@ const Sidebar = () =>{
           // Cleanup the event listener
           document.removeEventListener("mousedown", checkIfClickedOutside);
         };
-      }, [sidebarIsOpen]);
+      }, [dispatch, sidebarIsOpen]);
 
 
     return (
         <>
 <div className={styles.wrapper} ref={ref}>
         {/*bar icon **conditional render  to show icon just in th eindex page*/}
-        {router.pathname == '/' ?  <div className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}><Image src={sidebarIcon}/></div> : null}
+        {router.pathname == '/' ?  <div className={styles.sidebarIcon} onClick={()=>dispatch(handelOpenSidebar())}><Image alt='img' src={sidebarIcon}/></div> : null}
 
          {/*sidebar page*/}
       <div className={sidebarIsOpen ? styles.sidebarOpen: styles.sidebar}>
                <div className={styles.header}>
                    <div className={styles.closeIcon} onClick={()=>dispatch(handelCloseSidebar())}>
                     
-               <Image src={closeIcon}/>
+               <Image alt='img' src={closeIcon}/>
                </div>
                 <span>منو</span>
                </div>

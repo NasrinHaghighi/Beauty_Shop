@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Image from 'next/image'
 import styles from './ProductImages.module.css'
@@ -21,7 +22,7 @@ const ProductImages=({...singleProduct}) =>{
        {
         imgsrc.map( image => {
           return <div key={item}>
-            <img src={ image.src } />
+            <img alt='img' src={ image.src } />
             
           </div>
         })

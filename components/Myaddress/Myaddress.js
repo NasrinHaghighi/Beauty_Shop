@@ -17,7 +17,7 @@ console.log(userAddress)
     <div className={styles.conatiner}>
 
         {openModal ? <ModalAddress onClose={handleClose}/>: null}
-        <h6>آدرس ها * <span><Image src={trash}/> </span></h6>
+        <h6>آدرس ها * <span><Image alt='img' src={trash}/> </span></h6>
         <select className={styles.select}>
            {userAddress.length>0 ?
            userAddress.map((item, index)=>{

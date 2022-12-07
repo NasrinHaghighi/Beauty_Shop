@@ -30,7 +30,8 @@
         "react-responsive-carousel": "^3.2.22",
         "react-select": "^5.2.2",
         "redux": "^4.1.2",
-        "redux-thunk": "^2.4.1"
+        "redux-thunk": "^2.4.1",
+        "vercel": "^28.8.0"
     },
     "devDependencies": {
         "eslint": "8.7.0",

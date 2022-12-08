@@ -4,17 +4,17 @@ import Footer from '../../components/footer/Footer'
 import Filters from '../../components/filters/Filters';
 import ProductList from '../../components/productList/ProductList';
 import Sidebar from '../../components/Sidebar/Sidebar';
-import ToTop from '../../components/ToTop/ToTop';
+//import ToTop from '../../components/ToTop/ToTop';
 
 import { getAllProducts } from '../../redux/action/products'
 import { useDispatch , useSelector } from 'react-redux';
-import {productsList} from '../../servises/productsList'
+//import {productsList} from '../../servises/productsList'
 
 
 
 
 const ProductsPage=()=> {
- const products =useSelector(state=>state.products)
+ //const products =useSelector(state=>state.products)
   const dispatch = useDispatch();
 //console.log(products)  //ok
 //???  empty array    ??//
@@ -22,7 +22,7 @@ const ProductsPage=()=> {
 
     useEffect(()=>{
       dispatch(getAllProducts())
-    },[])
+    })
 
 //console.log(productsList)
 

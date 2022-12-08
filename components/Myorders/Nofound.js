@@ -6,7 +6,7 @@ import itemNotFound from '../../public/images/Group 423.png'
 const Nofound=() =>{
   return (
     <div className={styles.conatiner}>
-      <div>  <Image src={itemNotFound}/></div>
+      <div>  <Image alt="img" src={itemNotFound}/></div>
         </div>
   )
 }

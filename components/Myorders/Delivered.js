@@ -31,7 +31,7 @@ const Delivered =()=> {
                     <td  className={styles.td}>1400/01/21</td>
                     <td  className={styles.td}>{item.price}</td>
                     <td  className={styles.td}>پرداخت شده</td>
-                    <td  className={styles.tdLast}> <Image src={eye}/>مشاهده فاکتور</td>
+                    <td  className={styles.tdLast}> <Image alt="img" src={eye}/>مشاهده فاکتور</td>
                 </tr> 
                 )
             })}

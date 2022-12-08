@@ -1,4 +1,3 @@
-import { Category } from "@material-ui/icons";
 
 export const productsReducer = (state = [], action) => {
     switch (action.type) {

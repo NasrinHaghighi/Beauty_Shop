@@ -5,8 +5,8 @@ import { ListItem, ListItemButton, Box, Slider } from '@mui/material';
 import { ListItemText } from '@mui/material';
 import { Collapse } from '@mui/material';
 import { textAlign } from '@mui/system';
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import { IoChevronUp } from "react-icons/io5";
 import { IoChevronDown } from "react-icons/io5";
 import {categotyChangeHandel} from '../../redux/action/products'

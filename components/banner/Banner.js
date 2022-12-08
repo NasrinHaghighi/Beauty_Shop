@@ -32,9 +32,9 @@ const sidebarIsopen =useSelector(state=>state.Banner)
             
              <div> </div>
              <div></div>
-             <div className={styles.chatIcon}><Image src={chatIcon}/></div>
+             <div className={styles.chatIcon}><Image alt="img" src={chatIcon}/></div>
            </div>
-           <div className={styles.bgImage}>  <Image src={bg} className={styles.bg}/> </div> 
+           <div className={styles.bgImage}>  <Image alt="img" src={bg} className={styles.bg}/> </div> 
            {/* data OF OBJECT ??? */}
            <div  className={styles.anim}>   <object data="/images/scroll-anim.svg" type="image/svg+xml"></object> </div>
            </div>

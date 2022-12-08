@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import styles from './Product.module.css'
 import Image from 'next/image';
@@ -18,7 +19,7 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
 
   return <div className={styles.container}>
    
-      <img src={imgsrc[0].src} />
+      <img alt="img" src={imgsrc[0].src} />
       <div className={styles.infoContainer}>
           <p>{name}</p>
           <p>قیمت : {price} تومان</p>
@@ -27,9 +28,9 @@ const Product=({imgsrc, name, price, id, stars, comments, likes}) =>{
           <div className={styles.rank}>
               <Stars stars={stars}/>
               <div className={styles.likeComments}>
-               <span><Image src={likeIcon}/> <span>{likes}</span></span>
+               <span><Image alt="img" src={likeIcon}/> <span>{likes}</span></span>
                 <span>                
-                <Image src={commentsIcon}/><span>
+                <Image alt="img" src={commentsIcon}/><span>
                        
                 {comments.length}</span></span> 
                </div>

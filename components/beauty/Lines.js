@@ -13,17 +13,17 @@ const Lines =() =>{
      <h6>دارای سه لاین مجزای تخصصی</h6>
      <div className={styles.linesBg}>
          
-         <div className={styles.linesitem}><h4>مو</h4> <Image src={hair}/></div>
-         <div className={styles.linesitem}><h4>صورت</h4> <Image src={skin}/></div>
-         <div className={styles.linesitem}><h4>پوست</h4> <Image src={face}/></div>
+         <div className={styles.linesitem}><h4>مو</h4> <Image alt="img" src={hair}/></div>
+         <div className={styles.linesitem}><h4>صورت</h4> <Image alt="img" src={skin}/></div>
+         <div className={styles.linesitem}><h4>پوست</h4> <Image alt="img" src={face}/></div>
         
      </div>
 
  <div className={styles.icons}>
- <div className={styles.box}><Image src={img2}/> <span>ارسال رایگان</span></div>
-   <div className={styles.box}><Image src={img1}/> <span>هدایای ویژه</span></div>
+ <div className={styles.box}><Image alt="img" src={img2}/> <span>ارسال رایگان</span></div>
+   <div className={styles.box}><Image alt="img" src={img1}/> <span>هدایای ویژه</span></div>
   
-   <div className={styles.box}><Image src={img3}/> <span>بسته بندی ایمن</span></div>
+   <div className={styles.box}><Image alt="img" src={img3}/> <span>بسته بندی ایمن</span></div>
 
  </div>
   </div>

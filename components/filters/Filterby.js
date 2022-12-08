@@ -63,7 +63,7 @@ const Filterby = () => {
      aria-haspopup="true"
      aria-expanded={open ? 'true' : undefined}
      onClick={handleClick}
-     > <Image src={filterIcon}/> <span className={styles.btn}>فیلتر بر اساس </span>
+     > <Image alt="img" src={filterIcon}/> <span className={styles.btn}>فیلتر بر اساس </span>
      </Button>
 
      

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import img4 from '../../public/images/4.png'
 import img2 from '../../public/images/2.png'

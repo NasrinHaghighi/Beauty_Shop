@@ -52,11 +52,11 @@ const SingleProductInfo=({...singleProduct})=> {
           onClick={()=>{setisFavoraite(!isFavoraite); dispatch(userFavoriteHandle(singleProduct, mainColor))}}
           
           >
-            {isFavoraite ?  <Image src={redheart}/> : <Image src={heartIcon}/> }
+            {isFavoraite ?  <Image alt="img"src={redheart}/> : <Image alt="img" src={heartIcon}/> }
             
             
          </div>
-          <div>   <Image src={shareIcon}/></div>
+          <div>   <Image alt="img"src={shareIcon}/></div>
       </div>
 
 
@@ -76,8 +76,8 @@ const SingleProductInfo=({...singleProduct})=> {
   
     {/* onClick={()=>addToCart(id, mainColor, amount, product)} */}
     <div className={styles.comment}>
-    <p><Image src={likeIcon}/> <span>{likes}</span></p>
- <p> <Image src={commentsIcon}/><span> {comments.length}</span></p> 
+    <p><Image alt="img" src={likeIcon}/> <span>{likes}</span></p>
+ <p> <Image alt="img" src={commentsIcon}/><span> {comments.length}</span></p> 
     </div>
     </div>
   </section>;

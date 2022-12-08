@@ -12,30 +12,30 @@ import myfavoraite from '../../public/images/Group 335.png'
 export const sidebarData = [{
         title: 'پروفایل',
         path: '',
-        icon: < Image src = { profile }
+        icon: < Image alt="img" src = { profile }
         />,
         subNav: [{
                 title: 'پروفایل من',
                 path: '/profile',
-                icon: < Image src = { profile }
+                icon: < Image alt="img" src = { profile }
                 />
             },
             {
                 title: 'سفارش های من',
                 path: '/profile/myorder',
-                icon: < Image src = { myorder }
+                icon: < Image alt="img" src = { myorder }
                 />,
             },
             {
                 title: 'آدرس های من',
                 path: '/profile/myaddress',
-                icon: < Image src = { myadress }
+                icon: < Image alt="img" src = { myadress }
                 />,
             },
             {
                 title: 'علاقه مندی ها ',
                 path: '/profile/myfavoraite',
-                icon: < Image src = { myfavoraite }
+                icon: < Image alt="img" src = { myfavoraite }
                 />,
             },
 
@@ -47,21 +47,21 @@ export const sidebarData = [{
     {
         title: 'درباره ما',
         path: '/about',
-        icon: < Image src = { aboutIcon }
+        icon: < Image alt="img" src = { aboutIcon }
         />
     },
     {
         title: 'ارتباط با ما',
         path: '/contact',
 
-        icon: < Image src = { contactIcon }
+        icon: < Image alt="img" src = { contactIcon }
         />
     },
     {
         title: 'خروج',
         path: '/',
         //back to home//
-        icon: < Image src = { exitIcon }
+        icon: < Image alt="img" src = { exitIcon }
         />
 
     },

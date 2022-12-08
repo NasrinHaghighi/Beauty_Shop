@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import { AppProvider } from './context/context';
+//import { AppProvider } from './context/context';
 import { Provider } from "react-redux";
 import { store } from '../redux/store/index';
 

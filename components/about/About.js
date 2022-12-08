@@ -8,7 +8,7 @@ function About() {
   return (
     <div>
         <div className={styles.header}>
-           <Image src={maskImge}/>
+           <Image alt="img" src={maskImge}/>
         </div>
         <div className={styles.container}>
 

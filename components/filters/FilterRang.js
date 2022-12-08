@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React , { useEffect} from 'react';
 import Box from '@mui/material/Box';
 import { useDispatch , useSelector} from 'react-redux';

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,7 +20,7 @@ const CartContinue=()=> {
           </div>
            
             <div className={styles.cahngeAddress}>
-            <Link href='/profile/myaddress' ><a><span><Image src={arrow}/></span>تغییر یا ویرایش آدرس</a></Link>
+            <Link href='/profile/myaddress' ><a><span><Image alt="img" src={arrow}/></span>تغییر یا ویرایش آدرس</a></Link>
             </div>
         </div>
 
@@ -27,11 +28,11 @@ const CartContinue=()=> {
         <div className={styles.info}>
             <div className={styles.cartItems}>
              {cart.map((item)=>{
-                return(<div key={item} className={styles.cartItem}><p>{item.name}</p><div className={styles.cartItemImg}><img src={item.image[0].src} /></div></div>)
+                return(<div key={item} className={styles.cartItem}><p>{item.name}</p><div className={styles.cartItemImg}><img alt="img" src={item.image[0].src} /></div></div>)
                   })}
              </div>
           <div className={styles.table}>
-            <div className={styles.header}><span>انتخاب زمان ارسال </span><Image src={clock}/></div>
+            <div className={styles.header}><span>انتخاب زمان ارسال </span><Image alt="img" src={clock}/></div>
           
             <table className={styles.mainTable}>
   

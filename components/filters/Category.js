@@ -51,7 +51,7 @@ console.log(categories)
             <List component="div">
                {categories.map((c, index)=>{
                  return(
-                  <ListItem key={item}>
+                  <ListItem key={c}>
                  <FormControlLabel 
                   control={<Checkbox value={c} 
                   checked={filterOption.selectedCategory.includes(c)}

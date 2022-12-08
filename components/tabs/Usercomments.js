@@ -40,8 +40,8 @@ const Usercomments =( {...singleProduct})=> {
                   <p>{item.text}</p>
 
                   <div className={styles.info}>
-                      <div className={styles.info1}>{item.date} <span><Image src={retangleIcon}/> {item.name}</span></div>
-                      <div className={styles.info2}><button>پاسخ دادن</button> <span>{item.commentLikes} <Image src={likeIcon}/> </span></div>
+                      <div className={styles.info1}>{item.date} <span><Image alt="img" src={retangleIcon}/> {item.name}</span></div>
+                      <div className={styles.info2}><button>پاسخ دادن</button> <span>{item.commentLikes} <Image alt="img"  src={likeIcon}/> </span></div>
                   </div>
               </div>
           )

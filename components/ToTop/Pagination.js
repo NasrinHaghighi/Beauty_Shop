@@ -39,11 +39,11 @@ const Pagination=()=> {
             )
             
         })}
-         <button className={styles.btn} onClick={()=>AddOnePage(page)} >   <Image src={arrowBlack}/> </button>
-         <button className={styles.btn} onClick={()=>AddtwoPage(page)}>  <Image src={arrowBlack}/><Image src={arrowGray}/></button>
+         <button className={styles.btn} onClick={()=>AddOnePage(page)} >   <Image alt="img" src={arrowBlack}/> </button>
+         <button className={styles.btn} onClick={()=>AddtwoPage(page)}>  <Image alt="img" src={arrowBlack}/><Image alt="img" src={arrowGray}/></button>
        
 
-    </div>
+    </div>s
     </>
   )
 }

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React , {useState, useEffect}from 'react'
 import Image from 'next/image'
 import totopIcon from '../../public/images/Group 112.png'

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import styles from './Footer.module.css'
 import logo from '../../public/images/Group 10.png'

@@ -49,7 +49,7 @@ const Brand =()=> {
              
             return(  
 
-                  <ListItem key={item}>
+                  <ListItem key={c}>
                  <FormControlLabel control={<Checkbox
                   type="checkbox"
                   name={c}

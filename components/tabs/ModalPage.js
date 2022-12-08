@@ -41,7 +41,7 @@ const ModalPage=({onClose})=> {
         <Fade in={open}>
           <Box sx={style} className={styles.modal}>
             <Typography id="transition-modal-title" variant="h6" component="h2" className={styles.modalHeader}>
-            <Image src={commentIcon}/> افزودن دیدگاه
+            <Image alt="img" src={commentIcon}/> افزودن دیدگاه
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }} >
             عنوان نظر شما

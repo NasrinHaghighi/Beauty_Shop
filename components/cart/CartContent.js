@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, {useStae ,useEffect} from 'react'
 import styles from './CartContent.module.css'
 import Image from 'next/image'
@@ -26,7 +27,7 @@ const Cartcontent=()=> {
 useEffect(() => {
   dispatch(cartDiscont())
  dispatch(cartTotal())
-}, [cart])
+}, [cart, dispatch])
 
   //console.log(cart) ok
   return (
@@ -44,7 +45,7 @@ useEffect(() => {
             {/* ()=>dispatch(removeItemCart(item.id)) */}
   
             {/* first cloumn */}
-             <div className={styles.removeIcon}  onClick={handleOpen}><Image src={RemoveIcone}/></div>
+             <div className={styles.removeIcon}  onClick={handleOpen}><Image alt="img" src={RemoveIcone}/></div>
           {/* secend cloumn */}
             <div className={styles.info}>
               <h1>{item.name}</h1>
@@ -67,7 +68,7 @@ useEffect(() => {
   
             </div>
                 {/* third cloumn */}
-        <div className={styles.imgContainer}> <img src={item.image[0].src} /></div>
+        <div className={styles.imgContainer}> <img alt="img" src={item.image[0].src} /></div>
   
           </div>
         )

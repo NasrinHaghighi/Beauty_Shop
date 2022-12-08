@@ -22,7 +22,7 @@ const ProductsPage=()=> {
 
     useEffect(()=>{
       dispatch(getAllProducts())
-    })
+    },[])
 
 //console.log(productsList)
 
